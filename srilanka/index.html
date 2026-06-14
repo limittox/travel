@@ -85,6 +85,31 @@
   .ticker-track span::after{content:"★";color:var(--ink);font-size:1rem}
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
+  /* FLIGHTS */
+  .flt-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:820px){.flt-grid{grid-template-columns:1fr}}
+  .flt{border:1.5px solid var(--line);border-radius:18px;overflow:hidden;background:rgba(13,68,81,.42);transition:transform .3s,border-color .3s,box-shadow .3s}
+  .flt:hover{transform:translateY(-6px);border-color:rgba(31,211,197,.5);box-shadow:0 16px 40px -22px rgba(0,0,0,.8)}
+  .flt-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 22px;background:rgba(4,22,26,.55);border-bottom:1.5px solid var(--line)}
+  .flt-top .dir{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.05rem;letter-spacing:.02em;line-height:1.1}
+  .flt-top .dir small{display:block;font-family:'Hanken Grotesk',sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sun);font-weight:700;margin-top:5px}
+  .flt-top .badge{font-family:'Anton',sans-serif;font-size:.95rem;color:var(--lk-abyss);background:var(--surf);padding:6px 13px;border-radius:9px;letter-spacing:.03em;white-space:nowrap}
+  .flt-body{padding:24px 22px}
+  .flt-leg{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}
+  .flt-leg .pt .t{font-family:'Anton',sans-serif;font-size:2.1rem;line-height:.85}
+  .flt-leg .pt .t sup{font-size:.5em;color:var(--coral);font-family:'Hanken Grotesk',sans-serif;font-weight:800}
+  .flt-leg .pt .c{font-weight:800;letter-spacing:.14em;color:var(--surf);font-size:.92rem;margin-top:6px}
+  .flt-leg .pt .ap{font-size:.65rem;text-transform:uppercase;letter-spacing:.05em;color:var(--sand-dim);margin-top:3px}
+  .flt-leg .pt.r{text-align:right}
+  .flt-leg .mid{display:flex;flex-direction:column;align-items:center;min-width:84px}
+  .flt-leg .mid .d{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--sand-dim);margin-bottom:6px;white-space:nowrap}
+  .flt-leg .mid .ln{width:100%;height:2px;background:var(--line);position:relative}
+  .flt-leg .mid .ln::before,.flt-leg .mid .ln::after{content:"";position:absolute;top:50%;transform:translateY(-50%);width:7px;height:7px;border-radius:50%;background:var(--coral)}
+  .flt-leg .mid .ln::before{left:0}.flt-leg .mid .ln::after{right:0}
+  .flt-leg .mid .pl{color:var(--surf);font-size:.7rem;margin-top:6px;font-weight:800;letter-spacing:.04em}
+  .flt-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding-top:15px;border-top:1px dashed var(--line)}
+  .flt-chips span{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;font-weight:700;padding:5px 11px;border:1.5px solid var(--line);border-radius:8px;color:var(--sand)}
+
   /* SECTION */
   section{padding:100px 0;position:relative}
   .sec-tag{font-family:'Caveat',cursive;font-size:1.7rem;color:var(--sun);transform:rotate(-3deg);display:inline-block;margin-bottom:6px}
@@ -155,6 +180,7 @@
   <div class="brand"><span class="blob"></span>The Boys · LK</div>
   <div class="nav-links">
     <a href="../index.html">← Trips</a>
+    <a href="#flights">Flights</a>
     <a href="#mission">The Mission</a>
     <a href="#camps">Basecamps</a>
     <a href="#know">Intel</a>
@@ -187,6 +213,49 @@
   </div>
 </div>
 
+<section id="flights">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">wheels up, lads</span>
+      <h2 class="sec-title">The <em>flights</em></h2>
+      <p>SriLankan Airlines, direct both ways out of Sydney. Economy with 30 kg each — plenty of room for the duty-free. Heads up: the way home is a midnight red-eye.</p>
+    </div>
+    <div class="flt-grid">
+
+      <div class="flt reveal">
+        <div class="flt-top">
+          <div class="dir">Sydney → Colombo<small>Outbound · Fri 31 Jul 2026</small></div>
+          <div class="badge">UL607</div>
+        </div>
+        <div class="flt-body">
+          <div class="flt-leg">
+            <div class="pt"><div class="t">16:10</div><div class="c">SYD</div><div class="ap">Kingsford Smith · T1</div></div>
+            <div class="mid"><div class="d">11h 15m</div><div class="ln"></div><div class="pl">✈ Direct</div></div>
+            <div class="pt r"><div class="t">22:55</div><div class="c">CMB</div><div class="ap">Bandaranaike Intl</div></div>
+          </div>
+          <div class="flt-chips"><span>SriLankan Airlines</span><span>Economy (O)</span><span>Baggage 30 kg</span></div>
+        </div>
+      </div>
+
+      <div class="flt reveal">
+        <div class="flt-top">
+          <div class="dir">Colombo → Sydney<small>Return · Sun 09 Aug 2026 · red-eye</small></div>
+          <div class="badge">UL606</div>
+        </div>
+        <div class="flt-body">
+          <div class="flt-leg">
+            <div class="pt"><div class="t">00:05</div><div class="c">CMB</div><div class="ap">Bandaranaike Intl</div></div>
+            <div class="mid"><div class="d">10h 05m</div><div class="ln"></div><div class="pl">✈ Direct</div></div>
+            <div class="pt r"><div class="t">14:40</div><div class="c">SYD</div><div class="ap">Kingsford Smith · T1</div></div>
+          </div>
+          <div class="flt-chips"><span>SriLankan Airlines</span><span>Economy (O)</span><span>Baggage 30 kg</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section id="mission">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -201,8 +270,8 @@
         <div>
           <span class="leg-loc">Negombo</span>
           <h3>Land &amp; Lager</h3>
-          <p>Touch down at CMB, a 10-minute hop to Negombo. Drop bags, crack the first round on the beach, and ease into island time with a seafood-and-arrack welcome feast. The boys are officially off-grid.</p>
-          <div class="ops"><span>Airport pickup</span><span>Beach bar</span><span>Welcome feast</span></div>
+          <p>Touch down at CMB at 22:55 and make the 10-minute hop to the Negombo hotel. Too late for heroics — one cold welcome beer, drop the bags, bank some sleep. The real warm-up's in the morning.</p>
+          <div class="ops"><span>Land 22:55</span><span>Negombo check-in</span><span>First cold one</span></div>
         </div>
       </div>
 
@@ -281,18 +350,18 @@
         <div>
           <span class="leg-loc">→ Colombo</span>
           <h3>The Blue Train &amp; The Big Finish</h3>
-          <p>Hang out the door of the famous hill-country train for the photo, then on to Colombo. Last night, full send — rooftop bars, street eats, and whatever the city throws at the grooms.</p>
-          <div class="ops"><span>Scenic train</span><span>Rooftop bars</span><span>Big finish</span></div>
+          <p>Hang out the door of the famous hill-country train, then roll into Colombo. Squeeze in the rooftops and street eats for one last send-off — before a near-midnight run to the airport.</p>
+          <div class="ops"><span>Scenic train</span><span>Rooftop send-off</span><span>Airport run</span></div>
         </div>
       </div>
 
       <div class="leg sun reveal">
         <div class="leg-top"><div class="leg-num">10</div><div class="leg-date">Sun 09 Aug</div></div>
         <div>
-          <span class="leg-loc">Colombo → Home</span>
+          <span class="leg-loc">Red-Eye Home</span>
           <h3>Wheels Up</h3>
-          <p>Brunch, last-minute Colombo shopping, then the short run to CMB. Two men less single, seven men wrecked, one group chat that'll never recover. Home.</p>
-          <div class="ops"><span>Brunch</span><span>Airport</span><span>Home</span></div>
+          <p>UL606 lifts off at 00:05 and lands in Sydney at 14:40. Two men less single, seven men wrecked, and one group chat that'll never recover. Sleep it off on the plane.</p>
+          <div class="ops"><span>Depart 00:05</span><span>Land SYD 14:40</span><span>Home</span></div>
         </div>
       </div>
     </div>
@@ -325,7 +394,7 @@
       <div class="camp reveal">
         <div class="nights">1<span>night</span></div>
         <div class="place">Colombo<small>8 Aug</small></div>
-        <div class="vibe">City lights, rooftop bars and one final send-off before the airport. Make it count.</div>
+        <div class="vibe">Last hurrah — in from Ella, rooftops and street eats, then the midnight red-eye home. Grab a day-use room to freshen up before the airport.</div>
       </div>
     </div>
   </div>
