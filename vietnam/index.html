@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vietnam · The Nine — 18–27 September</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1612;
+    --ink-soft:#3a2f27;
+    --paper:#f3e9d8;
+    --paper-2:#ece0cb;
+    --lacquer:#9e2b25;
+    --lacquer-bright:#c1402f;
+    --jade:#3c6e5a;
+    --gold:#c19a4b;
+    --line:rgba(28,22,18,.14);
+    --shadow:0 24px 60px -28px rgba(28,22,18,.55);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Hanken Grotesk',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* paper grain */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  }
+  ::selection{background:var(--lacquer);color:var(--paper)}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
+  .serif{font-family:'Fraunces',serif}
+
+  /* ---- NAV ---- */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 32px;
+    background:linear-gradient(to bottom,rgba(243,233,216,.96),rgba(243,233,216,0));
+    backdrop-filter:blur(4px);transition:padding .3s,background .3s;
+  }
+  nav.scrolled{padding:12px 32px;background:rgba(243,233,216,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;letter-spacing:.02em;display:flex;align-items:center;gap:9px}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--lacquer)}
+  .nav-links{display:flex;gap:30px;font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;font-weight:500}
+  .nav-links a{color:var(--ink-soft);text-decoration:none;position:relative;transition:color .25s}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--lacquer);transition:width .3s}
+  .nav-links a:hover{color:var(--lacquer)}
+  .nav-links a:hover::after{width:100%}
+  @media(max-width:780px){.nav-links{display:none}}
+
+  /* ---- HERO ---- */
+  header{
+    min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+    position:relative;padding:120px 0 60px;overflow:hidden;
+    background:var(--paper);
+  }
+  header::after{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(120% 80% at 80% -10%,rgba(193,64,47,.14),transparent 55%),
+      radial-gradient(90% 70% at 5% 110%,rgba(60,110,90,.16),transparent 60%),
+      linear-gradient(108deg,var(--paper) 26%,rgba(243,233,216,.62) 52%,rgba(243,233,216,.12) 100%),
+      url("assets/halong.webp") center right/cover no-repeat;
+  }
+  @media(max-width:780px){header::after{background:
+      radial-gradient(120% 80% at 80% -10%,rgba(193,64,47,.14),transparent 55%),
+      linear-gradient(180deg,var(--paper) 40%,rgba(243,233,216,.55) 75%,rgba(243,233,216,.2)),
+      url("assets/halong.webp") center/cover no-repeat;}}
+  .eyebrow{
+    font-size:.78rem;text-transform:uppercase;letter-spacing:.42em;font-weight:600;color:var(--lacquer);
+    display:flex;align-items:center;gap:16px;margin-bottom:26px;
+  }
+  .eyebrow::before{content:"";width:46px;height:1.5px;background:var(--lacquer)}
+  .hero-title{
+    font-family:'Fraunces',serif;font-weight:300;line-height:.86;letter-spacing:-.02em;
+    font-size:clamp(4.2rem,17vw,15rem);color:var(--ink);
+  }
+  .hero-title em{font-style:italic;color:var(--lacquer);font-weight:400}
+  .hero-sub{
+    display:flex;flex-wrap:wrap;gap:14px 34px;align-items:baseline;margin-top:34px;
+    font-size:clamp(1rem,1.6vw,1.35rem);color:var(--ink-soft);max-width:760px;
+  }
+  .hero-sub .lede{font-family:'Fraunces',serif;font-style:italic;font-size:1.45rem;color:var(--ink)}
+  .meta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:46px}
+  .chip{
+    border:1px solid var(--line);border-radius:100px;padding:9px 20px;font-size:.8rem;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.25);backdrop-filter:blur(3px);
+  }
+  .chip b{color:var(--lacquer)}
+  .scroll-cue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);opacity:.7;animation:bob 2.4s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+  /* ---- ROUTE STRIP ---- */
+  .route{background:var(--ink);color:var(--paper);padding:54px 0;position:relative}
+  .route .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px}
+  .stop{display:flex;flex-direction:column;gap:4px;position:relative}
+  .stop .n{font-family:'Fraunces',serif;font-size:.9rem;color:var(--gold);letter-spacing:.1em}
+  .stop .p{font-family:'Fraunces',serif;font-size:clamp(1.3rem,2.4vw,2rem);font-weight:400}
+  .stop .d{font-size:.78rem;color:rgba(243,233,216,.6);letter-spacing:.06em}
+  .arrow{color:var(--lacquer-bright);font-size:1.6rem;opacity:.8}
+  @media(max-width:720px){.arrow{display:none}.route .wrap{gap:26px}}
+
+  /* ---- FLIGHTS ---- */
+  .flights{background:var(--paper-2)}
+  .flight-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:860px){.flight-grid{grid-template-columns:1fr}}
+  .flight{background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden;position:relative;transition:transform .35s,box-shadow .35s}
+  .flight:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .flight-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 24px;background:var(--ink);color:var(--paper)}
+  .flight-top .dir{font-family:'Fraunces',serif;font-size:1.18rem;line-height:1.15}
+  .flight-top .dir small{display:block;font-family:'Hanken Grotesk',sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:5px;font-weight:600}
+  .flight-top .tag2{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(243,233,216,.4);padding:5px 11px;border-radius:100px;color:var(--gold);white-space:nowrap;font-weight:600}
+  .flight-body{padding:24px}
+  .leg{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}
+  .leg .pt{display:flex;flex-direction:column;gap:3px}
+  .leg .pt.r{text-align:right;align-items:flex-end}
+  .leg .time{font-family:'Fraunces',serif;font-size:1.85rem;line-height:1}
+  .leg .time sup{font-size:.55em;color:var(--lacquer);font-family:'Hanken Grotesk',sans-serif;font-weight:700}
+  .leg .code{font-weight:700;letter-spacing:.12em;font-size:.92rem}
+  .leg .term{font-size:.68rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.06em}
+  .leg .mid{display:flex;flex-direction:column;align-items:center;min-width:86px}
+  .leg .mid .dur{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:5px;white-space:nowrap}
+  .leg .path{width:100%;height:1.5px;background:var(--line);position:relative}
+  .leg .path::before,.leg .path::after{content:"";position:absolute;top:50%;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:var(--lacquer)}
+  .leg .path::before{left:0}.leg .path::after{right:0}
+  .leg .plane{font-size:.7rem;margin-top:5px;color:var(--lacquer);font-weight:700;letter-spacing:.06em}
+  .stopover{display:flex;align-items:center;gap:9px;margin:14px 0;padding:9px 14px;background:var(--paper-2);border-left:2px solid var(--gold);font-size:.72rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+  .flight-meta{margin-top:18px;padding-top:14px;border-top:1px dashed var(--line);font-size:.82rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px}
+  .flight-meta b{color:var(--ink)}
+  .fare-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+  .fare-chips span{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:5px 11px;border:1px solid var(--line);border-radius:6px;background:rgba(255,255,255,.45)}
+
+  /* ---- SECTION SHELL ---- */
+  section{padding:108px 0;position:relative}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:58px;flex-wrap:wrap}
+  .sec-num{font-family:'Fraunces',serif;font-size:.9rem;color:var(--lacquer);letter-spacing:.3em}
+  .sec-title{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.4rem,5.5vw,4.2rem);line-height:1;letter-spacing:-.01em}
+  .sec-title em{font-style:italic;color:var(--jade)}
+  .sec-note{max-width:330px;font-size:.95rem;color:var(--ink-soft);border-left:2px solid var(--lacquer);padding-left:18px}
+
+  /* ---- TIMELINE ---- */
+  .timeline{position:relative}
+  .timeline::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--lacquer),var(--jade),var(--gold));opacity:.35}
+  @media(max-width:680px){.timeline::before{left:0}}
+  .day{
+    position:relative;padding:0 0 56px 56px;
+  }
+  .day:last-child{padding-bottom:0}
+  .day::before{
+    content:"";position:absolute;left:-7px;top:6px;width:16px;height:16px;border-radius:50%;
+    background:var(--paper);border:2.5px solid var(--lacquer);transition:transform .3s,background .3s;
+  }
+  .day:hover::before{background:var(--lacquer);transform:scale(1.25)}
+  .day .tag{font-size:.74rem;text-transform:uppercase;letter-spacing:.22em;font-weight:700;color:var(--jade);margin-bottom:4px}
+  .day h3{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.1;margin-bottom:10px}
+  .day h3 .place{color:var(--lacquer)}
+  .day p{max-width:660px;color:var(--ink-soft);font-size:1.02rem}
+  .day-photo{margin:18px 0 6px;max-width:660px;overflow:hidden;border-radius:4px;position:relative}
+  .day-photo img{width:100%;height:280px;object-fit:cover;display:block;filter:saturate(1.05);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+  .day-photo:hover img{transform:scale(1.06)}
+  .day-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 18px 14px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--paper);background:linear-gradient(to top,rgba(28,22,18,.78),transparent);z-index:1}
+  .day .pins{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .pin{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:5px 12px;border:1px solid var(--line);border-radius:6px;background:rgba(255,255,255,.3)}
+
+  /* ---- STAYS ---- */
+  .stays{background:var(--paper-2)}
+  .stay-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+  .stay{
+    background:var(--paper);border:1px solid var(--line);border-radius:4px;
+    position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s;
+  }
+  .stay-photo{position:relative;height:180px;overflow:hidden}
+  .stay-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .stay-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(28,22,18,.45),transparent 55%);z-index:1}
+  .stay:hover .stay-photo img{transform:scale(1.07)}
+  .stay-body{padding:24px 26px 30px}
+  .stay::after{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:var(--lacquer);transform:scaleX(0);transform-origin:left;transition:transform .4s;z-index:2}
+  .stay:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .stay:hover::after{transform:scaleX(1)}
+  .stay .nights{margin-top:-58px;position:relative;z-index:2;color:var(--paper);text-shadow:0 2px 10px rgba(0,0,0,.4)}
+  .stay .nights span{color:rgba(243,233,216,.85)}
+  .stay .nights{font-family:'Fraunces',serif;font-size:2.6rem;line-height:1;color:var(--lacquer);font-weight:300}
+  .stay .nights span{font-size:.8rem;font-family:'Hanken Grotesk';color:var(--ink-soft);text-transform:uppercase;letter-spacing:.15em;vertical-align:super}
+  .stay .city{font-family:'Fraunces',serif;font-size:1.45rem;margin:12px 0 4px}
+  .stay .dates{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--jade);font-weight:600;margin-bottom:16px}
+  .stay .hotel{font-size:.95rem;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:14px}
+  .stay .hotel b{color:var(--ink);font-weight:600}
+
+  /* ---- NOTES ---- */
+  .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;background:var(--line);border:1px solid var(--line)}
+  .note{background:var(--paper);padding:30px 28px}
+  .note .ic{font-family:'Fraunces',serif;font-style:italic;color:var(--lacquer);font-size:1.4rem;margin-bottom:8px}
+  .note h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;margin-bottom:8px}
+  .note p{font-size:.92rem;color:var(--ink-soft)}
+  .budget{margin-top:48px;background:var(--ink);color:var(--paper);border-radius:4px;padding:42px 40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+  .budget .big{font-family:'Fraunces',serif;font-size:clamp(2.2rem,6vw,3.6rem);font-weight:300;color:var(--gold)}
+  .budget .big small{display:block;font-family:'Hanken Grotesk';font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(243,233,216,.6);margin-top:8px}
+  .budget p{max-width:420px;font-size:.92rem;color:rgba(243,233,216,.8)}
+
+  /* ---- FOOTER ---- */
+  footer{background:var(--lacquer);color:var(--paper);padding:90px 0 50px;text-align:center;position:relative}
+  footer .big{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(3rem,11vw,8rem);line-height:.9;letter-spacing:-.02em}
+  footer .big em{font-style:italic}
+  footer p{margin-top:20px;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;opacity:.85}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="brand"><span class="dot"></span>The Nine · Vietnam</div>
+  <div class="nav-links">
+    <a href="#flights">Flights</a>
+    <a href="#days">Itinerary</a>
+    <a href="#stays">Stays</a>
+    <a href="#notes">Know-how</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">18 – 27 September · Nine Travellers</div>
+    <h1 class="hero-title">Việt<em>nam</em></h1>
+    <div class="hero-sub">
+      <span class="lede">South to north, nine nights, no rush.</span>
+      <span>Saigon's roar, the lanterns of Hoi An, Hanoi's old streets, and a karst-studded bay — strung together with two short flights and a lot of good dinners.</span>
+    </div>
+    <div class="meta-row">
+      <span class="chip">9 <b>Nights</b></span>
+      <span class="chip">4 <b>Cities</b></span>
+      <span class="chip"><b>Boutique</b> · Upscale</span>
+      <span class="chip">1 <b>Luxury Cruise</b></span>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll ↓</div>
+</header>
+
+<div class="route">
+  <div class="wrap">
+    <div class="stop"><span class="n">01</span><span class="p">Saigon</span><span class="d">Sep 18–20</span></div>
+    <span class="arrow">→</span>
+    <div class="stop"><span class="n">02</span><span class="p">Hoi An</span><span class="d">Sep 21–23</span></div>
+    <span class="arrow">→</span>
+    <div class="stop"><span class="n">03</span><span class="p">Hanoi</span><span class="d">Sep 24 & 26</span></div>
+    <span class="arrow">→</span>
+    <div class="stop"><span class="n">04</span><span class="p">Halong Bay</span><span class="d">Sep 25</span></div>
+  </div>
+</div>
+
+<section id="flights" class="flights">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="sec-num">I · GETTING THERE</div>
+        <h2 class="sec-title">The <em>flights</em></h2>
+      </div>
+      <p class="sec-note">Vietnam Airlines · Economy Lite · 23 kg checked + 10 kg cabin each. Open-jaw: into Saigon, home from Hanoi.</p>
+    </div>
+    <div class="flight-grid">
+
+      <div class="flight reveal">
+        <div class="flight-top">
+          <div class="dir">Sydney → Ho Chi Minh City<small>Outbound · Fri 18 Sep 2026</small></div>
+          <div class="tag2">Nonstop · 9h 00m</div>
+        </div>
+        <div class="flight-body">
+          <div class="leg">
+            <div class="pt"><div class="time">10:15</div><div class="code">SYD</div><div class="term">Kingsford Smith · T1</div></div>
+            <div class="mid"><div class="dur">9h 00m</div><div class="path"></div><div class="plane">✈ VN 772</div></div>
+            <div class="pt r"><div class="time">16:15</div><div class="code">SGN</div><div class="term">Tan Son Nhat · T2</div></div>
+          </div>
+          <div class="flight-meta"><span><b>VN 772</b> · Vietnam Airlines</span><span>Airbus A350-900</span></div>
+          <div class="fare-chips"><span>Economy Lite</span><span>Checked 1 × 23kg</span><span>Cabin 1 × 10kg</span></div>
+        </div>
+      </div>
+
+      <div class="flight reveal">
+        <div class="flight-top">
+          <div class="dir">Hanoi → Sydney<small>Return · Sun 27 Sep 2026 · 13h 15m total</small></div>
+          <div class="tag2">1 Stop · SGN</div>
+        </div>
+        <div class="flight-body">
+          <div class="leg">
+            <div class="pt"><div class="time">16:00</div><div class="code">HAN</div><div class="term">Noi Bai · T1</div></div>
+            <div class="mid"><div class="dur">2h 10m</div><div class="path"></div><div class="plane">✈ VN 273</div></div>
+            <div class="pt r"><div class="time">18:10</div><div class="code">SGN</div><div class="term">Tan Son Nhat · T3</div></div>
+          </div>
+          <div class="stopover">⏱ 2h 35m layover in Saigon · terminal change T3 → T2</div>
+          <div class="leg">
+            <div class="pt"><div class="time">20:45</div><div class="code">SGN</div><div class="term">Tan Son Nhat · T2</div></div>
+            <div class="mid"><div class="dur">8h 30m</div><div class="path"></div><div class="plane">✈ VN 773</div></div>
+            <div class="pt r"><div class="time">08:15<sup>+1</sup></div><div class="code">SYD</div><div class="term">Kingsford Smith · T1</div></div>
+          </div>
+          <div class="flight-meta"><span><b>VN 273</b> · Boeing 787</span><span><b>VN 773</b> · A350-900</span><span>Arrives Mon 28 Sep</span></div>
+          <div class="fare-chips"><span>Economy Lite</span><span>Checked 1 × 23kg</span><span>Cabin 1 × 10kg</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="days">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="sec-num">II · THE JOURNEY</div>
+        <h2 class="sec-title">Day by <em>day</em></h2>
+      </div>
+      <p class="sec-note">Ten days, gently paced. Private transfers throughout; mornings earned, evenings savoured.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="day reveal">
+        <div class="tag">Day 1 · Fri 18 Sep</div>
+        <h3>Touch down in <span class="place">Saigon</span></h3>
+        <p>Land at Tan Son Nhat at 16:15, private transfers to the hotel. Shake off the flight with an easy first evening — rooftop drinks over the city and a relaxed welcome dinner. No alarms.</p>
+        <div class="pins"><span class="pin">Arrive 16:15</span><span class="pin">Rooftop Drinks</span><span class="pin">Welcome Dinner</span></div>
+      </div>
+      <div class="day reveal">
+        <div class="tag">Day 2 · Sat 19 Sep</div>
+        <h3><span class="place">Saigon</span> — tunnels & the city</h3>
+        <p>The Cu Chi Tunnels in the morning. Afternoon downtown — War Remnants Museum, Notre-Dame, the Central Post Office, Ben Thanh Market — then dinner and Bui Vien if the energy holds.</p>
+        <div class="pins"><span class="pin">Cu Chi Tunnels</span><span class="pin">Ben Thanh</span><span class="pin">Bui Vien</span></div>
+      </div>
+      <div class="day reveal">
+        <div class="tag">Day 3 · Sun 20 Sep</div>
+        <h3>The <span class="place">Mekong Delta</span></h3>
+        <p>A day trip into the delta — sampans through coconut canals, river markets and tropical fruit at Cai Be / Ben Tre. Back to Saigon for the evening. (Swap for a spa-and-shopping day if the group prefers.)</p>
+        <figure class="day-photo"><img src="assets/mekong.webp" alt="Boats at a floating market in the Mekong Delta" loading="lazy"><figcaption>Floating market · Mekong Delta</figcaption></figure>
+        <div class="pins"><span class="pin">Sampan Cruise</span><span class="pin">Floating Market</span></div>
+      </div>
+      <div class="day reveal">
+        <div class="tag">Day 4 · Mon 21 Sep</div>
+        <h3><span class="place">Saigon</span> → Hoi An</h3>
+        <p>Morning at leisure, then fly Ho Chi Minh City → Da Nang and transfer to Hoi An. Check in, then a riverfront dinner under the lanterns.</p>
+        <div class="pins"><span class="pin">Flight SGN→DAD</span><span class="pin">Riverfront Dinner</span></div>
+      </div>
+      <div class="day reveal">
+        <div class="tag">Day 5 · Tue 22 Sep</div>
+        <h3>Lanterns of <span class="place">Hoi An</span></h3>
+        <p>The Ancient Town, the Japanese Bridge, the tailors (order early — final fitting before you fly north), and An Bang beach in the afternoon. After dark: a lantern boat ride and floating candles on the Thu Bon.</p>
+        <div class="pins"><span class="pin">Ancient Town</span><span class="pin">Custom Tailors</span><span class="pin">Lantern Boats</span></div>
+      </div>
+      <div class="day reveal">
+        <div class="tag">Day 6 · Wed 23 Sep</div>
+        <h3><span class="place">Da Nang</span> — choose your day</h3>
+        <p>Ba Na Hills & the Golden Bridge plus the Marble Mountains — or a hands-on Vietnamese cooking class and a countryside bike tour. Spa and pool to close it out.</p>
+        <figure class="day-photo"><img src="assets/danang.webp" alt="The Golden Bridge held by giant stone hands, Ba Na Hills" loading="lazy"><figcaption>The Golden Bridge · Ba Na Hills, Da Nang</figcaption></figure>
+        <div class="pins"><span class="pin">Golden Bridge</span><span class="pin">Cooking Class</span><span class="pin">Spa</span></div>
+      </div>
+      <div class="day reveal">
+        <div class="tag">Day 7 · Thu 24 Sep</div>
+        <h3>North to <span class="place">Hanoi</span></h3>
+        <p>Final tailor fittings, then fly Da Nang → Hanoi. Settle into the Metropole, then a slow loop of the Old Quarter, egg coffee at Giảng, and a long Hanoi dinner.</p>
+        <div class="pins"><span class="pin">Flight DAD→HAN</span><span class="pin">Old Quarter</span><span class="pin">Egg Coffee</span></div>
+      </div>
+      <div class="day reveal">
+        <div class="tag">Day 8 · Fri 25 Sep</div>
+        <h3>Aboard the bay — <span class="place">Lan Ha / Halong</span></h3>
+        <p>Private coach to the coast, then the luxury overnight cruise. Kayaking through the karsts, a hidden cave, a swim, sunset on the sundeck, a seafood dinner, and night squid-fishing.</p>
+        <div class="pins"><span class="pin">Overnight Cruise</span><span class="pin">Kayaking</span><span class="pin">Sundeck Sunset</span></div>
+      </div>
+      <div class="day reveal">
+        <div class="tag">Day 9 · Sat 26 Sep</div>
+        <h3>Bay → <span class="place">Hanoi</span></h3>
+        <p>Sunrise tai-chi and brunch as you cruise back. Disembark midday and drive to Hanoi for the afternoon — Hoan Kiem Lake, the Temple of Literature, a final street-food crawl, then a water-puppet show.</p>
+        <div class="pins"><span class="pin">Temple of Literature</span><span class="pin">Street Food</span><span class="pin">Water Puppets</span></div>
+      </div>
+      <div class="day reveal">
+        <div class="tag">Day 10 · Sun 27 Sep</div>
+        <h3>Tạm biệt, Vietnam</h3>
+        <p>A leisurely Hanoi morning and last-minute shopping, then a private transfer to Noi Bai for the 16:00 flight home. Bags full of tailored suits, lantern photos, and a group chat that won't shut up for months.</p>
+        <div class="pins"><span class="pin">Hanoi Morning</span><span class="pin">Depart 16:00</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stays" class="stays">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="sec-num">III · WHERE WE SLEEP</div>
+        <h2 class="sec-title">The <em>stays</em></h2>
+      </div>
+      <p class="sec-note">Hold 4–5 rooms per property and a 5-cabin block on the cruise early — luxury inventory is thin in September.</p>
+    </div>
+    <div class="stay-grid">
+      <div class="stay reveal">
+        <div class="stay-photo"><img src="assets/saigon.webp" alt="Ho Chi Minh City skyline" loading="lazy"></div>
+        <div class="stay-body">
+          <div class="nights">3<span>nights</span></div>
+          <div class="city">Ho Chi Minh City</div>
+          <div class="dates">Sep 18 – 20</div>
+          <div class="hotel"><b>Park Hyatt Saigon</b> or <b>The Reverie</b> — downtown polish, rooftop views.</div>
+        </div>
+      </div>
+      <div class="stay reveal">
+        <div class="stay-photo"><img src="assets/hoian.webp" alt="Silk lanterns in Hoi An Ancient Town" loading="lazy"></div>
+        <div class="stay-body">
+          <div class="nights">3<span>nights</span></div>
+          <div class="city">Hoi An</div>
+          <div class="dates">Sep 21 – 23</div>
+          <div class="hotel"><b>Four Seasons The Nam Hai</b> or <b>Anantara Hoi An</b> — beachfront villas or riverside calm.</div>
+        </div>
+      </div>
+      <div class="stay reveal">
+        <div class="stay-photo"><img src="assets/hanoi.webp" alt="Sunset over Hoan Kiem Lake, Hanoi" loading="lazy"></div>
+        <div class="stay-body">
+          <div class="nights">2<span>nights</span></div>
+          <div class="city">Hanoi</div>
+          <div class="dates">Sep 24 & 26</div>
+          <div class="hotel"><b>Sofitel Legend Metropole</b> — colonial grande dame in the Old Quarter; your base either side of the bay.</div>
+        </div>
+      </div>
+      <div class="stay reveal">
+        <div class="stay-photo"><img src="assets/halong.webp" alt="Karst islands of Halong Bay" loading="lazy"></div>
+        <div class="stay-body">
+          <div class="nights">1<span>night</span></div>
+          <div class="city">Halong Bay</div>
+          <div class="dates">Sep 25</div>
+          <div class="hotel"><b>Heritage Line <i>Ylang</i></b> or <b>Aqua de Mar</b> — overnight luxury cruise on quieter Lan Ha Bay.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="notes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="sec-num">IV · GOOD TO KNOW</div>
+        <h2 class="sec-title">The <em>know-how</em></h2>
+      </div>
+      <p class="sec-note">The small print that keeps nine people moving smoothly.</p>
+    </div>
+    <div class="notes-grid reveal">
+      <div class="note"><div class="ic">i</div><h4>Visas</h4><p>Most nationalities need a Vietnam e-visa — apply online 2–4 weeks out, all nine together.</p></div>
+      <div class="note"><div class="ic">ii</div><h4>Internal Flights</h4><p>Two legs to book as a group: <b>SGN→DAD</b> (Sep 21) and <b>DAD→HAN</b> (Sep 24). Vietnam Airlines / Bamboo.</p></div>
+      <div class="note"><div class="ic">iii</div><h4>Money</h4><p>VND cash for markets & street food; cards at hotels and restaurants. Carry small notes.</p></div>
+      <div class="note"><div class="ic">iv</div><h4>Weather</h4><p>~28–33°C, humid, short afternoon showers likely in the centre. Light layers + a rain shell.</p></div>
+      <div class="note"><div class="ic">v</div><h4>Getting Around</h4><p>Grab app for taxis in cities; pre-arranged private vans for the group on transfer days.</p></div>
+      <div class="note"><div class="ic">vi</div><h4>Pack For It</h4><p>Breathable clothing, good sandals, a temple-friendly cover-up, and room for tailored finds.</p></div>
+    </div>
+
+    <div class="budget reveal">
+      <div class="big">$2.5–3.8k<small>per person · ground costs</small></div>
+      <p>Indicative: luxury hotels (twin-share), the overnight cruise, internal flights, private transfers, guides and most meals. Excludes international flights — refine once rooms are locked.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="big">See you in <em>September</em></div>
+    <p>The Nine · 18 – 27 September 2026 · Saigon → Hoi An → Hanoi → Halong</p>
+    <p style="opacity:.55;letter-spacing:.1em;font-size:.66rem;margin-top:14px">Location photography via Wikimedia Commons (CC) · optimised to WebP</p>
+  </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*70)+'ms';io.observe(el)});
+</script>
+</body>
+</html>
