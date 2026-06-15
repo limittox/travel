@@ -59,7 +59,13 @@
   @media(max-width:760px){.nav-links{display:none}}
 
   /* HERO */
-  header{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;padding:130px 0 90px}
+  header{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;padding:130px 0 90px;overflow:hidden}
+  header::after{content:"";position:absolute;inset:0;z-index:0;
+    background:
+      linear-gradient(90deg,var(--abyss) 6%,rgba(5,34,41,.55) 48%,rgba(5,34,41,.15) 100%),
+      linear-gradient(180deg,rgba(5,34,41,.35),rgba(5,34,41,.7) 72%,var(--abyss)),
+      url("assets/hero.webp") center/cover no-repeat;}
+  @media(max-width:760px){header::after{background:linear-gradient(180deg,rgba(5,34,41,.5),rgba(5,34,41,.8) 68%,var(--abyss)),url("assets/hero.webp") center/cover no-repeat}}
   .kicker{display:inline-flex;align-items:center;gap:12px;font-size:.8rem;text-transform:uppercase;letter-spacing:.3em;font-weight:800;color:var(--sun);margin-bottom:22px}
   .kicker::before{content:"";width:42px;height:2px;background:var(--sun)}
   .hero-title{font-family:'Anton',sans-serif;text-transform:uppercase;line-height:.84;letter-spacing:.005em;font-size:clamp(3.4rem,13vw,11rem)}
@@ -136,6 +142,10 @@
   .leg.coral .leg-loc{background:var(--coral);color:var(--sand)} .leg.surf .leg-loc{background:var(--surf);color:var(--ink)}
   .leg h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.7rem;line-height:1;margin-bottom:10px;letter-spacing:.01em}
   .leg p{color:var(--sand-dim);font-size:1rem;max-width:640px}
+  .leg-photo{margin:16px 0 4px;border-radius:12px;overflow:hidden;position:relative;max-width:640px}
+  .leg-photo img{width:100%;height:250px;object-fit:cover;display:block;filter:saturate(1.06);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .leg-photo:hover img{transform:scale(1.06)}
+  .leg-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 12px;font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--sand);background:linear-gradient(to top,rgba(5,34,41,.85),transparent);z-index:1}
   .ops{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
   .ops span{font-size:.72rem;font-weight:700;letter-spacing:.04em;padding:5px 12px;border:1.5px solid var(--line);border-radius:8px;color:var(--sand)}
   @media(max-width:620px){.leg{grid-template-columns:1fr;gap:10px;padding:22px}.leg-top{display:flex;align-items:baseline;gap:16px}.leg-num{font-size:2.8rem}}
@@ -143,9 +153,14 @@
   /* BASECAMPS */
   .camps{background:linear-gradient(180deg,transparent,rgba(10,55,66,.45),transparent)}
   .camp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-  .camp{border:1.5px solid var(--line);border-radius:18px;padding:30px 26px;background:rgba(13,68,81,.4);position:relative;overflow:hidden;transition:transform .3s,background .3s}
+  .camp{border:1.5px solid var(--line);border-radius:18px;background:rgba(13,68,81,.4);position:relative;overflow:hidden;transition:transform .3s,background .3s}
   .camp:hover{transform:translateY(-7px);background:rgba(13,68,81,.7)}
-  .camp .nights{font-family:'Anton',sans-serif;font-size:3rem;line-height:.85;color:var(--coral)}
+  .camp-photo{height:172px;overflow:hidden;position:relative}
+  .camp-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.06);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .camp-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,34,41,.9),transparent 58%)}
+  .camp:hover .camp-photo img{transform:scale(1.08)}
+  .camp-body{padding:0 26px 30px}
+  .camp .nights{font-family:'Anton',sans-serif;font-size:3rem;line-height:.85;color:var(--coral);margin-top:-44px;position:relative;z-index:2;text-shadow:0 2px 12px rgba(0,0,0,.5)}
   .camp .nights span{font-family:'Hanken Grotesk',sans-serif;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sand-dim);font-weight:700;vertical-align:super}
   .camp .place{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.5rem;margin:14px 0 4px;line-height:1}
   .camp .place small{display:block;font-family:'Hanken Grotesk',sans-serif;text-transform:none;font-size:.78rem;font-weight:700;letter-spacing:.1em;color:var(--surf);margin-top:6px}
@@ -301,6 +316,7 @@
           <span class="leg-loc">Weligama</span>
           <h3>Surf's Up</h3>
           <p>Beginner-friendly waves at Weligama — lessons for the kooks, cold ones for the spectators. Stilt-fishermen photo op, a beach-club afternoon, and a seafood BBQ as the sun drops.</p>
+          <figure class="leg-photo"><img src="assets/surf.webp" alt="Surfers in the waves at Weligama" loading="lazy"><figcaption>Beginner waves · Weligama Bay</figcaption></figure>
           <div class="ops"><span>Surf lessons</span><span>Beach club</span><span>Seafood BBQ</span></div>
         </div>
       </div>
@@ -321,6 +337,7 @@
           <span class="leg-loc">Galle / Chill</span>
           <h3>Galle &amp; Recover</h3>
           <p>Day trip to Galle Fort — ramparts, cafés, a cold one on the old Dutch walls — or write the whole day off to the pool and a well-earned recovery. Dealer's choice.</p>
+          <figure class="leg-photo"><img src="assets/galle.webp" alt="The ramparts and lighthouse of Galle Fort" loading="lazy"><figcaption>The old Dutch ramparts · Galle Fort</figcaption></figure>
           <div class="ops"><span>Galle Fort</span><span>Ramparts</span><span>Recovery</span></div>
         </div>
       </div>
@@ -377,24 +394,36 @@
     </div>
     <div class="camp-grid">
       <div class="camp reveal">
-        <div class="nights">2<span>nights</span></div>
-        <div class="place">Negombo<small>31 Jul – 1 Aug</small></div>
-        <div class="vibe">Beach town right by the airport. Easy landing, fresh seafood, sunset over the Indian Ocean. The gentle warm-up.</div>
+        <div class="camp-photo"><img src="assets/negombo.webp" alt="Fishing boats on Negombo beach" loading="lazy"></div>
+        <div class="camp-body">
+          <div class="nights">2<span>nights</span></div>
+          <div class="place">Negombo<small>31 Jul – 1 Aug</small></div>
+          <div class="vibe">Beach town right by the airport. Easy landing, fresh seafood, sunset over the Indian Ocean. The gentle warm-up.</div>
+        </div>
       </div>
       <div class="camp reveal">
-        <div class="nights">4<span>nights</span></div>
-        <div class="place">South Coast<small>Ahangama · Weligama · Mirissa · 2 – 5 Aug</small></div>
-        <div class="vibe">Surf, stilt fishermen and beach bars. The beating heart of the trip — base near Ahangama and roam the coast.</div>
+        <div class="camp-photo"><img src="assets/south.webp" alt="Traditional stilt fishermen on the south coast" loading="lazy"></div>
+        <div class="camp-body">
+          <div class="nights">4<span>nights</span></div>
+          <div class="place">South Coast<small>Ahangama · Weligama · Mirissa · 2 – 5 Aug</small></div>
+          <div class="vibe">Surf, stilt fishermen and beach bars. The beating heart of the trip — base near Ahangama and roam the coast.</div>
+        </div>
       </div>
       <div class="camp reveal">
-        <div class="nights">2<span>nights</span></div>
-        <div class="place">Ella<small>6 – 7 Aug</small></div>
-        <div class="vibe">Tea hills, waterfalls and the Nine Arch Bridge. Cooler air, huge views, and the best curve-ball on the route.</div>
+        <div class="camp-photo"><img src="assets/ella.webp" alt="The Nine Arch Bridge near Ella" loading="lazy"></div>
+        <div class="camp-body">
+          <div class="nights">2<span>nights</span></div>
+          <div class="place">Ella<small>6 – 7 Aug</small></div>
+          <div class="vibe">Tea hills, waterfalls and the Nine Arch Bridge. Cooler air, huge views, and the best curve-ball on the route.</div>
+        </div>
       </div>
       <div class="camp reveal">
-        <div class="nights">1<span>night</span></div>
-        <div class="place">Colombo<small>8 Aug</small></div>
-        <div class="vibe">Last hurrah — in from Ella, rooftops and street eats, then the midnight red-eye home. Grab a day-use room to freshen up before the airport.</div>
+        <div class="camp-photo"><img src="assets/colombo.webp" alt="Colombo city skyline" loading="lazy"></div>
+        <div class="camp-body">
+          <div class="nights">1<span>night</span></div>
+          <div class="place">Colombo<small>8 Aug</small></div>
+          <div class="vibe">Last hurrah — in from Ella, rooftops and street eats, then the midnight red-eye home. Grab a day-use room to freshen up before the airport.</div>
+        </div>
       </div>
     </div>
   </div>
