@@ -136,8 +136,12 @@
   .leg:hover{transform:translateX(6px);border-color:rgba(31,211,197,.5);box-shadow:-8px 14px 40px -20px rgba(0,0,0,.7)}
   .leg:hover::before{transform:scaleY(1)}
   .leg.coral::before{background:var(--coral)} .leg.sun::before{background:var(--sun)}
-  .leg-num{font-family:'Anton',sans-serif;font-size:3.6rem;line-height:.8;color:transparent;-webkit-text-stroke:1.5px var(--surf-deep)}
-  .leg-date{font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:var(--sand-dim);margin-top:8px}
+  .leg-date{display:flex;flex-direction:column;line-height:1}
+  .leg-date .dw{font-size:.74rem;text-transform:uppercase;letter-spacing:.18em;font-weight:800;color:var(--sand-dim)}
+  .leg-date .dd{font-family:'Anton',sans-serif;font-size:2.7rem;line-height:.92;color:var(--surf);margin:3px 0 1px}
+  .leg-date .dm{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.1rem;letter-spacing:.1em;color:var(--sand)}
+  .leg.coral .leg-date .dd{color:var(--coral)}
+  .leg.sun .leg-date .dd{color:var(--sun)}
   .leg-loc{display:inline-block;font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--ink);background:var(--sun);padding:4px 11px;border-radius:100px;margin-bottom:10px}
   .leg.coral .leg-loc{background:var(--coral);color:var(--sand)} .leg.surf .leg-loc{background:var(--surf);color:var(--ink)}
   .leg h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.7rem;line-height:1;margin-bottom:10px;letter-spacing:.01em}
@@ -148,7 +152,7 @@
   .leg-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 12px;font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--sand);background:linear-gradient(to top,rgba(5,34,41,.85),transparent);z-index:1}
   .ops{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
   .ops span{font-size:.72rem;font-weight:700;letter-spacing:.04em;padding:5px 12px;border:1.5px solid var(--line);border-radius:8px;color:var(--sand)}
-  @media(max-width:620px){.leg{grid-template-columns:1fr;gap:10px;padding:22px}.leg-top{display:flex;align-items:baseline;gap:16px}.leg-num{font-size:2.8rem}}
+  @media(max-width:620px){.leg{grid-template-columns:1fr;gap:10px;padding:22px}}
 
   /* BASECAMPS */
   .camps{background:linear-gradient(180deg,transparent,rgba(10,55,66,.45),transparent)}
@@ -284,7 +288,7 @@
 
     <div class="legs">
       <div class="leg surf reveal">
-        <div class="leg-top"><div class="leg-num">01</div><div class="leg-date">Fri 31 Jul</div></div>
+        <div class="leg-top"><div class="leg-date"><span class="dw">Fri</span><span class="dd">31</span><span class="dm">Jul</span></div></div>
         <div>
           <span class="leg-loc">Colombo</span>
           <h3>Land &amp; Into The Villa</h3>
@@ -294,7 +298,7 @@
       </div>
 
       <div class="leg surf reveal">
-        <div class="leg-top"><div class="leg-num">02</div><div class="leg-date">Sat 01 Aug</div></div>
+        <div class="leg-top"><div class="leg-date"><span class="dw">Sat</span><span class="dd">01</span><span class="dm">Aug</span></div></div>
         <div>
           <span class="leg-loc">Colombo</span>
           <h3>Colombo Warm-Up</h3>
@@ -305,7 +309,7 @@
       </div>
 
       <div class="leg sun reveal">
-        <div class="leg-top"><div class="leg-num">03</div><div class="leg-date">Sun 02 Aug</div></div>
+        <div class="leg-top"><div class="leg-date"><span class="dw">Sun</span><span class="dd">02</span><span class="dm">Aug</span></div></div>
         <div>
           <span class="leg-loc">Colombo</span>
           <h3>Villa Life &amp; The Big Night</h3>
@@ -315,7 +319,7 @@
       </div>
 
       <div class="leg coral reveal">
-        <div class="leg-top"><div class="leg-num">04</div><div class="leg-date">Mon 03 Aug</div></div>
+        <div class="leg-top"><div class="leg-date"><span class="dw">Mon</span><span class="dd">03</span><span class="dm">Aug</span></div></div>
         <div>
           <span class="leg-loc">→ South Coast</span>
           <h3>South Bound</h3>
@@ -325,7 +329,7 @@
       </div>
 
       <div class="leg surf reveal">
-        <div class="leg-top"><div class="leg-num">05</div><div class="leg-date">Tue 04 Aug</div></div>
+        <div class="leg-top"><div class="leg-date"><span class="dw">Tue</span><span class="dd">04</span><span class="dm">Aug</span></div></div>
         <div>
           <span class="leg-loc">Ahangama / Weligama</span>
           <h3>Surf &amp; The Coast</h3>
@@ -336,7 +340,7 @@
       </div>
 
       <div class="leg coral reveal">
-        <div class="leg-top"><div class="leg-num">06</div><div class="leg-date">Wed 05 Aug</div></div>
+        <div class="leg-top"><div class="leg-date"><span class="dw">Wed</span><span class="dd">05</span><span class="dm">Aug</span></div></div>
         <div>
           <span class="leg-loc">→ Ella</span>
           <h3>Up To The Hills</h3>
@@ -346,7 +350,7 @@
       </div>
 
       <div class="leg surf reveal">
-        <div class="leg-top"><div class="leg-num">07</div><div class="leg-date">Thu 06 Aug</div></div>
+        <div class="leg-top"><div class="leg-date"><span class="dw">Thu</span><span class="dd">06</span><span class="dm">Aug</span></div></div>
         <div>
           <span class="leg-loc">Ella</span>
           <h3>Ella Adventure</h3>
@@ -357,7 +361,7 @@
       </div>
 
       <div class="leg coral reveal">
-        <div class="leg-top"><div class="leg-num">08</div><div class="leg-date">Fri 07 Aug</div></div>
+        <div class="leg-top"><div class="leg-date"><span class="dw">Fri</span><span class="dd">07</span><span class="dm">Aug</span></div></div>
         <div>
           <span class="leg-loc">→ Colombo</span>
           <h3>The Blue Train Down</h3>
@@ -367,7 +371,7 @@
       </div>
 
       <div class="leg sun reveal">
-        <div class="leg-top"><div class="leg-num">09</div><div class="leg-date">Sat 08 Aug</div></div>
+        <div class="leg-top"><div class="leg-date"><span class="dw">Sat</span><span class="dd">08</span><span class="dm">Aug</span></div></div>
         <div>
           <span class="leg-loc">Colombo</span>
           <h3>The Big Finish</h3>
@@ -377,7 +381,7 @@
       </div>
 
       <div class="leg sun reveal">
-        <div class="leg-top"><div class="leg-num">10</div><div class="leg-date">Sun 09 Aug</div></div>
+        <div class="leg-top"><div class="leg-date"><span class="dw">Sun</span><span class="dd">09</span><span class="dm">Aug</span></div></div>
         <div>
           <span class="leg-loc">Red-Eye Home</span>
           <h3>Wheels Up</h3>
