@@ -165,6 +165,9 @@
   .camp .place{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.5rem;margin:14px 0 4px;line-height:1}
   .camp .place small{display:block;font-family:'Hanken Grotesk',sans-serif;text-transform:none;font-size:.78rem;font-weight:700;letter-spacing:.1em;color:var(--surf);margin-top:6px}
   .camp .vibe{font-size:.94rem;color:var(--sand-dim);border-top:1px solid var(--line);padding-top:14px;margin-top:14px}
+  .camp .booked{position:absolute;top:12px;left:12px;z-index:3;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:.72rem;letter-spacing:.1em;color:var(--ink);background:var(--surf);padding:5px 12px;border-radius:100px;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+  .camp .stay-link{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--surf);text-decoration:none;border-bottom:1.5px solid transparent;transition:border-color .2s}
+  .camp .stay-link:hover{border-color:var(--surf)}
 
   /* KNOW */
   .know-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
@@ -210,7 +213,7 @@
       <span class="l2">Do</span> <span class="l3">Sri Lanka</span>
     </h1>
     <div class="hero-scribble">last ride for Roxon &amp; Kavyin ✌</div>
-    <p class="hero-sub">Seven legends. Ten days. Two grooms about to be off the market. <b>Negombo beaches → south-coast surf → the Ella hills → one last night in Colombo</b> — then home, slightly broken.</p>
+    <p class="hero-sub">Seven legends. Ten days. Two grooms about to be off the market. <b>A Colombo villa base → south-coast surf → the Ella hills → one last big night out</b> — then the red-eye home, slightly broken.</p>
     <div class="hero-stats">
       <div class="hstat"><div class="n">7</div><div class="t">Legends</div></div>
       <div class="hstat"><div class="n sun">10</div><div class="t">Days</div></div>
@@ -223,8 +226,8 @@
 
 <div class="ticker">
   <div class="ticker-track">
-    <span>Negombo</span><span>Ahangama</span><span>Weligama</span><span>Mirissa</span><span>Galle</span><span>Ella</span><span>Colombo</span>
-    <span>Negombo</span><span>Ahangama</span><span>Weligama</span><span>Mirissa</span><span>Galle</span><span>Ella</span><span>Colombo</span>
+    <span>Colombo</span><span>Ahangama</span><span>Weligama</span><span>Mirissa</span><span>Galle</span><span>Ella</span>
+    <span>Colombo</span><span>Ahangama</span><span>Weligama</span><span>Mirissa</span><span>Galle</span><span>Ella</span>
   </div>
 </div>
 
@@ -283,92 +286,93 @@
       <div class="leg surf reveal">
         <div class="leg-top"><div class="leg-num">01</div><div class="leg-date">Fri 31 Jul</div></div>
         <div>
-          <span class="leg-loc">Negombo</span>
-          <h3>Land &amp; Lager</h3>
-          <p>Touch down at CMB at 22:55 and make the 10-minute hop to the Negombo hotel. Too late for heroics — one cold welcome beer, drop the bags, bank some sleep. The real warm-up's in the morning.</p>
-          <div class="ops"><span>Land 22:55</span><span>Negombo check-in</span><span>First cold one</span></div>
+          <span class="leg-loc">Colombo</span>
+          <h3>Land &amp; Into The Villa</h3>
+          <p>Touch down at CMB at 22:55 and roll straight to the Colombo villa — pool, lift, four bedrooms, all ours. Too late for heroics: one cold welcome beer on the terrace, claim your rooms, bank some sleep. The real send-off starts in the morning.</p>
+          <div class="ops"><span>Land 22:55</span><span>Villa check-in</span><span>First cold one</span></div>
         </div>
       </div>
 
       <div class="leg surf reveal">
         <div class="leg-top"><div class="leg-num">02</div><div class="leg-date">Sat 01 Aug</div></div>
         <div>
-          <span class="leg-loc">Negombo</span>
-          <h3>Negombo Warm-Up</h3>
-          <p>A lagoon boat cruise, the glorious chaos of the Lellama fish market, tuk-tuk races through town, then a long afternoon on the sand. Sunset cocktails, round two after dark.</p>
-          <div class="ops"><span>Lagoon cruise</span><span>Fish market</span><span>Tuk-tuk run</span></div>
+          <span class="leg-loc">Colombo</span>
+          <h3>Colombo Warm-Up</h3>
+          <p>Ease in, city-style — Galle Face Green and the glorious chaos of the Pettah markets, Gangaramaya Temple, a proper Sri Lankan feed, then the rooftop bars after dark. Back to the villa pool whenever the heat wins.</p>
+          <figure class="leg-photo"><img src="assets/colombo.webp" alt="Colombo city skyline at dusk" loading="lazy"><figcaption>City lights · Colombo</figcaption></figure>
+          <div class="ops"><span>Galle Face Green</span><span>Pettah markets</span><span>Rooftop bars</span></div>
+        </div>
+      </div>
+
+      <div class="leg sun reveal">
+        <div class="leg-top"><div class="leg-num">03</div><div class="leg-date">Sun 02 Aug</div></div>
+        <div>
+          <span class="leg-loc">Colombo</span>
+          <h3>Villa Life &amp; The Big Night</h3>
+          <p>Last full day in the capital: a slow pool session, a street-food crawl, maybe a cricket match or a spa reset for the fragile ones. Then the biggest night yet — you're on the coast tomorrow, so make it count.</p>
+          <div class="ops"><span>Villa pool</span><span>Street-food crawl</span><span>Big night out</span></div>
         </div>
       </div>
 
       <div class="leg coral reveal">
-        <div class="leg-top"><div class="leg-num">03</div><div class="leg-date">Sun 02 Aug</div></div>
+        <div class="leg-top"><div class="leg-num">04</div><div class="leg-date">Mon 03 Aug</div></div>
         <div>
           <span class="leg-loc">→ South Coast</span>
           <h3>South Bound</h3>
-          <p>Load up and bomb down the Southern Expressway (~3h) to the surf coast. Check into the south-coast basecamp around Ahangama, catch sunset at Coconut Tree Hill, and christen the trip with night one.</p>
-          <div class="ops"><span>Road trip</span><span>Coconut Tree Hill</span><span>Night one</span></div>
-        </div>
-      </div>
-
-      <div class="leg surf reveal">
-        <div class="leg-top"><div class="leg-num">04</div><div class="leg-date">Mon 03 Aug</div></div>
-        <div>
-          <span class="leg-loc">Weligama</span>
-          <h3>Surf's Up</h3>
-          <p>Beginner-friendly waves at Weligama — lessons for the kooks, cold ones for the spectators. Stilt-fishermen photo op, a beach-club afternoon, and a seafood BBQ as the sun drops.</p>
-          <figure class="leg-photo"><img src="assets/surf.webp" alt="Surfers in the waves at Weligama" loading="lazy"><figcaption>Beginner waves · Weligama Bay</figcaption></figure>
-          <div class="ops"><span>Surf lessons</span><span>Beach club</span><span>Seafood BBQ</span></div>
+          <p>Check out of the Colombo villa and bomb down the Southern Expressway (~2.5h) to the surf coast. Drop the bags at Tide House in Ahangama — pool, six beds, all ours — catch sunset at Coconut Tree Hill, and christen the coast with night one.</p>
+          <div class="ops"><span>Tide House check-in</span><span>Coconut Tree Hill</span><span>Night one</span></div>
         </div>
       </div>
 
       <div class="leg surf reveal">
         <div class="leg-top"><div class="leg-num">05</div><div class="leg-date">Tue 04 Aug</div></div>
         <div>
-          <span class="leg-loc">Mirissa</span>
-          <h3>Mirissa Mode</h3>
-          <p>Parrot Rock at golden hour, Coconut Tree Hill round two, and the legendary Mirissa beach-bar strip after dark. (Whale season's technically off — the parties very much are not.)</p>
-          <div class="ops"><span>Parrot Rock</span><span>Beach party</span><span>Late one</span></div>
-        </div>
-      </div>
-
-      <div class="leg sun reveal">
-        <div class="leg-top"><div class="leg-num">06</div><div class="leg-date">Wed 05 Aug</div></div>
-        <div>
-          <span class="leg-loc">Galle / Chill</span>
-          <h3>Galle &amp; Recover</h3>
-          <p>Day trip to Galle Fort — ramparts, cafés, a cold one on the old Dutch walls — or write the whole day off to the pool and a well-earned recovery. Dealer's choice.</p>
-          <figure class="leg-photo"><img src="assets/galle.webp" alt="The ramparts and lighthouse of Galle Fort" loading="lazy"><figcaption>The old Dutch ramparts · Galle Fort</figcaption></figure>
-          <div class="ops"><span>Galle Fort</span><span>Ramparts</span><span>Recovery</span></div>
+          <span class="leg-loc">Ahangama / Weligama</span>
+          <h3>Surf &amp; The Coast</h3>
+          <p>The one big coast day: beginner-friendly waves at Weligama (lessons for the kooks, cold ones for the spectators) and the stilt-fishermen photo op, then roam — Parrot Rock and the Mirissa beach bars, or Galle Fort's old Dutch ramparts. Seafood BBQ back at the villa as the sun drops.</p>
+          <figure class="leg-photo"><img src="assets/surf.webp" alt="Surfers in the waves at Weligama" loading="lazy"><figcaption>Beginner waves · Weligama Bay</figcaption></figure>
+          <div class="ops"><span>Surf lessons</span><span>Mirissa bars</span><span>Galle Fort</span></div>
         </div>
       </div>
 
       <div class="leg coral reveal">
-        <div class="leg-top"><div class="leg-num">07</div><div class="leg-date">Thu 06 Aug</div></div>
+        <div class="leg-top"><div class="leg-num">06</div><div class="leg-date">Wed 05 Aug</div></div>
         <div>
           <span class="leg-loc">→ Ella</span>
           <h3>Up To The Hills</h3>
-          <p>A scenic drive into tea country (~4h). The air gets cooler, the views get unreal. Settle into Ella and reset with valley-view sundowners.</p>
-          <div class="ops"><span>Tea country drive</span><span>Sundowners</span></div>
+          <p>One last dawn surf or a slow beach breakfast, then check out of Tide House and drive up into tea country (~3.5h). The air gets cooler, the views get unreal. Settle into the OUNA bungalow and reset with valley-view sundowners.</p>
+          <div class="ops"><span>Villa checkout</span><span>Tea country drive</span><span>Sundowners</span></div>
         </div>
       </div>
 
       <div class="leg surf reveal">
-        <div class="leg-top"><div class="leg-num">08</div><div class="leg-date">Fri 07 Aug</div></div>
+        <div class="leg-top"><div class="leg-num">07</div><div class="leg-date">Thu 06 Aug</div></div>
         <div>
           <span class="leg-loc">Ella</span>
           <h3>Ella Adventure</h3>
           <p>A (humane) early start for Little Adam's Peak, the Nine Arch Bridge train shot, Ravana Falls, and the Flying Ravana zipline for the brave. Sunset and a feed at 98 Acres.</p>
+          <figure class="leg-photo"><img src="assets/ella.webp" alt="The Nine Arch Bridge near Ella" loading="lazy"><figcaption>The Nine Arch Bridge · Ella</figcaption></figure>
           <div class="ops"><span>Little Adam's Peak</span><span>Nine Arch Bridge</span><span>Zipline</span></div>
         </div>
       </div>
 
       <div class="leg coral reveal">
-        <div class="leg-top"><div class="leg-num">09</div><div class="leg-date">Sat 08 Aug</div></div>
+        <div class="leg-top"><div class="leg-num">08</div><div class="leg-date">Fri 07 Aug</div></div>
         <div>
           <span class="leg-loc">→ Colombo</span>
-          <h3>The Blue Train &amp; The Big Finish</h3>
-          <p>Hang out the door of the famous hill-country train, then roll into Colombo. Squeeze in the rooftops and street eats for one last send-off — before a near-midnight run to the airport.</p>
-          <div class="ops"><span>Scenic train</span><span>Rooftop send-off</span><span>Airport run</span></div>
+          <h3>The Blue Train Down</h3>
+          <p>Check out of the bungalow and hang out the door of the famous hill-country train as it winds down through the tea country, then on to Colombo. Drop the bags, freshen up, and hit the rooftops for round one of the big finish.</p>
+          <div class="ops"><span>Bungalow checkout</span><span>Scenic train</span><span>Rooftop night</span></div>
+        </div>
+      </div>
+
+      <div class="leg sun reveal">
+        <div class="leg-top"><div class="leg-num">09</div><div class="leg-date">Sat 08 Aug</div></div>
+        <div>
+          <span class="leg-loc">Colombo</span>
+          <h3>The Big Finish</h3>
+          <p>A full last day in the capital — street eats, last-minute shopping, a spa reset for the fragile, and one final send-off across the rooftop bars. Then a near-midnight dash to the airport. Make it count.</p>
+          <div class="ops"><span>Street eats</span><span>Rooftop send-off</span><span>Airport run</span></div>
         </div>
       </div>
 
@@ -390,39 +394,45 @@
     <div class="sec-head reveal">
       <span class="sec-tag">where we drop the bags</span>
       <h2 class="sec-title">The <em>basecamps</em></h2>
-      <p>Four home bases, nine nights. Lock in 3–4 rooms (or a villa) per stop — for seven of you, a whole villa with a pool usually beats a stack of hotel rooms.</p>
+      <p>Four home bases across nine nights — three already locked in as whole villas of our own, the last a quick Colombo stop before the red-eye. For seven of you, a place to yourselves beats a stack of hotel rooms every time.</p>
     </div>
     <div class="camp-grid">
       <div class="camp reveal">
-        <div class="camp-photo"><img src="assets/negombo.webp" alt="Fishing boats on Negombo beach" loading="lazy"></div>
+        <div class="camp-photo"><span class="booked">✓ Booked</span><img src="assets/colombo-villa.webp" alt="Modern luxury villa in Colombo lit up at dusk" loading="lazy"></div>
         <div class="camp-body">
-          <div class="nights">2<span>nights</span></div>
-          <div class="place">Negombo<small>31 Jul – 1 Aug</small></div>
-          <div class="vibe">Beach town right by the airport. Easy landing, fresh seafood, sunset over the Indian Ocean. The gentle warm-up.</div>
+          <div class="nights">3<span>nights</span></div>
+          <div class="place">Colombo Villa<small>Sri Jayawardenepura Kotte · 31 Jul – 3 Aug</small></div>
+          <div class="vibe">Our own 4-bedroom villa with a pool and a lift — ★5.0, sleeps the whole crew. Base in the capital for the opening run before we head south.
+            <a class="stay-link" href="https://www.airbnb.com.au/rooms/1573515506808351485" target="_blank" rel="noopener">View listing →</a>
+          </div>
         </div>
       </div>
       <div class="camp reveal">
-        <div class="camp-photo"><img src="assets/south.webp" alt="Traditional stilt fishermen on the south coast" loading="lazy"></div>
+        <div class="camp-photo"><span class="booked">✓ Booked</span><img src="assets/ahangama-villa.webp" alt="Pool villa at Tide House, Ahangama West" loading="lazy"></div>
         <div class="camp-body">
-          <div class="nights">4<span>nights</span></div>
-          <div class="place">South Coast<small>Ahangama · Weligama · Mirissa · 2 – 5 Aug</small></div>
-          <div class="vibe">Surf, stilt fishermen and beach bars. The beating heart of the trip — base near Ahangama and roam the coast.</div>
+          <div class="nights">2<span>nights</span></div>
+          <div class="place">Tide House Villa<small>Ahangama West · 3 – 5 Aug</small></div>
+          <div class="vibe">Our own 4-bedroom pool villa on the surf coast — ★4.86, six beds, sleeps the crew. Base for Weligama waves, Coconut Tree Hill sunsets and beach-bar nights.
+            <a class="stay-link" href="https://www.airbnb.com.au/rooms/1682722197569929074" target="_blank" rel="noopener">View listing →</a>
+          </div>
         </div>
       </div>
       <div class="camp reveal">
-        <div class="camp-photo"><img src="assets/ella.webp" alt="The Nine Arch Bridge near Ella" loading="lazy"></div>
+        <div class="camp-photo"><span class="booked">✓ Booked</span><img src="assets/ella-villa.webp" alt="The OUNA Bungalow in the Ella hills" loading="lazy"></div>
         <div class="camp-body">
           <div class="nights">2<span>nights</span></div>
-          <div class="place">Ella<small>6 – 7 Aug</small></div>
-          <div class="vibe">Tea hills, waterfalls and the Nine Arch Bridge. Cooler air, huge views, and the best curve-ball on the route.</div>
+          <div class="place">OUNA Bungalow<small>Ella · 5 – 7 Aug</small></div>
+          <div class="vibe">A 5-bedroom hill bungalow with a garden and valley views — ★4.8, room for everyone. Tea country, waterfalls and the Nine Arch Bridge on the doorstep.
+            <a class="stay-link" href="https://www.airbnb.com.au/rooms/1140125776827824489" target="_blank" rel="noopener">View listing →</a>
+          </div>
         </div>
       </div>
       <div class="camp reveal">
         <div class="camp-photo"><img src="assets/colombo.webp" alt="Colombo city skyline" loading="lazy"></div>
         <div class="camp-body">
           <div class="nights">1<span>night</span></div>
-          <div class="place">Colombo<small>8 Aug</small></div>
-          <div class="vibe">Last hurrah — in from Ella, rooftops and street eats, then the midnight red-eye home. Grab a day-use room to freshen up before the airport.</div>
+          <div class="place">Colombo<small>Finish · 7 – 8 Aug</small></div>
+          <div class="vibe">Back down from the hills for one last night in the capital — rooftops, street eats and a final big one, then the midnight red-eye home. To be booked.</div>
         </div>
       </div>
     </div>
@@ -460,7 +470,7 @@
   <div class="wrap">
     <div class="big">Send it,<br><span class="o">boys</span></div>
     <div class="scribble">Roxon &amp; Kavyin · the last ride</div>
-    <div class="meta">7 Legends · 31 Jul – 9 Aug 2026 · Negombo → South Coast → Ella → Colombo</div>
+    <div class="meta">7 Legends · 31 Jul – 9 Aug 2026 · Colombo → South Coast → Ella → Colombo</div>
   </div>
 </footer>
 
