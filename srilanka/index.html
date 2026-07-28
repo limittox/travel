@@ -179,6 +179,16 @@
   .know .h{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.15rem;color:var(--surf);margin-bottom:8px;display:flex;align-items:center;gap:10px}
   .know .h b{color:var(--sun);-webkit-text-stroke:0}
   .know p{font-size:.92rem;color:var(--sand-dim)}
+  .bars-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:16px}
+  .bar{border:1.5px solid var(--line);border-radius:16px;padding:24px 22px;background:rgba(13,68,81,.32);display:flex;flex-direction:column}
+  .bar .type{align-self:flex-start;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:.68rem;letter-spacing:.16em;color:var(--ink);background:var(--surf);padding:5px 11px;border-radius:100px;margin-bottom:13px}
+  .bar.club .type{background:var(--coral);color:var(--sand)}
+  .bar.casino .type{background:var(--sun)}
+  .bar h4{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.32rem;line-height:1;color:var(--sand)}
+  .bar .where{font-size:.79rem;font-weight:700;color:var(--surf);margin-top:7px}
+  .bar p{font-size:.9rem;color:var(--sand-dim);margin-top:11px;flex:1}
+  .bar .cost{margin-top:15px;padding-top:12px;border-top:1px solid var(--line);font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;font-weight:800;color:var(--sand)}
+  .bar-note{margin-top:22px;font-size:.86rem;color:var(--sand-dim)}
   .rules{margin-top:40px;border:2px dashed var(--coral);border-radius:18px;padding:32px 30px;background:rgba(255,91,60,.07)}
   .rules .sec-tag{margin-bottom:14px}
   .rules ol{list-style:none;counter-reset:r;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
@@ -205,6 +215,7 @@
     <a href="#flights">Flights</a>
     <a href="#mission">The Mission</a>
     <a href="#camps">Basecamps</a>
+    <a href="#nights">Nights Out</a>
     <a href="#know">Intel</a>
   </div>
 </nav>
@@ -302,9 +313,9 @@
         <div>
           <span class="leg-loc">Colombo</span>
           <h3>Colombo Warm-Up</h3>
-          <p>Ease in, city-style — Galle Face Green and the glorious chaos of the Pettah markets, Gangaramaya Temple, a proper Sri Lankan feed, then the rooftop bars after dark. Back to the villa pool whenever the heat wins.</p>
+          <p>Ease in, city-style. Lunch is locked in at Coffee Colombo in Bambalapitiya — Jaffna cooking, and the crab pittu is the whole reason to go. After that: Galle Face Green, the glorious chaos of the Pettah markets and Gangaramaya Temple, then the rooftop bars after dark. Back to the villa pool whenever the heat wins.</p>
           <figure class="leg-photo"><img src="assets/colombo.webp" alt="Colombo city skyline at dusk" loading="lazy"><figcaption>City lights · Colombo</figcaption></figure>
-          <div class="ops"><span>Galle Face Green</span><span>Pettah markets</span><span>Rooftop bars</span></div>
+          <div class="ops"><span>Coffee Colombo · lunch</span><span>Galle Face Green</span><span>Pettah markets</span><span>Rooftop bars</span></div>
         </div>
       </div>
 
@@ -440,6 +451,118 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="nights">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">after dark, gentlemen</span>
+      <h2 class="sec-title">Bars &amp; <em>clubs</em></h2>
+      <p>Three nights in the capital to play with — the two opening weekend nights and the big finish on the 8th. Every venue below was checked as still trading; Colombo loses bars fast, so we'll re-check closer to the date.</p>
+    </div>
+
+    <div class="bars-grid reveal">
+
+      <div class="bar">
+        <span class="type">Rooftop</span>
+        <h4>Virticle by Jetwing</h4>
+        <div class="where">30th floor, Access Tower II · Union Place, Colombo 02</div>
+        <p>The highest rooftop in the city and rated 4.9 on Tripadvisor. Open-air terrace, indoor dining room, a big screen that shows the cricket. More sunset-drinks than mayhem — start here, go loud later.</p>
+        <div class="cost">Book ahead · +94 70 735 5355</div>
+      </div>
+
+      <div class="bar">
+        <span class="type">Rooftop</span>
+        <h4>The Bar On The Top</h4>
+        <div class="where">27th floor, Granbell Hotel · Kollupitiya</div>
+        <p>Ranked the city's best rooftop by The Rooftop Guide. Sits about 100 m above Marine Drive with panoramic ocean views, indoor and outdoor.</p>
+        <div class="cost">Smart casual</div>
+      </div>
+
+      <div class="bar">
+        <span class="type">Rooftop</span>
+        <h4>ON14</h4>
+        <div class="where">14th floor, Radisson Hotel · Colombo 04</div>
+        <p>Rooftop pool bar with ocean panoramas and local DJs running house and EDM. The most club-like of the rooftops, and it goes later on weekend event nights.</p>
+        <div class="cost">LKR 3,000–10,000 pp · ~US$9–30</div>
+      </div>
+
+      <div class="bar">
+        <span class="type">Rooftop</span>
+        <h4>Sky Lounge</h4>
+        <div class="where">The Kingsbury · Fort, Colombo 01</div>
+        <p>The polished option — champagne, cigars and molecular cocktails over the harbour, lounge and deep house. Runs 6pm–1am, later on weekends.</p>
+        <div class="cost">LKR 4,000–15,000 pp · ~US$12–45</div>
+      </div>
+
+      <div class="bar club">
+        <span class="type">Club</span>
+        <h4>Rhythm &amp; Blues</h4>
+        <div class="where">R. A. De Mel Mawatha · Colombo 04</div>
+        <p>The veteran. Big dance floor, strobes, top-40 and EDM with live bands some nights, and a mixed crowd of locals and travellers. Open till 5am Monday to Saturday.</p>
+        <div class="cost">Cover ~LKR 1,500 · LKR 1,500–5,000 pp</div>
+      </div>
+
+      <div class="bar club">
+        <span class="type">Club</span>
+        <h4>Cleopatra</h4>
+        <div class="where">Liberty Plaza basement · Colombo 03</div>
+        <p>Open 24 hours and known as the after-party spot when everywhere else has shut. Big floor, VIP seating, commercial and hip hop. This is the 4am decision.</p>
+        <div class="cost">LKR 1,500–5,000 pp · ~US$4–15</div>
+      </div>
+
+      <div class="bar club">
+        <span class="type">Club</span>
+        <h4>The Love Bar</h4>
+        <div class="where">Flamingo House, 58A Horton Place · Colombo 07</div>
+        <p>Bar-lounge that turns into a dance floor after dark, full food menu, fashionable local and expat crowd. Friday and Saturday it runs till 4am.</p>
+        <div class="cost">LKR 2,000–6,000 pp · ~US$6–18</div>
+      </div>
+
+      <div class="bar club">
+        <span class="type">Club</span>
+        <h4>H2O</h4>
+        <div class="where">Cinnamon Lakeside · Colombo 02</div>
+        <p>Long-running lakeside club with visiting DJs. Friday and Saturday only, 9pm–4am — so it lines up with both of your weekend nights.</p>
+        <div class="cost">Fri &amp; Sat only</div>
+      </div>
+
+      <div class="bar club">
+        <span class="type">Beach club</span>
+        <h4>Bellevue Beach Club</h4>
+        <div class="where">Port City · Colombo 01</div>
+        <p>Pool club, cabanas, restaurant and bar on the new Port City reclamation, deep house rolling into late parties. A strong daytime-into-evening option rather than a 3am one.</p>
+        <div class="cost">LKR 3,000–12,000 pp · closes 1am</div>
+      </div>
+
+      <div class="bar casino">
+        <span class="type">Casino</span>
+        <h4>City of Dreams</h4>
+        <div class="where">1 Justice Akbar Mawatha · Colombo 02</div>
+        <p>Melco's integrated resort, opened August 2025 — South Asia's first. Casino, the NÜWA hotel, mall, restaurants and nightlife under one roof. The obvious headline night.</p>
+        <div class="cost">Confirm gaming floor by phone</div>
+      </div>
+
+      <div class="bar casino">
+        <span class="type">Casino</span>
+        <h4>Bally's</h4>
+        <div class="where">Colombo 03</div>
+        <p>Open since 1995 and running 24/7 with 100-plus tables and 50 slots. Reviewers consistently report a free buffet and free drinks while you're playing — hard to beat for value with seven of you.</p>
+        <div class="cost">24/7 · free buffet &amp; drinks for players</div>
+      </div>
+
+      <div class="bar casino">
+        <span class="type">Casino</span>
+        <h4>Bellagio</h4>
+        <div class="where">Colombo 03</div>
+        <p>Going since 1998, the more high-roller-leaning room of the two, with a points-based comps scheme covering food and drink.</p>
+        <div class="cost">Smart casual</div>
+      </div>
+
+    </div>
+
+    <p class="bar-note reveal"><b style="color:var(--sand)">Timing:</b> Colombo floors are dead before 11pm and peak between midnight and 2am, so eat late and move late. <b style="color:var(--sand)">Dress:</b> smart casual at the rooftops and hotel venues — no shorts, no flip-flops, and they check ID on the door. <b style="color:var(--sand)">Good news:</b> no Poya falls during the trip, so nothing is dry.</p>
   </div>
 </section>
 
