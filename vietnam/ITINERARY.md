@@ -60,13 +60,15 @@ Fare (both): Economy Lite · checked 1 × 23 kg + cabin 1 × 10 kg each · chang
 ## Day by day
 
 ### Day 1 · Fri 18 Sep — Arrive Saigon
-Land at Tan Son Nhat at 16:15. **Viettel e-SIM** at the airport, visas, villa by ~18:00. Dinner and a rooftop bar.
+Land at Tan Son Nhat at 16:15 — right in the afternoon storm. **Viettel e-SIM** at the airport, visas, villa by ~18:00. Clears by 20:00–21:00: late dinner, then a rooftop with an indoor section (Social Club at Hotel des Arts, Chill Skybar).
 
 ### Day 2 · Sat 19 Sep — Cu Chi Tunnels & Bui Vien
-**Cu Chi Tunnels private tour with shooting-range experience** — book the [Klook tour with pickup from the villa](https://www.klook.com/en-AU/activity/856-cu-chi-tunnels-private-tour-ho-chi-minh/). Evening: **Bui Vien** party street.
+**Cu Chi Tunnels private tour with shooting range** — [Klook, pickup from the villa](https://www.klook.com/en-AU/activity/856-cu-chi-tunnels-private-tour-ho-chi-minh/). Take the **earliest pickup (07:00)**; back ~14:00 as the rain arrives. Tunnels and range are covered — wear shoes you don't love, bring cash for bullets.
+- **Wet afternoon:** villa (pool, sauna, billiards, karaoke) or **War Remnants Museum** + **Independence Palace** (indoor, 10 min away).
+- **Evening:** [À Ố Show](https://www.luneproduction.com/ao-show) at the Opera House (18:00, 1 hr, indoor — confirm the date runs) or, if clear, [Saigon After Dark Vespa food tour](https://vespaadventures.com/tour/saigon-after-dark) (18:00 pickup, 4 hrs, food & drinks included). Then **Bui Vien**.
 
 ### Day 3 · Sun 20 Sep — Saigon
-**Muay Thai / kickboxing class**, then the food hit-list: **Hum Garden** (Michelin-recognised), **Anan Saigon** (Michelin star), and the must-try **Pizza 4P's**.
+Wettest afternoon — built indoors. **Morning Muay Thai / kickboxing class**, then food as the afternoon activity (seated by 14:00, rain runs to ~19:00): **Hum Garden** (Michelin-recognised), **Anan Saigon** (Michelin star), and the must-try **Pizza 4P's**.
 
 ### Day 4 · Mon 21 Sep — Saigon → Hanoi → night train
 **VN 246** departs Tan Son Nhat **Terminal 3** at 11:00, lands Hanoi 13:10. Hotel by 15:00–15:30, **tailoring** in the afternoon. **22:00 overnight train to Sapa.**
@@ -96,7 +98,7 @@ Breakfast, then to Noi Bai for the **16:00 flight home**. Tạm biệt, Vietnam.
 - **Visa:** Most nationalities need a Vietnam e-visa — apply online ~2–4 weeks ahead, all 9 together.
 - **Money:** VND cash for markets & street food; cards fine at hotels/restaurants. A Wise/travel card works well; pull cash from ATMs on arrival and carry small notes.
 - **Apps:** **Grab** is Vietnam's Uber/Gojek equivalent — cars and bikes, works everywhere.
-- **Weather (Sep):** ~28–33°C and humid in the cities; Sapa is much cooler — pack a layer. Short showers likely.
+- **Weather:** Saigon forecast is thunderstorms daily (18–21 Sep), but mornings are mostly dry; rain builds from 14:00, peaks 15:00–19:00, clears 20:00–21:00. Outdoor before lunch, indoor mid-afternoon, out again after dark. Compact rain shell or 20k VND poncho; Grab cars not bikes in a downpour. Sapa is much cooler — pack a layer.
 - **Connectivity:** Viettel e-SIM from the airport — best coverage, including Sapa.
 - **Indicative ground budget:** roughly **US$2,500–3,800 per person** — the rooms are now locked.
 
