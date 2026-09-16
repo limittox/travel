@@ -112,8 +112,9 @@
 
   /* ---- FLIGHTS ---- */
   .flights{background:var(--paper-2)}
-  .flight-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  @media(max-width:860px){.flight-grid{grid-template-columns:1fr}}
+  .flight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:1020px){.flight-grid{grid-template-columns:1fr 1fr}.flight.wide{grid-column:1/-1}}
+  @media(max-width:700px){.flight-grid{grid-template-columns:1fr}}
   .flight{background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden;position:relative;transition:transform .35s,box-shadow .35s}
   .flight:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
   .flight-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 24px;background:var(--ink);color:var(--paper)}
@@ -197,6 +198,9 @@
   .stay .dates{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--jade);font-weight:600;margin-bottom:16px}
   .stay .hotel{font-size:.95rem;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:14px}
   .stay .hotel b{color:var(--ink);font-weight:600}
+  .stay-link{display:inline-block;margin-top:12px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lacquer);text-decoration:none;border-bottom:1.5px solid var(--lacquer);padding-bottom:2px;transition:color .25s,border-color .25s}
+  .stay-link:hover{color:var(--lacquer-bright);border-color:var(--lacquer-bright)}
+  .stay .booked{position:absolute;top:14px;right:14px;z-index:3;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;background:var(--jade);color:var(--paper);padding:5px 10px;border-radius:100px;box-shadow:0 4px 12px rgba(0,0,0,.25)}
 
   /* ---- NOTES ---- */
   .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;background:var(--line);border:1px solid var(--line)}
@@ -272,7 +276,7 @@
         <div class="sec-num">I · GETTING THERE</div>
         <h2 class="sec-title">The <em>flights</em></h2>
       </div>
-      <p class="sec-note">Vietnam Airlines · Economy Lite · 23 kg checked + 10 kg cabin each. Open-jaw: into Saigon, home from Hanoi.</p>
+      <p class="sec-note">Vietnam Airlines all the way — open-jaw into Saigon, home from Hanoi, with one internal hop between. All three booked.</p>
     </div>
     <div class="flight-grid">
 
@@ -293,6 +297,22 @@
       </div>
 
       <div class="flight reveal">
+        <div class="flight-top">
+          <div class="dir">Ho Chi Minh City → Hanoi<small>Internal · Mon 21 Sep 2026</small></div>
+          <div class="tag2">Nonstop · 2h 10m</div>
+        </div>
+        <div class="flight-body">
+          <div class="leg">
+            <div class="pt"><div class="time">11:00</div><div class="code">SGN</div><div class="term">Tan Son Nhat · T3</div></div>
+            <div class="mid"><div class="dur">2h 10m</div><div class="path"></div><div class="plane">✈ VN 246</div></div>
+            <div class="pt r"><div class="time">13:10</div><div class="code">HAN</div><div class="term">Noi Bai · T1</div></div>
+          </div>
+          <div class="flight-meta"><span><b>VN 246</b> · Vietnam Airlines</span><span>Domestic · Terminal 3 departure</span></div>
+          <div class="fare-chips"><span>Economy Lite</span><span>Checked 1 pc</span><span>Booked ✓</span></div>
+        </div>
+      </div>
+
+      <div class="flight reveal wide">
         <div class="flight-top">
           <div class="dir">Hanoi → Sydney<small>Return · Sun 27 Sep 2026 · 13h 15m total</small></div>
           <div class="tag2">1 Stop · SGN</div>
@@ -332,13 +352,13 @@
       <div class="day reveal">
         <div class="tag">Day 1 · Fri 18 Sep</div>
         <h3>Touch down in <span class="place">Saigon</span></h3>
-        <p>Land at Tan Son Nhat at 16:15. Grab a Viettel e-SIM at the airport, clear visas, and be at the hotel by about 6pm. Then an easy first evening — dinner and a rooftop bar over the city. No alarms.</p>
+        <p>Land at Tan Son Nhat at 16:15. Grab a Viettel e-SIM at the airport, clear visas, and be at the villa by about 6pm. Then an easy first evening — dinner and a rooftop bar over the city. No alarms.</p>
         <div class="pins"><span class="pin">Arrive 16:15</span><span class="pin">Viettel e-SIM</span><span class="pin">Rooftop Bar</span></div>
       </div>
       <div class="day reveal">
         <div class="tag">Day 2 · Sat 19 Sep</div>
         <h3><span class="place">Saigon</span> — tunnels & Bui Vien</h3>
-        <p>The Cu Chi Tunnels on a private tour with the shooting-range experience — <a href="https://www.klook.com/en-AU/activity/856-cu-chi-tunnels-private-tour-ho-chi-minh/" target="_blank" rel="noopener">book the Klook tour that includes hotel pickup</a>. Back to the city for the evening, then out on Bui Vien party street.</p>
+        <p>The Cu Chi Tunnels on a private tour with the shooting-range experience — <a href="https://www.klook.com/en-AU/activity/856-cu-chi-tunnels-private-tour-ho-chi-minh/" target="_blank" rel="noopener">book the Klook tour that includes pickup from the villa</a>. Back to the city for the evening, then out on Bui Vien party street.</p>
         <div class="pins"><span class="pin">Cu Chi Tunnels</span><span class="pin">Shooting Range</span><span class="pin">Bui Vien</span></div>
       </div>
       <div class="day reveal">
@@ -351,8 +371,8 @@
       <div class="day reveal">
         <div class="tag">Day 4 · Mon 21 Sep</div>
         <h3><span class="place">Saigon</span> → Hanoi → night train</h3>
-        <p>The 11am flight to Hanoi lands at 1:30pm; hotel by 3–3:30pm, then tailoring in the afternoon. At 10pm, board the overnight train to Sapa — beds on wheels, breakfast in the mountains.</p>
-        <div class="pins"><span class="pin">Flight SGN→HAN 11:00</span><span class="pin">Tailoring</span><span class="pin">Night Train 22:00</span></div>
+        <p>VN 246 leaves Tan Son Nhat's Terminal 3 at 11am and lands in Hanoi at 1:10pm; hotel by 3–3:30pm, then tailoring in the afternoon. At 10pm, board the overnight train to Sapa — beds on wheels, breakfast in the mountains.</p>
+        <div class="pins"><span class="pin">VN 246 · 11:00 → 13:10</span><span class="pin">Tailoring</span><span class="pin">Night Train 22:00</span></div>
       </div>
       <div class="day reveal">
         <div class="tag">Day 5 · Tue 22 Sep</div>
@@ -403,29 +423,29 @@
         <div class="sec-num">III · WHERE WE SLEEP</div>
         <h2 class="sec-title">The <em>stays</em></h2>
       </div>
-      <p class="sec-note">Still to book: Hanoi for the 21st, Sapa, and Hanoi for the 23rd–26th — plus the SGN→HAN flight. Two of the nine nights are beds on the rails.</p>
+      <p class="sec-note">All locked in — a District 1 villa in Saigon, sleeper cabins, the Sapa hilltop, the cruise and the Hanoi rooms. Two of the nine nights are beds on the rails.</p>
     </div>
     <div class="stay-grid">
       <div class="stay reveal">
-        <div class="stay-photo"><img src="assets/saigon.webp" alt="Ho Chi Minh City skyline" loading="lazy"></div>
+        <div class="stay-photo"><img src="assets/saigon.webp" alt="Ho Chi Minh City skyline" loading="lazy"></div><div class="booked">✓ Booked</div>
         <div class="stay-body">
           <div class="nights">3<span>nights</span></div>
           <div class="city">Ho Chi Minh City</div>
           <div class="dates">Sep 18 – 20</div>
-          <div class="hotel"><b>Hotel + Airbnb</b> — hotel for the first stretch, Airbnb for the 20th. Exact picks TBC.</div>
+          <div class="hotel"><b>Ola Halo Villa, District 1</b> — a 6-bedroom, 6-bathroom villa to ourselves near Tan Dinh Market. Pool, jacuzzi, sauna, billiards, karaoke room and a BBQ terrace. ★4.8 Guest Favourite.<br><a class="stay-link" href="https://www.airbnb.com.au/rooms/1703744065569609630" target="_blank" rel="noopener">View listing →</a></div>
         </div>
       </div>
       <div class="stay reveal">
-        <div class="stay-photo"><img src="assets/hanoi.webp" alt="Sunset over Hoan Kiem Lake, Hanoi" loading="lazy"></div>
+        <div class="stay-photo"><img src="assets/hanoi.webp" alt="Sunset over Hoan Kiem Lake, Hanoi" loading="lazy"></div><div class="booked">✓ Booked</div>
         <div class="stay-body">
           <div class="nights">2<span>trains</span></div>
           <div class="city">Overnight Trains</div>
           <div class="dates">Sep 21 & 23</div>
-          <div class="hotel"><b>Hanoi ⇄ Sapa sleeper</b> — 10pm departures both ways, arriving 6am. Book cabins as a block.</div>
+          <div class="hotel"><b>Hanoi ⇄ Sapa sleeper</b> — 10pm departures both ways, arriving 6am. Cabins booked as a block.</div>
         </div>
       </div>
       <div class="stay reveal">
-        <div class="stay-photo"><img src="assets/sapa.jpg" alt="Terraced rice fields in the Sapa valley" loading="lazy"></div>
+        <div class="stay-photo"><img src="assets/sapa.jpg" alt="Terraced rice fields in the Sapa valley" loading="lazy"></div><div class="booked">✓ Booked</div>
         <div class="stay-body">
           <div class="nights">1<span>night</span></div>
           <div class="city">Sapa</div>
@@ -434,21 +454,21 @@
         </div>
       </div>
       <div class="stay reveal">
-        <div class="stay-photo"><img src="assets/halong.webp" alt="Karst islands of Halong Bay" loading="lazy"></div>
+        <div class="stay-photo"><img src="assets/halong.webp" alt="Karst islands of Halong Bay" loading="lazy"></div><div class="booked">✓ Booked</div>
         <div class="stay-body">
           <div class="nights">1<span>night</span></div>
           <div class="city">Halong Bay</div>
           <div class="dates">Sep 24</div>
-          <div class="hotel"><b>Overnight cruise</b> — board 11am, dock 10am next day. Book the Hanoi→Halong transfer to match.</div>
+          <div class="hotel"><b>Overnight cruise</b> — board 11am, dock 10am next day. Hanoi→Halong transfer timed to the 6am train arrival.</div>
         </div>
       </div>
       <div class="stay reveal">
-        <div class="stay-photo"><img src="assets/hanoi.webp" alt="Sunset over Hoan Kiem Lake, Hanoi" loading="lazy"></div>
+        <div class="stay-photo"><img src="assets/hanoi.webp" alt="Sunset over Hoan Kiem Lake, Hanoi" loading="lazy"></div><div class="booked">✓ Booked</div>
         <div class="stay-body">
           <div class="nights">2<span>nights</span></div>
           <div class="city">Hanoi</div>
           <div class="dates">Sep 25 – 26</div>
-          <div class="hotel"><b>To book</b> — Old Quarter base for Train Street, the food crawl and the Ninh Binh day trip.</div>
+          <div class="hotel"><b>Booked</b> — our base for Train Street, the food crawl and the Ninh Binh day trip.</div>
         </div>
       </div>
     </div>
@@ -466,7 +486,7 @@
     </div>
     <div class="notes-grid reveal">
       <div class="note"><div class="ic">i</div><h4>Visas</h4><p>Most nationalities need a Vietnam e-visa — apply online 2–4 weeks out, all nine together.</p></div>
-      <div class="note"><div class="ic">ii</div><h4>Internal Travel</h4><p>One flight to book as a group — <b>SGN→HAN</b>, 11am on Sep 21 — plus sleeper cabins on the Sapa night trains (Sep 21 & 23).</p></div>
+      <div class="note"><div class="ic">ii</div><h4>Internal Travel</h4><p>All locked in: <b>VN 246</b> SGN→HAN, 11:00 on Sep 21 (lands 13:10, departs Terminal 3), plus sleeper cabins on the Sapa night trains (Sep 21 & 23).</p></div>
       <div class="note"><div class="ic">iii</div><h4>Money</h4><p>VND cash for markets & street food; cards at hotels and restaurants. A Wise / travel card works well — pull cash from ATMs on arrival and carry small notes. (Yes, Gautam, this one's for you.)</p></div>
       <div class="note"><div class="ic">iv</div><h4>Weather</h4><p>~28–33°C and humid in the cities; Sapa runs much cooler in the hills — pack a layer. Short showers likely everywhere.</p></div>
       <div class="note"><div class="ic">v</div><h4>Getting Around</h4><p>Grab is Vietnam's Uber/Gojek — cars and bikes, everywhere. Pre-arranged vans for the group on transfer days; the Sapa hotel books the minivan up the hill.</p></div>
@@ -475,7 +495,7 @@
 
     <div class="budget reveal">
       <div class="big">$2.5–3.8k<small>per person · ground costs</small></div>
-      <p>Indicative: hotels & Airbnb (twin-share), the overnight cruise, night trains, the internal flight, tours, transfers and most meals. Excludes international flights — refine once the remaining rooms are locked.</p>
+      <p>Indicative: the Saigon villa, Hanoi hotel (twin-share), the overnight cruise, night trains, the internal flight, tours, transfers and most meals. Excludes international flights.</p>
     </div>
   </div>
 </section>

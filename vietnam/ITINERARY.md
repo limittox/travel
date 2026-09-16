@@ -14,6 +14,10 @@ Flights are open-jaw — you land in **Ho Chi Minh City** and fly home from **Ha
 - VN 772 · Airbus A350-900
 - 10:15 SYD (Kingsford Smith, T1) → 16:15 SGN (Tan Son Nhat, T2)
 
+**Internal · Mon 21 Sep 2026 — Ho Chi Minh City → Hanoi (nonstop, 2h 10m)**
+- VN 246 · Economy Lite · 1 pc checked
+- 11:00 SGN (Tan Son Nhat, **T3**) → 13:10 HAN (Noi Bai, T1)
+
 **Return · Sun 27 Sep 2026 — Hanoi → Sydney (1 stop, 13h 15m total)**
 - VN 273 · Boeing 787 — 16:00 HAN (Noi Bai, T1) → 18:10 SGN (Tan Son Nhat, T3)
 - *2h 35m layover in Saigon — terminal change T3 → T2*
@@ -24,13 +28,17 @@ Fare (both): Economy Lite · checked 1 × 23 kg + cabin 1 × 10 kg each · chang
 
 ---
 
-## Still to book
+## Booked
 
-- **SGN→HAN flight** — 11am, Mon 21 Sep, as a group
-- **Hanoi accommodation for the 21st** (day room / luggage before the night train)
-- **Sapa accommodation** — Lady Hill Sapa, 22 Sep
-- **Hanoi accommodation for 23rd–26th** (25th & 26th nights)
+- **SGN→HAN flight** — VN 246, 11:00 Mon 21 Sep
 - **Night-train cabins** — Hanoi⇄Sapa, 21 & 23 Sep
+- **Lady Hill Sapa** — 22 Sep
+- **Halong Bay overnight cruise** — 24 Sep
+- **Hanoi accommodation** — 21st (pre-train) and 25th–26th
+- **Saigon villa** — [Ola Halo 6BR Villa, District 1](https://www.airbnb.com.au/rooms/1703744065569609630), 18–21 Sep
+
+## Still to confirm
+
 - **Hanoi → Halong Bay transfer** — morning of 24 Sep
 
 ---
@@ -39,12 +47,12 @@ Fare (both): Economy Lite · checked 1 × 23 kg + cabin 1 × 10 kg each · chang
 
 | Nights | Base | Stay |
 |--------|------|------|
-| Sep 18–20 (3) | Ho Chi Minh City | Hotel (18–19) + Airbnb (20) — TBC |
-| Sep 21 (1) | Overnight train | Hanoi → Sapa sleeper, dep 22:00 |
-| Sep 22 (1) | Sapa | **Lady Hill Sapa** |
-| Sep 23 (1) | Overnight train | Sapa → Hanoi sleeper, dep 22:00 |
-| Sep 24 (1) | Halong Bay | Overnight cruise — board 11:00 |
-| Sep 25–26 (2) | Hanoi | To book |
+| Sep 18–20 (3) | Ho Chi Minh City | **[Ola Halo Villa, District 1](https://www.airbnb.com.au/rooms/1703744065569609630)** — 6BR Airbnb, pool — booked |
+| Sep 21 (1) | Overnight train | Hanoi → Sapa sleeper, dep 22:00 — booked |
+| Sep 22 (1) | Sapa | **Lady Hill Sapa** — booked |
+| Sep 23 (1) | Overnight train | Sapa → Hanoi sleeper, dep 22:00 — booked |
+| Sep 24 (1) | Halong Bay | Overnight cruise — board 11:00 — booked |
+| Sep 25–26 (2) | Hanoi | Booked |
 | — | Depart Sep 27 (16:00) | — |
 
 ---
@@ -52,16 +60,16 @@ Fare (both): Economy Lite · checked 1 × 23 kg + cabin 1 × 10 kg each · chang
 ## Day by day
 
 ### Day 1 · Fri 18 Sep — Arrive Saigon
-Land at Tan Son Nhat at 16:15. **Viettel e-SIM** at the airport, visas, hotel by ~18:00. Dinner and a rooftop bar.
+Land at Tan Son Nhat at 16:15. **Viettel e-SIM** at the airport, visas, villa by ~18:00. Dinner and a rooftop bar.
 
 ### Day 2 · Sat 19 Sep — Cu Chi Tunnels & Bui Vien
-**Cu Chi Tunnels private tour with shooting-range experience** — book the [Klook tour with hotel pickup](https://www.klook.com/en-AU/activity/856-cu-chi-tunnels-private-tour-ho-chi-minh/). Evening: **Bui Vien** party street.
+**Cu Chi Tunnels private tour with shooting-range experience** — book the [Klook tour with pickup from the villa](https://www.klook.com/en-AU/activity/856-cu-chi-tunnels-private-tour-ho-chi-minh/). Evening: **Bui Vien** party street.
 
-### Day 3 · Sun 20 Sep — Saigon (Airbnb)
+### Day 3 · Sun 20 Sep — Saigon
 **Muay Thai / kickboxing class**, then the food hit-list: **Hum Garden** (Michelin-recognised), **Anan Saigon** (Michelin star), and the must-try **Pizza 4P's**.
 
 ### Day 4 · Mon 21 Sep — Saigon → Hanoi → night train
-11:00 flight to Hanoi, arrive 13:30. Hotel by 15:00–15:30, **tailoring** in the afternoon. **22:00 overnight train to Sapa.**
+**VN 246** departs Tan Son Nhat **Terminal 3** at 11:00, lands Hanoi 13:10. Hotel by 15:00–15:30, **tailoring** in the afternoon. **22:00 overnight train to Sapa.**
 
 ### Day 5 · Tue 22 Sep — Sapa
 Arrive 06:00. Transfer to **Lady Hill Sapa** — the hotel books a 10-seater minivan (~A$56). Rice terraces and the **Glass Bridge**.
@@ -90,6 +98,6 @@ Breakfast, then to Noi Bai for the **16:00 flight home**. Tạm biệt, Vietnam.
 - **Apps:** **Grab** is Vietnam's Uber/Gojek equivalent — cars and bikes, works everywhere.
 - **Weather (Sep):** ~28–33°C and humid in the cities; Sapa is much cooler — pack a layer. Short showers likely.
 - **Connectivity:** Viettel e-SIM from the airport — best coverage, including Sapa.
-- **Indicative ground budget:** roughly **US$2,500–3,800 per person** — refine once the remaining rooms are locked.
+- **Indicative ground budget:** roughly **US$2,500–3,800 per person** — the rooms are now locked.
 
 > Trip site: https://jocular-chaja-0e95fd.netlify.app (working copy) · this repo's page is the canonical one.
