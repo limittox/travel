@@ -5,6 +5,7 @@ Trip sites, served via GitHub Pages.
 - **Home (pick a trip):** https://limittox.github.io/travel/
 - **Vietnam** — The Nine, 18–27 Sep 2026: https://limittox.github.io/travel/vietnam/
 - **Sri Lanka** — The Boys (bachelor trip), 31 Jul–9 Aug 2026: https://limittox.github.io/travel/srilanka/
+- **Taiwan** — Two mates, island loop, 19–30 Dec 2026: https://limittox.github.io/travel/taiwan/
 
 Each trip lives in its own folder with a self-contained `index.html` and `assets/`.
 

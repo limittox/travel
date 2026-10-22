@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>集章 Taiwan Stamp Rally · 19–30 Dec 2026</title>
+<meta name="description" content="Twelve days looping Taiwan — Taipei nights, turtles, paragliding, surf, Taroko and Christmas at 460 metres. A travel stamp book.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f3ead8;
+    --paper-2:#e9dcc3;
+    --card:#fffaf0;
+    --ink:#1f1b16;
+    --ink-2:#463e35;
+    --ink-dim:#7a6f62;
+    --seal:#c8302a;
+    --seal-deep:#a3221d;
+    --blue:#2d4f9e;
+    --green:#23805b;
+    --purple:#6a3d9a;
+    --gold:#e9b949;
+    --hsr:#e3741f;
+    --peach:#f6d8c2;
+    --night:#0e1729;
+    --sign:#ffd23f;
+    --grid:rgba(35,128,91,.11);
+    --rule:rgba(31,27,22,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Instrument Sans',sans-serif;
+    background:var(--paper);
+    color:var(--ink-2);
+    line-height:1.62;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.35;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0 0.28 0 0 0 0.22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  ::selection{background:var(--seal);color:var(--card)}
+  a{color:var(--blue)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px;position:relative}
+  .zh{font-family:'Noto Serif TC',serif;font-weight:900}
+  .hand{font-family:'LXGW WenKai TC',cursive}
+  .grid-paper{
+    background-color:var(--paper);
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:34px 34px;
+  }
+  svg.defs{position:absolute;width:0;height:0}
+
+  /* ───── STAMPS ───── */
+  .stamp{display:block;mix-blend-mode:multiply;--r:-8deg;transform:rotate(var(--r));opacity:.92;pointer-events:none}
+  .stamp svg{width:100%;height:auto;display:block;overflow:visible}
+  .stamp.wait{opacity:0}
+  .stamp.thunk{animation:thunk .55s cubic-bezier(.3,1.4,.5,1) both}
+  @keyframes thunk{
+    0%{opacity:0;transform:rotate(var(--r)) scale(1.9)}
+    55%{opacity:1;transform:rotate(var(--r)) scale(.93)}
+    78%{transform:rotate(var(--r)) scale(1.03)}
+    100%{opacity:.92;transform:rotate(var(--r)) scale(1)}
+  }
+  @keyframes jolt{0%,100%{transform:none}35%{transform:translateY(2px)}70%{transform:translateY(-1px)}}
+
+  /* ───── NAV ───── */
+  nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;padding:16px 28px;transition:padding .3s,background .3s,box-shadow .3s}
+  nav.scrolled{padding:10px 28px;background:rgba(243,234,216,.94);backdrop-filter:blur(6px);box-shadow:0 1px 0 var(--rule)}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
+  .brand .seal-mini{width:30px;height:30px;background:var(--seal);color:var(--card);display:grid;place-items:center;font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.05rem;border-radius:4px;box-shadow:inset 0 0 0 2px var(--seal),inset 0 0 0 3.5px var(--card)}
+  .brand b{font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:.92rem;letter-spacing:.02em}
+  .nav-links{display:flex;gap:22px;font-family:'DM Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em}
+  .nav-links a{color:var(--ink-2);text-decoration:none;display:flex;gap:6px;align-items:baseline}
+  .nav-links a span{font-family:'Noto Serif TC',serif;font-weight:900;color:var(--seal);font-size:.82rem;letter-spacing:0}
+  .nav-links a:hover{color:var(--seal)}
+  @media(max-width:900px){.nav-links{display:none}}
+
+  /* ───── HERO ───── */
+  header{min-height:100vh;position:relative;padding:120px 0 80px;overflow:hidden;display:flex;align-items:center;cursor:crosshair}
+  header .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;width:100%}
+  header .wrap>*{min-width:0}
+  @media(max-width:900px){header .wrap{grid-template-columns:1fr;gap:70px}.polaroid{width:calc(100% - 50px);transform:rotate(2.5deg)}.polaroid figcaption{font-size:.84rem}}
+  .kicker{font-family:'DM Mono',monospace;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .kicker i{white-space:nowrap;font-style:normal;font-family:'Noto Serif TC',serif;font-weight:900;color:var(--seal);font-size:1rem;letter-spacing:.1em}
+  .title-row{display:flex;align-items:flex-start;gap:18px}
+  .hero-title{font-family:'Dela Gothic One',sans-serif;font-weight:400;color:var(--ink);font-size:clamp(3.4rem,10vw,8.8rem);line-height:.86;letter-spacing:-.02em}
+  .hero-title .sub-line{display:block;font-size:.42em;letter-spacing:.01em;color:var(--seal);margin-top:.18em}
+  .seal-big{flex:none;margin-top:.6rem;background:var(--seal);color:var(--card);writing-mode:vertical-rl;font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(2rem,4.4vw,3.6rem);line-height:1;padding:14px 10px;border-radius:6px;box-shadow:inset 0 0 0 4px var(--seal),inset 0 0 0 6px var(--card);transform:rotate(3deg);mix-blend-mode:multiply;letter-spacing:.06em}
+  .hero-sub{max-width:560px;margin-top:26px;font-size:clamp(1rem,1.5vw,1.14rem);color:var(--ink-2)}
+  .hero-sub b{color:var(--ink)}
+  .punch{display:inline-grid;grid-auto-flow:column;margin-top:30px;background:var(--card);border:1.5px solid var(--ink);border-radius:10px;box-shadow:4px 4px 0 var(--ink);overflow:hidden}
+  .punch>div{padding:12px 18px 12px;border-right:1.5px dashed var(--rule);position:relative;text-align:center;min-width:84px}
+  .punch>div:last-child{border-right:0}
+  .punch>div::before{content:"";position:absolute;top:6px;left:50%;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:var(--paper-2);box-shadow:inset 0 1px 1px rgba(0,0,0,.25)}
+  .punch .n{font-family:'Dela Gothic One',sans-serif;font-size:1.65rem;line-height:1;color:var(--ink);margin-top:8px}
+  .punch .n.red{color:var(--seal)}
+  .punch .t{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);margin-top:6px}
+  @media(max-width:560px){.punch{grid-auto-flow:row;grid-template-columns:repeat(3,1fr)}.punch>div{border-bottom:1.5px dashed var(--rule)}}
+  .hint{margin-top:22px;font-family:'LXGW WenKai TC',cursive;font-size:1.05rem;color:var(--seal)}
+
+  .polaroid{position:relative;background:#fff;padding:14px 14px 54px;box-shadow:0 18px 40px -18px rgba(31,27,22,.45),0 2px 6px rgba(31,27,22,.12);transform:rotate(3.5deg);max-width:440px;justify-self:center}
+  .polaroid img{display:block;width:100%;aspect-ratio:4/4.6;object-fit:cover;object-position:78% center}
+  .polaroid figcaption{position:absolute;left:18px;right:18px;bottom:14px;font-family:'LXGW WenKai TC',cursive;font-size:1.02rem;color:var(--ink-2)}
+  .tape{position:absolute;width:118px;height:30px;background:rgba(233,185,73,.55);box-shadow:0 1px 2px rgba(0,0,0,.08);clip-path:polygon(3% 0,97% 4%,100% 50%,96% 100%,2% 96%,0 45%);z-index:2}
+  .tape.mint{background:rgba(120,196,166,.55)} .tape.pink{background:rgba(240,150,160,.55)}
+  .polaroid .tape{top:-14px;left:50%;margin-left:-59px;transform:rotate(-4deg)}
+  .polaroid .stamp{position:absolute;z-index:3;opacity:1}
+  .polaroid .stamp.thunk{animation-name:thunk-solid}
+  @keyframes thunk-solid{0%{opacity:0;transform:rotate(var(--r)) scale(1.9)}55%{opacity:1;transform:rotate(var(--r)) scale(.93)}78%{transform:rotate(var(--r)) scale(1.03)}100%{opacity:1;transform:rotate(var(--r)) scale(1)}}
+  .click-stamp{position:absolute;width:96px;z-index:5;pointer-events:none}
+
+  /* ───── HAKKA FLORAL BAND ───── */
+  .hakka{position:relative;height:120px;overflow:hidden;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+  .hakka svg.bg{position:absolute;inset:0;width:100%;height:100%}
+  .ribbon{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);background:var(--card);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:9px 0;white-space:nowrap;overflow:hidden}
+  .ribbon-track{display:inline-flex;animation:scroll 38s linear infinite;will-change:transform}
+  .ribbon-track span{display:inline-flex;align-items:baseline;gap:10px;padding:0 22px;font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.25rem;color:var(--ink)}
+  .ribbon-track span small{font-family:'DM Mono',monospace;font-weight:500;font-size:.72rem;letter-spacing:.14em;color:var(--seal)}
+  .ribbon-track span::after{content:"✿";color:var(--seal);font-size:1rem;margin-left:12px}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ───── SECTIONS ───── */
+  section{padding:110px 0;position:relative}
+  .sec-head{display:flex;gap:22px;align-items:flex-start;margin-bottom:54px;max-width:840px}
+  .sec-seal{flex:none;writing-mode:vertical-rl;background:var(--seal);color:var(--card);font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.5rem;line-height:1.05;padding:12px 8px;border-radius:4px;box-shadow:inset 0 0 0 3px var(--seal),inset 0 0 0 4.5px var(--card);letter-spacing:.08em;transform:rotate(-2deg)}
+  .sec-tag{font-family:'LXGW WenKai TC',cursive;font-size:1.25rem;color:var(--seal);display:block;margin-bottom:6px}
+  .sec-title{font-family:'Dela Gothic One',sans-serif;font-weight:400;color:var(--ink);font-size:clamp(2.1rem,5vw,3.8rem);line-height:1;letter-spacing:-.01em}
+  .sec-head p{margin-top:16px;font-size:1.05rem;max-width:640px}
+  .sec-head p b{color:var(--ink)}
+
+  /* ───── FLIGHT TICKETS ───── */
+  .tickets{display:flex;flex-direction:column;gap:26px;filter:drop-shadow(0 12px 14px rgba(31,27,22,.22))}
+  .ticket{display:grid;grid-template-columns:1fr 190px;background:var(--peach);border-radius:12px;position:relative;
+    --notch:radial-gradient(circle 11px at calc(100% - 190px) 0,#0000 10.5px,#000 11px);
+    -webkit-mask:var(--notch) top/100% 51% no-repeat,radial-gradient(circle 11px at calc(100% - 190px) 100%,#0000 10.5px,#000 11px) bottom/100% 51% no-repeat;
+    mask:var(--notch) top/100% 51% no-repeat,radial-gradient(circle 11px at calc(100% - 190px) 100%,#0000 10.5px,#000 11px) bottom/100% 51% no-repeat;
+    background-image:repeating-linear-gradient(45deg,rgba(163,34,29,.05) 0 1.5px,transparent 1.5px 7px),repeating-linear-gradient(-45deg,rgba(45,79,158,.04) 0 1.5px,transparent 1.5px 7px);
+    transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .7s}
+  .ticket:nth-child(2){background-color:#dfe6f3}
+  .ticket:nth-child(3){background-color:#f6ecc4}
+  .ticket.in:hover{transform:translateY(-4px) rotate(-.4deg)}
+  @media(max-width:760px){.ticket{grid-template-columns:1fr;-webkit-mask:none;mask:none}}
+  .t-main{padding:0 0 22px}
+  .t-band{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:var(--hsr);color:#fff;padding:10px 24px;border-radius:12px 0 0 0;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+  .ticket:nth-child(2) .t-band{background:var(--blue)}
+  .ticket:nth-child(3) .t-band{background:var(--sign);color:var(--ink)}
+  @media(max-width:760px){.t-band{border-radius:12px 12px 0 0}}
+  .t-band b{font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.05rem;letter-spacing:.06em;text-transform:none;margin-right:8px}
+  .t-legs{padding:18px 24px 0;display:flex;flex-direction:column;gap:16px}
+  .t-leg{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center}
+  .t-date{grid-column:1/-1;font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:-10px}
+  .t-pt .city{font-family:'Noto Serif TC',serif;font-weight:900;font-size:2rem;line-height:1;color:var(--ink)}
+  .t-pt .code{font-family:'DM Mono',monospace;font-size:.8rem;color:var(--ink-2);margin-top:6px;letter-spacing:.06em}
+  .t-pt .code b{color:var(--seal);font-weight:500}
+  .t-pt.r{text-align:right}
+  .t-mid{display:flex;flex-direction:column;align-items:center;font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.08em;color:var(--ink-dim);text-transform:uppercase;text-align:center}
+  .t-mid .line{width:100%;height:0;border-top:2px dashed rgba(31,27,22,.35);margin:6px 0;position:relative}
+  .t-mid .line::after{content:"✈";position:absolute;right:-4px;top:-11px;font-size:.95rem;color:var(--ink)}
+  .t-note{margin:18px 24px 0;padding-top:14px;border-top:1px dashed rgba(31,27,22,.25);font-size:.92rem}
+  .t-note b{color:var(--ink)}
+  .t-stub{position:relative;border-left:2px dashed rgba(31,27,22,.4);padding:22px 20px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+  @media(max-width:760px){.t-stub{border-left:0;border-top:2px dashed rgba(31,27,22,.4)}}
+  .t-stub .opt{font-family:'Dela Gothic One',sans-serif;font-size:3.4rem;line-height:.9;color:var(--ink)}
+  .t-stub .lbl{font-family:'DM Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-dim)}
+  .t-stub .price{font-family:'Dela Gothic One',sans-serif;font-size:1.3rem;color:var(--seal);line-height:1.1;margin-top:8px}
+  .t-stub .stamp{position:absolute;width:104px;right:8px;top:10px}
+  .flt-foot{margin-top:28px;font-size:.9rem;max-width:860px}
+  .flt-foot b{color:var(--ink)}
+
+  /* ───── ROUTE / MAP ───── */
+  .route-wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:50px;align-items:start}
+  @media(max-width:900px){.route-wrap{grid-template-columns:1fr}}
+  .map-card{background:var(--card);border:1.5px solid var(--ink);border-radius:14px;box-shadow:6px 6px 0 var(--ink);padding:14px;position:sticky;top:90px}
+  @media(max-width:900px){.map-card{position:relative;top:0}}
+  .map-card svg{width:100%;height:auto;display:block;max-height:78vh}
+  .map-legend{display:flex;flex-wrap:wrap;gap:14px;font-family:'DM Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding:10px 6px 2px;border-top:1px dashed var(--rule);margin-top:6px}
+  .map-legend i{display:inline-block;width:26px;height:0;vertical-align:middle;margin-right:6px}
+  .lg-car{border-top:3px solid var(--seal)} .lg-rail{border-top:2px dashed var(--ink)} .lg-boat{border-top:2.5px dotted var(--blue)} .lg-bus{border-top:2px dotted var(--green)}
+  .m-island{fill:#efe2c6;stroke:var(--ink);stroke-width:2}
+  .m-label{font-family:'Noto Serif TC',serif;font-weight:900;font-size:15px;fill:var(--ink)}
+  .m-en{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.08em;fill:var(--ink-dim)}
+  .m-label,.m-en{paint-order:stroke;stroke:var(--card);stroke-width:3.5px;stroke-linejoin:round}
+  .m-sea{font-family:'Noto Serif TC',serif;font-weight:700;font-size:13px;fill:rgba(45,79,158,.55);letter-spacing:.3em}
+  .m-sea-en{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.3em;fill:rgba(45,79,158,.55)}
+  .m-dot{fill:var(--seal);stroke:var(--card);stroke-width:2}
+  .m-road{fill:none;stroke:var(--seal);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+  .map-card.go .m-road{transition:stroke-dashoffset 2.6s cubic-bezier(.6,.1,.3,1) .4s;stroke-dashoffset:0}
+  .m-rail{fill:none;stroke:var(--ink);stroke-width:2;stroke-dasharray:6 5}
+  .m-thin{fill:none;stroke:var(--ink);stroke-width:1.4;stroke-dasharray:3 4}
+  .m-boat{fill:none;stroke:var(--blue);stroke-width:2.5;stroke-dasharray:1 5;stroke-linecap:round}
+  .m-bus{fill:none;stroke:var(--green);stroke-width:2.2;stroke-dasharray:1 4;stroke-linecap:round}
+  .m-fade{opacity:0;transition:opacity .8s}
+  .map-card.go .m-fade{opacity:1}
+  .m-peak{fill:none;stroke:rgba(35,128,91,.55);stroke-width:1.4}
+
+  .stations{display:flex;flex-direction:column;gap:14px}
+  .station{background:#fff;border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;box-shadow:0 8px 18px -14px rgba(31,27,22,.5)}
+  .st-top{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:14px 18px 12px}
+  .st-top .zh{font-size:1.9rem;line-height:1;color:var(--ink)}
+  .st-top .en{font-weight:700;font-size:.95rem;color:var(--ink);margin-top:5px;letter-spacing:.02em}
+  .st-top .what{font-size:.86rem;color:var(--ink-dim);margin-top:4px}
+  .st-n{text-align:right}
+  .st-n b{display:block;font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:2rem;line-height:1;color:var(--seal)}
+  .st-n span{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim)}
+  .st-bar{display:flex;justify-content:space-between;gap:10px;background:var(--blue);color:#fff;padding:6px 18px;font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.06em}
+  .station.hot .st-bar{background:var(--seal)}
+
+  /* ───── DAY CARDS ───── */
+  .days{display:flex;flex-direction:column;gap:30px}
+  .day{display:grid;grid-template-columns:118px minmax(0,1fr) 180px;gap:26px;align-items:start;background:var(--card);border:1.5px solid var(--rule);border-radius:10px;padding:30px 28px 28px;position:relative;box-shadow:0 16px 34px -26px rgba(31,27,22,.45)}
+  .day.hit{animation:jolt .28s ease-out}
+  @media(max-width:860px){.day{grid-template-columns:92px minmax(0,1fr);padding:24px 20px}.day .d-stamp{position:absolute;right:-6px;top:-34px;width:112px}}
+  @media(max-width:560px){.day{grid-template-columns:1fr;gap:12px}}
+  .d-date{display:flex;flex-direction:column;line-height:1}
+  .d-date .wk{font-family:'Noto Serif TC',serif;font-weight:900;font-size:1rem;color:var(--seal)}
+  .d-date .wk small{font-family:'DM Mono',monospace;font-weight:500;font-size:.66rem;letter-spacing:.14em;color:var(--ink-dim);margin-left:6px}
+  .d-date .num{font-family:'Dela Gothic One',sans-serif;font-size:3.6rem;color:var(--ink);line-height:.95;margin:6px 0 4px}
+  .d-date .mo{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.16em;color:var(--ink-dim);text-transform:uppercase}
+  .d-date .mo i{font-style:normal;font-family:'Noto Serif TC',serif;font-weight:700;letter-spacing:0;margin-right:4px}
+  .d-sign{display:inline-flex;flex-direction:column;border:1.5px solid var(--ink);border-bottom-width:4px;border-bottom-color:var(--blue);background:#fff;padding:5px 12px 4px;margin-bottom:12px;line-height:1.15}
+  .d-sign b{font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.05rem;color:var(--ink)}
+  .d-sign span{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+  .day h3{font-family:'Dela Gothic One',sans-serif;font-weight:400;color:var(--ink);font-size:clamp(1.35rem,2.4vw,1.75rem);line-height:1.12;margin-bottom:12px}
+  .day p{font-size:1rem;max-width:660px}
+  .day p+p{margin-top:10px}
+  .day p b{color:var(--ink)}
+  .sticky{display:inline-block;margin-top:14px;background:#fff1a8;padding:10px 14px;font-size:.95rem;transform:rotate(-1deg);box-shadow:0 6px 12px -8px rgba(31,27,22,.45);max-width:520px;font-family:'LXGW WenKai TC',cursive;color:var(--ink)}
+  .photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:22px 0 6px;max-width:660px}
+  .snap{position:relative;background:#fff;padding:8px 8px 30px;box-shadow:0 10px 20px -14px rgba(31,27,22,.55);transform:rotate(-1.2deg);transition:transform .4s}
+  .snap:nth-child(2){transform:rotate(1.6deg)}
+  .snap:hover{transform:rotate(0) scale(1.02)}
+  .snap img{width:100%;height:220px;object-fit:cover;display:block}
+  .snap figcaption{position:absolute;left:10px;right:10px;bottom:6px;font-family:'LXGW WenKai TC',cursive;font-size:.92rem;color:var(--ink-2)}
+  .snap .tape{top:-12px;left:50%;margin-left:-50px;width:100px;height:24px;transform:rotate(3deg)}
+  .todo{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:16px;padding-top:14px;border-top:1px dashed var(--rule);font-family:'DM Mono',monospace;font-size:.74rem;color:var(--ink-2)}
+  .todo span::before{content:"☐ ";color:var(--ink-dim)}
+  .todo span.hot{color:var(--seal)}
+  .todo span.hot::before{content:"★ ";color:var(--seal)}
+  .d-stamp{width:170px;justify-self:center;margin-top:-6px}
+
+  /* Christmas: spring-couplet red */
+  .day.xmas{background-color:var(--seal);border-color:var(--seal-deep);color:#fbe9d0;outline:2px solid var(--gold);outline-offset:-10px;
+    background-image:radial-gradient(circle at 20% 10%,rgba(255,255,255,.08),transparent 40%),repeating-linear-gradient(0deg,rgba(0,0,0,.035) 0 2px,transparent 2px 5px)}
+  .day.xmas .d-date .num,.day.xmas p b{color:#fff6e4}
+  .day.xmas h3{color:var(--gold)}
+  .day.xmas .d-date .wk,.day.xmas .d-date .mo,.day.xmas .d-date .wk small{color:var(--gold)}
+  .day.xmas .d-sign{border-color:var(--gold);border-bottom-color:var(--gold);background:var(--seal-deep)}
+  .day.xmas .d-sign b{color:var(--gold)} .day.xmas .d-sign span{color:#fbe9d0}
+  .day.xmas .todo{border-color:rgba(233,185,73,.4);color:#fbe9d0}
+  .day.xmas .todo span::before{color:#f3c7a8}
+  .day.xmas .todo span.hot,.day.xmas .todo span.hot::before{color:var(--gold)}
+  .day.xmas .stamp{mix-blend-mode:normal}
+  .fu{position:absolute;right:30px;bottom:-24px;width:56px;height:56px;background:var(--gold);transform:rotate(45deg);display:grid;place-items:center;box-shadow:0 8px 16px -8px rgba(0,0,0,.4)}
+  .fu span{transform:rotate(-45deg);font-family:'Noto Serif TC',serif;font-weight:900;color:var(--seal);font-size:1.6rem}
+
+  /* ───── STAYS: luggage tags ───── */
+  .stays{background:var(--paper-2)}
+  .tags{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:26px 20px}
+  .tag{position:relative;background:#fffdf6;padding:52px 22px 24px;clip-path:polygon(16% 0,84% 0,100% 7%,100% 100%,0 100%,0 7%);transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .7s}
+  .tag.in:nth-child(odd){transform:rotate(-.8deg)} .tag.in:nth-child(even){transform:rotate(.9deg)}
+  .tag.in:hover{transform:rotate(0) translateY(-6px)}
+  .tag::before{content:"";position:absolute;top:13px;left:50%;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:var(--paper-2);box-shadow:0 0 0 4px #d9c7a4}
+  .tag .band{position:absolute;left:0;right:0;top:40px;height:6px;background:var(--blue)}
+  .tag.hostel .band{background:var(--green)} .tag.treat .band{background:var(--gold)}
+  .tag .kind{font-family:'DM Mono',monospace;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim)}
+  .tag .kind b{font-family:'Noto Serif TC',serif;font-weight:900;color:var(--seal);font-size:.9rem;letter-spacing:.04em;margin-right:6px}
+  .tag .nights{font-family:'Dela Gothic One',sans-serif;font-size:2.3rem;line-height:1;color:var(--ink);margin-top:10px}
+  .tag .nights span{font-family:'DM Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-dim);margin-left:6px;vertical-align:middle}
+  .tag .place{font-family:'Dela Gothic One',sans-serif;font-size:1.08rem;color:var(--ink);margin-top:10px;line-height:1.2}
+  .tag .place small{display:block;font-family:'DM Mono',monospace;font-size:.72rem;color:var(--seal);margin-top:6px;letter-spacing:.04em}
+  .tag .vibe{font-size:.92rem;margin-top:12px;padding-top:12px;border-top:1px dashed var(--rule)}
+  .tag .vibe b{color:var(--ink)}
+  .stay-link{display:inline-block;margin:10px 14px 0 0;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);text-decoration:none;border-bottom:1.5px solid currentColor}
+  .stay-link:hover{color:var(--seal)}
+
+  /* ───── NIGHTS: night-market lightboxes ───── */
+  #nights{background:var(--night);color:#cdd3e0;overflow:hidden}
+  #nights::before{content:"";position:absolute;left:0;right:0;top:26px;height:22px;
+    background:radial-gradient(circle at 20px 11px,#ffd98a 0 4px,rgba(255,200,90,.35) 5px,transparent 11px) 0 0/58px 22px repeat-x}
+  #nights::after{content:"";position:absolute;left:0;right:0;top:36px;height:2px;background:rgba(255,255,255,.12)}
+  #nights .sec-title{color:#fff}
+  #nights .sec-tag{color:var(--sign)}
+  #nights .sec-head p{color:#aeb6c8}
+  #nights .sec-head p b{color:#fff}
+  .signs{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:34px 22px}
+  .sign-card{position:relative;padding-top:22px}
+  .sign-card::before,.sign-card::after{content:"";position:absolute;top:0;width:2px;height:22px;background:#5d6680}
+  .sign-card::before{left:28%}.sign-card::after{right:28%}
+  .lightbox{position:relative;display:flex;align-items:stretch;background:var(--sign);color:var(--seal);border-radius:6px;border:3px solid #1b2238;box-shadow:0 0 0 2px #39415a,0 0 34px -4px rgba(255,210,63,.55);overflow:hidden}
+  .lightbox .v{writing-mode:vertical-rl;font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.15rem;background:var(--seal);color:var(--sign);padding:10px 7px;letter-spacing:.1em;display:flex;align-items:center}
+  .lightbox h4{font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:1.32rem;line-height:1.1;padding:16px;display:flex;align-items:center}
+  .sign-card.red .lightbox{background:var(--seal);color:#fff;box-shadow:0 0 0 2px #39415a,0 0 34px -4px rgba(200,48,42,.7)}
+  .sign-card.red .lightbox .v{background:#fff;color:var(--seal)}
+  .sign-card.white .lightbox{background:#f6f7fb;color:var(--blue);box-shadow:0 0 0 2px #39415a,0 0 34px -4px rgba(220,230,255,.45)}
+  .sign-card.white .lightbox .v{background:var(--blue);color:#fff}
+  .sign-card:hover .lightbox{animation:buzz .5s steps(2) 1}
+  @keyframes buzz{0%{filter:brightness(1)}25%{filter:brightness(.55)}50%{filter:brightness(1.1)}75%{filter:brightness(.7)}100%{filter:brightness(1)}}
+  .sign-card .where{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--sign);margin-top:14px;letter-spacing:.03em}
+  .sign-card p{font-size:.92rem;margin-top:8px;color:#bcc3d3}
+  .sign-card .cost{margin-top:12px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.18);font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:#fff}
+  .night-note{margin-top:34px;font-size:.92rem;color:#aeb6c8;max-width:900px}
+  .night-note b{color:#fff}
+
+  /* ───── BUDGET: e-invoice receipts ───── */
+  .receipts{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:start}
+  @media(max-width:980px){.receipts{grid-template-columns:1fr;max-width:420px}}
+  .receipt{position:relative;background:#fbfbf6;padding:26px 22px 30px;font-family:'DM Mono',monospace;color:#2a2a2a;box-shadow:0 14px 26px -18px rgba(0,0,0,.45);font-size:.78rem;margin:10px 0;transition:opacity .7s,transform .7s}
+  .receipt::before,.receipt::after{content:"";position:absolute;left:0;right:0;height:10px;background:radial-gradient(circle at 7px 10px,transparent 6px,#fbfbf6 6.5px) 0 0/14px 10px repeat-x}
+  .receipt::before{top:-10px}
+  .receipt::after{bottom:-10px;transform:scaleY(-1)}
+  .receipt.in:nth-child(1){transform:rotate(-1.2deg)} .receipt.in:nth-child(3){transform:rotate(1deg)}
+  .receipt.pick.in{transform:translateY(-12px)}
+  .r-head{text-align:center;border-bottom:1px dashed #999;padding-bottom:12px}
+  .r-head .zh{font-size:1.25rem;color:#111;letter-spacing:.08em}
+  .r-head .per{font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.5rem;color:#111;margin-top:4px}
+  .r-head .no{font-size:1.05rem;letter-spacing:.06em;margin-top:2px;color:#111}
+  .r-tier{text-align:center;margin:14px 0 4px}
+  .r-tier b{font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.1rem;color:var(--seal);margin-right:8px}
+  .r-tier span{letter-spacing:.14em;text-transform:uppercase;font-size:.7rem}
+  .r-meta{display:flex;justify-content:space-between;font-size:.68rem;color:#555;margin-top:10px}
+  .r-items{margin-top:14px;border-top:1px dashed #999;padding-top:12px;display:flex;flex-direction:column;gap:8px}
+  .r-items div{display:flex;gap:8px;align-items:baseline}
+  .r-items div span:first-child{white-space:nowrap}
+  .r-items div i{flex:1;border-bottom:1px dotted #aaa;transform:translateY(-3px);min-width:8px}
+  .r-items div span:last-child{white-space:nowrap;color:#111;font-weight:500}
+  .r-total{margin-top:14px;padding-top:12px;border-top:2px solid #222;display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .r-total b{font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:1.2rem;color:#111}
+  .r-total span{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+  .barcode{height:38px;margin-top:16px}
+  .qrs{display:flex;justify-content:center;gap:18px;margin-top:14px}
+  .qrs svg{width:34%;height:auto;display:block}
+  .receipt .stamp{position:absolute;width:112px;right:-22px;top:56px;z-index:2}
+  .menu-board{margin-top:56px;background:#fff8e7;border:6px solid var(--seal);border-radius:8px;padding:26px 28px;box-shadow:0 0 0 2px var(--card) inset,8px 8px 0 var(--ink)}
+  .menu-board h4{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;font-family:'Noto Serif TC',serif;font-weight:900;font-size:2rem;color:var(--seal);line-height:1;border-bottom:2px solid var(--seal);padding-bottom:12px;margin-bottom:8px}
+  .menu-board h4 small{font-family:'DM Mono',monospace;font-weight:500;font-size:.72rem;letter-spacing:.16em;color:var(--ink-2);text-transform:uppercase}
+  .menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0 34px}
+  .menu div{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:12px 0;border-bottom:1px dashed rgba(200,48,42,.35)}
+  .menu .it b{display:block;font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.1rem;color:var(--ink);line-height:1.15}
+  .menu .it span{font-size:.8rem;color:var(--ink-dim)}
+  .menu .pr{font-family:'Dela Gothic One',sans-serif;color:var(--seal);font-size:1rem;white-space:nowrap}
+
+  /* ───── INTEL ───── */
+  .notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px}
+  .note{background:var(--card);border:1.5px solid var(--ink);border-radius:8px;padding:24px 22px 22px;box-shadow:4px 4px 0 rgba(31,27,22,.85);position:relative}
+  .note.wide{grid-column:1/-1;background:#fff;border-color:var(--seal);box-shadow:6px 6px 0 var(--seal)}
+  .note .h{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .note .h i{font-style:normal;width:34px;height:34px;flex:none;border-radius:50%;border:2px solid var(--seal);color:var(--seal);display:grid;place-items:center;font-family:'Noto Serif TC',serif;font-weight:900;font-size:1rem}
+  .note .h b{font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:1.05rem;color:var(--ink);line-height:1.2}
+  .note .h small{font-family:'Noto Serif TC',serif;font-weight:900;color:var(--ink-dim);font-size:.85rem;margin-left:auto}
+  .note p{font-size:.93rem}
+  .note p b{color:var(--ink)}
+
+  .doufang{margin-top:80px;text-align:center}
+  .doufang .sec-tag{font-size:1.4rem}
+  .diamonds{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:34px}
+  @media(max-width:860px){.diamonds{grid-template-columns:repeat(2,1fr);row-gap:40px}}
+  .dia{display:flex;flex-direction:column;align-items:center;gap:28px}
+  .dia .sq{width:96px;height:96px;background:var(--seal);transform:rotate(45deg);display:grid;place-items:center;box-shadow:inset 0 0 0 4px var(--seal),inset 0 0 0 6px var(--gold),0 12px 22px -12px rgba(0,0,0,.5);transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+  .dia:hover .sq{transform:rotate(225deg)}
+  .dia .sq span{transform:rotate(-45deg);font-family:'Noto Serif TC',serif;font-weight:900;color:var(--gold);font-size:2.6rem;line-height:1;transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+  .dia:hover .sq span{transform:rotate(-225deg)}
+  .dia p{font-family:'LXGW WenKai TC',cursive;font-size:1.12rem;color:var(--ink);max-width:220px}
+
+  /* ───── FOOTER ───── */
+  footer{background:var(--ink);color:#cfc6b6;padding:90px 0 50px;text-align:center;position:relative}
+  .seal-4{display:inline-grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;width:148px;height:148px;background:var(--seal);color:var(--card);font-family:'Noto Serif TC',serif;font-weight:900;font-size:3.1rem;line-height:1;border-radius:8px;padding:10px;box-shadow:inset 0 0 0 5px var(--seal),inset 0 0 0 8px var(--card);transform:rotate(-4deg)}
+  .seal-4 span{display:grid;place-items:center}
+  footer .big{font-family:'Dela Gothic One',sans-serif;font-size:clamp(2.4rem,7vw,5rem);color:var(--card);line-height:1;margin-top:34px}
+  footer .big em{font-style:normal;color:var(--seal)}
+  footer .hand{font-size:1.35rem;color:var(--gold);margin-top:12px}
+  footer .meta{margin-top:20px;font-family:'DM Mono',monospace;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#9d9483}
+  footer .credits{margin:28px auto 0;max-width:840px;font-size:.72rem;color:#7d7566;line-height:1.7}
+  footer .credits a{color:#a39a88}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .stamp.wait{opacity:.92}.stamp.thunk{animation:none}
+    .ribbon-track{animation:none}
+    .m-road{stroke-dashoffset:0}.m-fade{opacity:1}
+  }
+</style>
+</head>
+<body>
+
+<!-- Shared SVG defs: rubber-stamp ink texture, Hakka floral cloth, map waves -->
+<svg class="defs" aria-hidden="true">
+  <defs>
+    <filter id="ink" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="w"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.1 0 0 0 1.75" result="mask"/>
+      <feComposite in="w" in2="mask" operator="in"/>
+    </filter>
+    <g id="peony">
+      <ellipse cx="-24" cy="16" rx="19" ry="8" fill="#2a8a5a" transform="rotate(-32 -24 16)"/>
+      <ellipse cx="22" cy="22" rx="17" ry="7" fill="#1d6b45" transform="rotate(28 22 22)"/>
+      <ellipse cx="4" cy="-27" rx="13" ry="6" fill="#2a8a5a" transform="rotate(-75 4 -27)"/>
+      <g fill="#f48aa6"><circle cx="13" cy="0" r="12"/><circle cx="6.5" cy="11.3" r="12"/><circle cx="-6.5" cy="11.3" r="12"/><circle cx="-13" cy="0" r="12"/><circle cx="-6.5" cy="-11.3" r="12"/><circle cx="6.5" cy="-11.3" r="12"/></g>
+      <g fill="#fbc9d6"><circle cx="6" cy="0" r="7.5"/><circle cx="-3" cy="5.2" r="7.5"/><circle cx="-3" cy="-5.2" r="7.5"/></g>
+      <circle r="4.5" fill="#fff3b0"/>
+      <g fill="#c4122f"><circle cx="-1.5" cy="-1" r="1"/><circle cx="1.6" cy="1.2" r="1"/><circle cx="1.4" cy="-1.8" r="1"/></g>
+    </g>
+    <g id="bloom">
+      <ellipse cx="-16" cy="10" rx="12" ry="5" fill="#2a8a5a" transform="rotate(-25 -16 10)"/>
+      <g fill="#fffaf0"><circle cx="0" cy="-8" r="7"/><circle cx="7.6" cy="-2.5" r="7"/><circle cx="4.7" cy="6.5" r="7"/><circle cx="-4.7" cy="6.5" r="7"/><circle cx="-7.6" cy="-2.5" r="7"/></g>
+      <circle r="4" fill="#f4c430"/>
+    </g>
+    <pattern id="hakka" width="150" height="120" patternUnits="userSpaceOnUse">
+      <rect width="150" height="120" fill="#c4122f"/>
+      <use href="#peony" x="38" y="34"/>
+      <use href="#peony" transform="translate(113 94) rotate(20)"/>
+      <use href="#bloom" x="112" y="22"/>
+      <use href="#bloom" transform="translate(34 98) rotate(-15)"/>
+      <g fill="#fffaf0" opacity=".9"><circle cx="75" cy="60" r="2.2"/><circle cx="8" cy="66" r="1.8"/><circle cx="142" cy="56" r="1.8"/><circle cx="70" cy="8" r="1.6"/><circle cx="76" cy="113" r="1.6"/></g>
+    </pattern>
+    <pattern id="waves" width="30" height="16" patternUnits="userSpaceOnUse">
+      <path d="M0 8 Q7.5 3 15 8 T30 8" fill="none" stroke="rgba(45,79,158,.2)" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+</svg>
+
+<nav id="nav">
+  <a class="brand" href="#top"><span class="seal-mini">集</span><b>Taiwan Stamp Rally</b></a>
+  <div class="nav-links">
+    <a href="../index.html">← Trips</a>
+    <a href="#flights"><span>航班</span>Flights</a>
+    <a href="#route"><span>路線</span>Route</a>
+    <a href="#plan"><span>行程</span>Plan</a>
+    <a href="#stays"><span>住宿</span>Stays</a>
+    <a href="#nights"><span>夜生活</span>Nights</a>
+    <a href="#budget"><span>預算</span>Budget</a>
+    <a href="#know"><span>須知</span>Intel</a>
+  </div>
+</nav>
+
+<header id="top" class="grid-paper">
+  <div class="wrap">
+    <div>
+      <div class="kicker"><i>集章之旅</i> Two mates · 19 – 30 Dec 2026</div>
+      <div class="title-row">
+        <h1 class="hero-title">Taiwan<span class="sub-line">Stamp Rally</span></h1>
+        <div class="seal-big" aria-hidden="true">台灣</div>
+      </div>
+      <p class="hero-sub">Every station in Taiwan has a rubber stamp for travellers. Here's twelve days, all the way round the island, one stamp a day: <b>Taipei nights → turtles → paragliding → surf → Taroko → Christmas at 460 metres → Sun Moon Lake → Taiwan's best bar</b>. Then a night flight home in time for New Year's Eve.</p>
+      <div class="punch" aria-label="Trip at a glance">
+        <div><div class="n">2</div><div class="t">Travellers</div></div>
+        <div><div class="n red">12</div><div class="t">Days</div></div>
+        <div><div class="n">6</div><div class="t">Bases</div></div>
+        <div><div class="n">2</div><div class="t">Paraglides</div></div>
+        <div><div class="n red">5</div><div class="t">Big Nights</div></div>
+      </div>
+      <div class="hint">↖ tap anywhere up here to stamp it</div>
+    </div>
+    <figure class="polaroid">
+      <span class="tape"></span>
+      <img src="assets/hero.webp" alt="Taipei 101 and the city skyline at night from Elephant Mountain">
+      <figcaption>Taipei 101 · our Christmas sunset view</figcaption>
+      <span class="stamp wait hero-stamp" style="--r:-14deg;width:180px;left:-78px;bottom:30px" data-zh="台北" data-en="TAIPEI" data-sub="START · 起點" data-date="2026.12.19" data-shape="circle" data-color="seal"></span>
+      <span class="stamp wait hero-stamp" style="--r:9deg;width:160px;right:-56px;top:-50px" data-zh="集章" data-en="STAMP RALLY" data-sub="12 STAMPS" data-date="19—30 DEC" data-shape="burst" data-color="blue"></span>
+    </figure>
+  </div>
+</header>
+
+<div class="hakka" aria-hidden="true">
+  <svg class="bg"><rect width="100%" height="100%" fill="url(#hakka)"/></svg>
+  <div class="ribbon"><div class="ribbon-track">
+    <span>台北<small>TAIPEI</small></span><span>九份<small>JIUFEN</small></span><span>小琉球<small>XIAOLIUQIU</small></span><span>鹿野<small>LUYE</small></span><span>都蘭<small>DULAN</small></span><span>太魯閣<small>TAROKO</small></span><span>萬里<small>WANLI</small></span><span>日月潭<small>SUN MOON LAKE</small></span><span>台中<small>TAICHUNG</small></span>
+    <span>台北<small>TAIPEI</small></span><span>九份<small>JIUFEN</small></span><span>小琉球<small>XIAOLIUQIU</small></span><span>鹿野<small>LUYE</small></span><span>都蘭<small>DULAN</small></span><span>太魯閣<small>TAROKO</small></span><span>萬里<small>WANLI</small></span><span>日月潭<small>SUN MOON LAKE</small></span><span>台中<small>TAICHUNG</small></span>
+  </div></div>
+</div>
+
+<!-- ───────── FLIGHTS ───────── -->
+<section id="flights">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-seal">航班</div>
+      <div>
+        <span class="sec-tag">getting there</span>
+        <h2 class="sec-title">Pick your tickets</h2>
+        <p>Fly into <b>Taipei (Taoyuan, TPE)</b>. It's the only airport with direct flights from Sydney, and the loop starts and ends there. One catch: China Airlines' direct flight doesn't fly on Saturdays from Sydney or on Wednesdays from Taipei. So you can go direct a day either side, or keep the exact dates with a stop.</p>
+      </div>
+    </div>
+
+    <div class="tickets">
+      <article class="ticket reveal">
+        <div class="t-main">
+          <div class="t-band"><span><b>中華航空</b>China Airlines</span><span>直飛 Direct · CI52 / CI51</span></div>
+          <div class="t-legs">
+            <div class="t-leg">
+              <div class="t-date">Fri 18 Dec → Sat 19 Dec</div>
+              <div class="t-pt"><div class="city">雪梨</div><div class="code">SYD <b>22:10</b> · T1</div></div>
+              <div class="t-mid">CI52 · 9h 10m<div class="line"></div>direct</div>
+              <div class="t-pt r"><div class="city">桃園</div><div class="code">TPE <b>04:20⁺¹</b> · T2</div></div>
+            </div>
+            <div class="t-leg">
+              <div class="t-date">Tue 29 Dec → Wed 30 Dec</div>
+              <div class="t-pt"><div class="city">桃園</div><div class="code">TPE <b>23:50</b> · T2</div></div>
+              <div class="t-mid">CI51 · 9h 25m<div class="line"></div>direct</div>
+              <div class="t-pt r"><div class="city">雪梨</div><div class="code">SYD <b>12:15⁺¹</b> · T1</div></div>
+            </div>
+          </div>
+          <p class="t-note">Gives you the <b>most time on the ground</b>, with no connections. You wake up in Taiwan on the 19th and land home at lunchtime on the 30th. The trade-off is two night flights.</p>
+        </div>
+        <div class="t-stub">
+          <span class="stamp wait" style="--r:12deg" data-zh="推薦" data-en="OUR PICK" data-sub="★ ★ ★" data-date="OPTION A" data-shape="circle" data-color="seal"></span>
+          <div class="lbl">Option</div>
+          <div class="opt">A</div>
+          <div class="price">A$1,516+</div>
+          <div class="lbl">return · Dec fares</div>
+        </div>
+      </article>
+
+      <article class="ticket reveal">
+        <div class="t-main">
+          <div class="t-band"><span><b>國泰航空</b>Cathay Pacific</span><span>轉機 Via Hong Kong · exact dates</span></div>
+          <div class="t-legs">
+            <div class="t-leg">
+              <div class="t-date">Sat 19 Dec</div>
+              <div class="t-pt"><div class="city">雪梨</div><div class="code">SYD <b>08:40</b> · CX110</div></div>
+              <div class="t-mid">HKG 15:10<div class="line"></div>1 stop</div>
+              <div class="t-pt r"><div class="city">桃園</div><div class="code">TPE <b>~evening</b></div></div>
+            </div>
+            <div class="t-leg">
+              <div class="t-date">Wed 30 Dec → Thu 31 Dec</div>
+              <div class="t-pt"><div class="city">桃園</div><div class="code">TPE <b>~pm</b> → HKG</div></div>
+              <div class="t-mid">CX111 · HKG 19:05<div class="line"></div>1 stop</div>
+              <div class="t-pt r"><div class="city">雪梨</div><div class="code">SYD <b>07:10⁺¹</b></div></div>
+            </div>
+          </div>
+          <p class="t-note">Keeps your <b>exact 19th–30th dates</b> and has no red-eye on the way out. You land in Taipei on the evening of the 19th and get an extra Taipei night on the 29th. The Taipei–Hong Kong connections aren't confirmed yet, so check them when you book.</p>
+        </div>
+        <div class="t-stub">
+          <div class="lbl">Option</div>
+          <div class="opt">B</div>
+          <div class="price">A$1,560+</div>
+          <div class="lbl">return · Dec fares</div>
+        </div>
+      </article>
+
+      <article class="ticket reveal">
+        <div class="t-main">
+          <div class="t-band"><span><b>酷航</b>Scoot</span><span>廉航 Budget · via Singapore</span></div>
+          <div class="t-legs">
+            <div class="t-leg">
+              <div class="t-date">Daily · Sydney ⇄ Taipei</div>
+              <div class="t-pt"><div class="city">雪梨</div><div class="code">SYD</div></div>
+              <div class="t-mid">18–21 hrs<div class="line"></div>via SIN</div>
+              <div class="t-pt r"><div class="city">桃園</div><div class="code">TPE</div></div>
+            </div>
+          </div>
+          <p class="t-note">The cheapest option, but you pay for it in time. It's <b>18–21 hours with a Singapore change</b>, and bags and meals cost extra. The typical range is for the whole year, and Christmas week will sit at the top of it or above. Only worth it if saving about A$700 each matters more than a whole travel day.</p>
+        </div>
+        <div class="t-stub">
+          <div class="lbl">Option</div>
+          <div class="opt">C</div>
+          <div class="price">~A$500–1,050</div>
+          <div class="lbl">typical return</div>
+        </div>
+      </article>
+    </div>
+
+    <p class="flt-foot reveal"><b>Prices</b> are the "from" fares each airline lists on its own site for December (October 2026). Over Christmas they move fast, so book soon. <b>Times</b> come from the current timetables. Re-check them when you book, especially that CI52 doesn't fly Saturdays and CI51 doesn't fly Wednesdays. The day-by-day plan below assumes <b>Option A</b>, with notes where Option B changes things.</p>
+  </div>
+</section>
+
+<!-- ───────── ROUTE MAP ───────── -->
+<section id="route" class="grid-paper">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-seal">路線</div>
+      <div>
+        <span class="sec-tag">the loop</span>
+        <h2 class="sec-title">Round the island</h2>
+        <p>Anticlockwise around the island, built around three things: <b>the warm, dry south and east in December</b>, <b>Christmas and the long weekend in Taipei</b> for the biggest nights, and a <b>rental car only where driving beats the train</b> (the east coast).</p>
+      </div>
+    </div>
+
+    <div class="route-wrap">
+      <div class="map-card reveal" id="map">
+        <svg viewBox="0 0 412 740" role="img" aria-label="Map of Taiwan showing the trip route">
+          <rect x="0" y="0" width="412" height="740" fill="url(#waves)"/>
+          <text class="m-sea" x="394" y="380" writing-mode="tb">太平洋</text>
+          <text class="m-sea-en" x="378" y="372" writing-mode="tb">PACIFIC OCEAN</text>
+          <text class="m-sea" x="22" y="140" writing-mode="tb">台灣海峽</text>
+          <text class="m-sea-en" x="38" y="124" writing-mode="tb">TAIWAN STRAIT</text>
+          <path class="m-island" d="M217.0,550.3 Q203.1,565.9 197.4,577.7 Q191.7,589.4 187.2,601.8 Q182.6,614.2 180.8,625.9 Q179.0,637.6 179.1,649.6 Q179.2,661.7 177.9,672.6 Q176.6,683.5 174.4,694.2 Q172.1,705.0 163.2,701.9 Q154.3,698.8 149.5,691.1 Q144.7,683.4 143.6,670.7 Q142.5,658.1 136.0,642.8 Q129.6,627.5 127.2,623.1 Q124.8,618.7 115.5,610.2 Q106.2,601.6 97.7,597.4 Q89.3,593.1 82.8,586.8 Q76.2,580.5 77.1,581.0 Q77.9,581.5 73.1,573.0 Q68.3,564.5 64.6,555.5 Q60.9,546.4 53.4,520.7 Q45.8,495.0 43.2,488.8 Q40.6,482.6 37.1,476.9 Q33.6,471.3 32.6,465.7 Q31.6,460.0 32.8,453.8 Q34.0,447.6 37.2,438.3 Q40.5,429.0 42.5,419.6 Q44.5,410.2 42.9,397.4 Q41.3,384.7 41.9,372.0 Q42.5,359.4 45.0,353.8 Q47.4,348.2 90.5,271.2 Q133.6,194.3 145.3,177.9 Q157.0,161.5 164.2,153.5 Q171.4,145.5 177.4,136.4 Q183.4,127.3 189.1,115.9 Q194.9,104.4 201.9,93.9 Q208.9,83.4 213.9,80.2 Q218.9,77.0 243.6,67.6 Q268.4,58.2 276.1,49.2 Q283.8,40.2 290.0,37.4 Q296.1,34.6 303.2,34.8 Q310.2,34.9 314.7,39.2 Q319.2,43.5 323.2,48.6 Q327.3,53.7 331.5,56.4 Q335.7,59.2 346.7,64.1 Q357.6,69.1 362.4,73.9 Q367.2,78.7 369.4,87.0 Q371.6,95.3 364.9,103.1 Q358.3,110.9 354.9,118.0 Q351.6,125.1 351.0,132.9 Q350.4,140.7 351.6,151.3 Q352.8,161.9 352.9,172.5 Q353.1,183.1 344.8,208.0 Q336.4,232.9 327.5,248.5 Q318.5,264.0 316.1,271.7 Q313.7,279.5 311.0,298.6 Q308.3,317.8 303.0,337.1 Q297.8,356.3 293.3,380.8 Q288.8,405.2 281.5,430.3 Q274.2,455.5 270.1,466.0 Q266.0,476.5 260.8,486.6 Q255.6,496.7 243.3,515.7 Q231.0,534.7 217.0,550.3Z"/>
+          <circle cx="86" cy="622" r="5" class="m-island"/>
+          <g id="peaks"></g>
+          <text x="262" y="430" transform="rotate(-71 262 430)" style="font-family:'Noto Serif TC',serif;font-weight:900;font-size:11px;letter-spacing:.3em;fill:rgba(35,128,91,.8)">中央山脈</text>
+
+          <path class="m-rail m-fade" d="M304,82 C285,92 265,96 255,102 C232,118 214,128 200,148 C178,185 160,225 150,262 C138,310 120,360 110,400 C100,440 90,465 85,490 C80,515 76,535 75,552"/>
+          <path class="m-rail m-fade" style="transition-delay:3s" d="M315,258 C322,236 332,200 338,160 C343,122 324,94 304,82"/>
+          <path class="m-thin m-fade" d="M304,82 Q275,70 243.6,74"/>
+          <path class="m-thin m-fade" d="M304,82 L342,80 L355,68"/>
+          <path class="m-thin m-fade" style="transition-delay:3.2s" d="M304,82 Q318,62 324,54"/>
+          <path class="m-bus m-fade" style="transition-delay:3.4s" d="M150,262 C165,278 178,296 185,318"/>
+          <path class="m-boat m-fade" style="transition-delay:.9s" d="M100.7,598 Q90,610 86,622"/>
+          <path class="m-road" pathLength="1" d="M75,552 Q88,575 100.7,598 C112,612 130,628 150,632 C172,636 190,620 200,598 C210,575 220,555 227,538 L225,508 L243.6,514 C258,496 270,482 278,466 C292,420 304,350 311,292 L315,258"/>
+
+          <g class="m-fade" style="transition-delay:.2s">
+            <circle class="m-dot" cx="243.6" cy="74" r="4.5"/><text class="m-label" x="236" y="62" text-anchor="end">桃園機場</text><text class="m-en" x="236" y="74" text-anchor="end">TPE · IN &amp; OUT</text>
+            <circle class="m-dot" cx="304" cy="82" r="6.5"/><text class="m-label" x="296" y="106" text-anchor="end">台北</text><text class="m-en" x="296" y="118" text-anchor="end">TAIPEI · 19–21, 24–27</text>
+            <circle class="m-dot" cx="355" cy="68" r="4.5"/><text class="m-label" x="380" y="44" text-anchor="middle">九份</text><text class="m-en" x="380" y="55" text-anchor="middle">JIUFEN · 20</text>
+            <circle class="m-dot" cx="324" cy="54" r="4.5"/><text class="m-label" x="330" y="26" text-anchor="middle">萬里</text><text class="m-en" x="330" y="37" text-anchor="middle">WANLI · 26</text>
+            <circle class="m-dot" cx="75" cy="552" r="4.5"/><text class="m-label" x="64" y="540" text-anchor="end">左營</text><text class="m-en" x="64" y="552" text-anchor="end">ZUOYING</text>
+          </g>
+          <g class="m-fade" style="transition-delay:1.2s">
+            <circle class="m-dot" cx="86" cy="622" r="5.5"/><text class="m-label" x="92" y="644" text-anchor="middle">小琉球</text><text class="m-en" x="92" y="656" text-anchor="middle">XIAOLIUQIU · 21</text>
+          </g>
+          <g class="m-fade" style="transition-delay:2s">
+            <circle class="m-dot" cx="225" cy="508" r="4.5"/><text class="m-label" x="214" y="496" text-anchor="end">鹿野</text><text class="m-en" x="214" y="508" text-anchor="end">LUYE · 22</text>
+            <circle class="m-dot" cx="243.6" cy="514" r="5.5"/><text class="m-label" x="256" y="530">都蘭</text><text class="m-en" x="256" y="542">DULAN · 22</text>
+          </g>
+          <g class="m-fade" style="transition-delay:2.7s">
+            <circle class="m-dot" cx="311" cy="292" r="5.5"/><text class="m-label" x="322" y="302">花蓮</text><text class="m-en" x="322" y="314">HUALIEN · 23</text>
+            <circle class="m-dot" cx="315" cy="258" r="4.5"/><text class="m-label" x="326" y="252">太魯閣</text><text class="m-en" x="326" y="264">TAROKO · 24</text>
+          </g>
+          <g class="m-fade" style="transition-delay:3.4s">
+            <circle class="m-dot" cx="150" cy="262" r="5.5"/><text class="m-label" x="140" y="250" text-anchor="end">台中</text><text class="m-en" x="140" y="262" text-anchor="end">TAICHUNG · 28</text>
+            <circle class="m-dot" cx="185" cy="318" r="5.5"/><text class="m-label" x="197" y="326">日月潭</text><text class="m-en" x="197" y="338">SUN MOON LAKE · 27</text>
+          </g>
+          <g transform="translate(372,690)" fill="none" stroke="#1f1b16" stroke-width="1.5"><circle r="16"/><path d="M0,-12 L4,4 L0,1 L-4,4Z" fill="#1f1b16"/><text y="-21" text-anchor="middle" class="m-en" stroke="none">N</text></g>
+        </svg>
+        <div class="map-legend"><span><i class="lg-car"></i>Rental car</span><span><i class="lg-rail"></i>Train</span><span><i class="lg-boat"></i>Ferry</span><span><i class="lg-bus"></i>Bus</span></div>
+      </div>
+
+      <div class="stations">
+        <div class="station reveal"><div class="st-top"><div><div class="zh">台北</div><div class="en">Taipei</div><div class="what">Social hostel · Saturday night · lanterns &amp; Jiufen</div></div><div class="st-n"><b>2</b><span>nights</span></div></div><div class="st-bar"><span>← 桃園機場 TPE</span><span>19 – 21 Dec</span><span>小琉球 →</span></div></div>
+        <div class="station reveal"><div class="st-top"><div><div class="zh">小琉球</div><div class="en">Xiaoliuqiu</div><div class="what">Turtle snorkel · e-scooters · island night</div></div><div class="st-n"><b>1</b><span>night</span></div></div><div class="st-bar"><span>← 台北</span><span>21 – 22 Dec</span><span>都蘭 →</span></div></div>
+        <div class="station reveal"><div class="st-top"><div><div class="zh">都蘭</div><div class="en">Dulan</div><div class="what">Southlink drive · Luye paragliding · surf hostel</div></div><div class="st-n"><b>1</b><span>night</span></div></div><div class="st-bar"><span>← 小琉球</span><span>22 – 23 Dec</span><span>花蓮 →</span></div></div>
+        <div class="station reveal"><div class="st-top"><div><div class="zh">花蓮</div><div class="en">Hualien</div><div class="what">Surf lesson · Highway 11 · night market · Taroko</div></div><div class="st-n"><b>1</b><span>night</span></div></div><div class="st-bar"><span>← 都蘭</span><span>23 – 24 Dec</span><span>台北 →</span></div></div>
+        <div class="station hot reveal"><div class="st-top"><div><div class="zh">台北</div><div class="en">Taipei · Christmas</div><div class="what">Christmas Eve · Skyline 460 · Wanli · two big nights</div></div><div class="st-n"><b>3</b><span>nights</span></div></div><div class="st-bar"><span>← 花蓮</span><span>24 – 27 Dec</span><span>日月潭 →</span></div></div>
+        <div class="station reveal"><div class="st-top"><div><div class="zh">日月潭</div><div class="en">Sun Moon Lake</div><div class="what">Ropeway · theme-park rides · the splurge night</div></div><div class="st-n"><b>1</b><span>night</span></div></div><div class="st-bar"><span>← 台北</span><span>27 – 28 Dec</span><span>台中 →</span></div></div>
+        <div class="station reveal"><div class="st-top"><div><div class="zh">台中</div><div class="en">Taichung</div><div class="what">Fengjia Night Market · Vender, Taiwan's best bar</div></div><div class="st-n"><b>1</b><span>night</span></div></div><div class="st-bar"><span>← 日月潭</span><span>28 – 29 Dec</span><span>桃園機場 →</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── DAY BY DAY ───────── -->
+<section id="plan">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-seal">行程</div>
+      <div>
+        <span class="sec-tag">one stamp a day</span>
+        <h2 class="sec-title">Twelve days, day by day</h2>
+        <p>Each day gets stamped as you scroll to it. The plan assumes the <b>direct China Airlines flights (Option A)</b>. The yellow notes show where Option B changes things.</p>
+      </div>
+    </div>
+
+    <div class="days">
+
+      <article class="day">
+        <div class="d-date"><span class="wk">週六<small>SAT</small></span><span class="num">19</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>台北</b><span>Taipei</span></div>
+          <h3>Land, Soak, Go Out</h3>
+          <p>Land at 04:20 and take the Airport MRT into Taipei Main (about 40 minutes), then go to Meander in Ximending. <b>Book the room from the night of the 18th</b> so you can sleep from 6am instead of waiting for a 3pm check-in. Sleep until lunch.</p>
+          <p>Afternoon: a <b>private hot-spring room in Beitou</b> (about NT$1,000–1,500 for two, 60–120 min) to recover from the overnight flight. Evening: Ximending street food, meet people in the hostel common room, then <b>Saturday night in Xinyi at WAVE or AI Club</b>.</p>
+          <div class="sticky">Option B: you land in the evening, so skip Beitou and go straight out.</div>
+          <div class="todo"><span>Land 04:20</span><span>Airport MRT</span><span>Beitou hot spring</span><span>Ximending</span><span class="hot">WAVE / AI Club</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:-10deg" data-zh="台北" data-en="TAIPEI" data-sub="HOT SPRINGS" data-date="2026.12.19" data-shape="circle" data-color="seal"></span>
+      </article>
+
+      <article class="day">
+        <div class="d-date"><span class="wk">週日<small>SUN</small></span><span class="num">20</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>十分 · 九份</b><span>Shifen · Jiufen</span></div>
+          <h3>Lanterns &amp; Jiufen</h3>
+          <p>Late start. Train to Ruifang, then the little Pingxi Line to <b>Shifen</b>. Write your wishes on a <b>sky lantern</b> (NT$200–350, cash) and launch it from the old railway track, then walk to Shifen Waterfall. Taxi up to <b>Jiufen</b> (about NT$200–250 from Ruifang) for when the red lanterns come on at dusk. It's packed on a Sunday, so arrive after 4pm.</p>
+          <p>Train back via Ruifang to Songshan and walk straight into <b>Raohe Night Market</b>, next to the station.</p>
+          <div class="photos">
+            <figure class="snap"><span class="tape mint"></span><img src="assets/shifen.webp" alt="Sky lanterns over the railway track at Shifen Old Street" loading="lazy"><figcaption>sky lanterns over the tracks</figcaption></figure>
+            <figure class="snap"><span class="tape pink"></span><img src="assets/jiufen.webp" alt="Jiufen old street lit by red lanterns at night" loading="lazy"><figcaption>Jiufen after dark</figcaption></figure>
+          </div>
+          <div class="todo"><span>Pingxi Line</span><span class="hot">Sky lantern</span><span>Shifen Waterfall</span><span>Jiufen at dusk</span><span>Raohe Night Market</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:7deg" data-zh="九份" data-en="JIUFEN" data-sub="SKY LANTERNS" data-date="2026.12.20" data-shape="square" data-color="blue"></span>
+      </article>
+
+      <article class="day">
+        <div class="d-date"><span class="wk">週一<small>MON</small></span><span class="num">21</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>小琉球</b><span>Xiaoliuqiu</span></div>
+          <h3>Swim With Turtles</h3>
+          <p>High-speed rail from Taipei to <b>Zuoying (Kaohsiung)</b>, about 1.5–2 hours. Pick up a <b>one-way rental car</b> at Zuoying, to drop off in Hualien on the 24th. Drive about an hour to Donggang, park at the ferry terminal and take the 20–25 minute boat to <b>Xiaoliuqiu</b> (about NT$200–230 each way).</p>
+          <p>Rent electric scooters (one rider each, no licence needed) and lap the coral island. <b>Snorkel with green turtles</b> straight off the shore. The water is 22–26°C, so hire a wetsuit. Turtles are likely but not guaranteed. Then Vase Rock, and sunset on the west side. It's a quiet island night: 7-Eleven beers on the harbour wall.</p>
+          <div class="photos"><figure class="snap"><span class="tape"></span><img src="assets/liuqiu.webp" alt="Vase Rock on Xiaoliuqiu island" loading="lazy"><figcaption>Vase Rock, Xiaoliuqiu</figcaption></figure></div>
+          <div class="todo"><span>HSR → Zuoying</span><span>Pick up car</span><span>Ferry from Donggang</span><span class="hot">Turtle snorkel</span><span>E-scooters</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:-6deg" data-zh="小琉球" data-en="XIAOLIUQIU" data-sub="SEA TURTLES" data-date="2026.12.21" data-shape="oval" data-color="green"></span>
+      </article>
+
+      <article class="day">
+        <div class="d-date"><span class="wk">週二<small>TUE</small></span><span class="num">22</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>南迴 → 鹿野 → 都蘭</b><span>Southlink → Luye → Dulan</span></div>
+          <h3>Fly Over the Valley</h3>
+          <p>Early ferry back to the car, then drive the <b>Southlink Highway</b> over the bottom of Taiwan's mountains to the Pacific (about 3 hours). Afternoon: <b>tandem paragliding off Luye Highland</b> over the rice fields of the East Rift Valley. It's NT$3,300, paid in cash, with about 10–15 minutes in the air. December is outside the calmest season, so book with a weather backup in mind. Plan B is a soak at Zhiben hot springs.</p>
+          <p>Evening: up the coast to <b>Dulan</b> and check into WaGaLiGong. It's a surf hostel with its own bar and pizzeria, and the easiest place on the east coast to meet people.</p>
+          <div class="todo"><span>Southlink Hwy 9</span><span class="hot">Luye paragliding</span><span>Dulan</span><span>Surf-hostel bar</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:11deg" data-zh="鹿野" data-en="LUYE HIGHLAND" data-sub="PARAGLIDING" data-date="2026.12.22" data-shape="octagon" data-color="purple"></span>
+      </article>
+
+      <article class="day">
+        <div class="d-date"><span class="wk">週三<small>WED</small></span><span class="num">23</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>都蘭 → 花蓮</b><span>Dulan → Hualien</span></div>
+          <h3>Surf, Then Highway 11</h3>
+          <p>A <b>morning surf lesson</b> in Dulan. The northeast monsoon makes winter the best surf season on this coast. It can also get big, so let the coach pick a beginner-friendly spot. Email WaGaLiGong ahead to make sure a coach will be there.</p>
+          <p>Afternoon: <b>Highway 11 north along the Pacific</b>, Taiwan's best coastal drive. Stop at Sanxiantai's eight-arch footbridge and the rock terraces at Shitiping, then on to Hualien (about 3 hours plus stops). Night: <b>Dongdamen Night Market</b>.</p>
+          <div class="todo"><span class="hot">Surf lesson</span><span>Highway 11</span><span>Sanxiantai</span><span>Shitiping</span><span>Dongdamen Night Market</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:-12deg" data-zh="都蘭" data-en="DULAN" data-sub="SURF'S UP" data-date="2026.12.23" data-shape="circle" data-color="blue"></span>
+      </article>
+
+      <article class="day">
+        <div class="d-date"><span class="wk">週四<small>THU</small></span><span class="num">24</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>太魯閣 → 台北</b><span>Taroko → Taipei</span></div>
+          <h3>Marble Canyon, Christmas Eve</h3>
+          <p>Early start into <b>Taroko Gorge</b>: the Qingshui Cliffs lookout, Taroko Terrace, then Highway 8 up to <b>Tianxiang</b> (open in the daytime only) for the short Tabido trail. Some of the famous parts (Swallow Grotto, Shakadang and the Tunnel of Nine Turns) are still closed after the 2024 earthquake. Having your own car is the easy way in, because there's still no bus up the gorge.</p>
+          <p>Drop the car in Hualien by about 1pm and take the <b>Taroko or Puyuma Express to Taipei</b> (about 2h15). <b>These sell out on Christmas Eve.</b> Tickets go on sale at midnight 28 days ahead, which for this train means <b>26 November</b>.</p>
+          <p>Christmas Eve: check into the Xinyi hotel, see the <b>Christmasland</b> lights in Banqiao if they're still up (2026 dates aren't announced; it usually runs mid-November to late December), then cocktails at <b>To Infinity &amp; Beyond</b>, #35 on Asia's 50 Best Bars.</p>
+          <div class="photos"><figure class="snap"><span class="tape mint"></span><img src="assets/taroko.webp" alt="Qingshui Cliff dropping into the Pacific in Taroko National Park" loading="lazy"><figcaption>Qingshui Cliffs, Taroko</figcaption></figure></div>
+          <div class="todo"><span>Qingshui Cliffs</span><span>Tianxiang</span><span>Drop car</span><span>Express train</span><span class="hot">Christmas Eve cocktails</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:8deg" data-zh="太魯閣" data-en="TAROKO" data-sub="MARBLE GORGE" data-date="2026.12.24" data-shape="square" data-color="green"></span>
+      </article>
+
+      <article class="day xmas">
+        <div class="d-date"><span class="wk">週五<small>FRI</small></span><span class="num">25</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>台北 · 聖誕節</b><span>Taipei · Christmas Day</span></div>
+          <h3>Christmas at 460 Metres</h3>
+          <p>The special one. Morning: <b>Skyline 460</b>, a harnessed walk around the outside of Taipei 101, 460 metres up. It's NT$3,000 each, about 50 minutes, in groups of three. It's cancelled in bad weather and sells out, so <b>book the moment Christmas Day slots open</b>. Wear trousers and flat shoes.</p>
+          <p>Late afternoon: the stairs up <b>Elephant Mountain</b> for sunset over Taipei 101 (the photo at the top of this page). Then <b>Christmas dinner on the 48th floor at CÉ LA VI</b>, and on to the clubs. Christmas Day is now a public holiday in Taiwan and falls on a Friday this year, so Xinyi will be packed.</p>
+          <div class="todo"><span class="hot">Skyline 460</span><span>Elephant Mountain sunset</span><span>CÉ LA VI dinner</span><span class="hot">Christmas party</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:-9deg" data-zh="台北101" data-en="MERRY CHRISTMAS" data-sub="460 METRES" data-date="2026.12.25" data-shape="burst" data-color="gold"></span>
+        <div class="fu" aria-hidden="true"><span>福</span></div>
+      </article>
+
+      <article class="day">
+        <div class="d-date"><span class="wk">週六<small>SAT</small></span><span class="num">26</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>萬里 · 台北</b><span>Wanli · Taipei</span></div>
+          <h3>Paraglide, Then the Big One</h3>
+          <p>Day: <b>tandem paragliding at Wanli</b> on the north coast, under an hour from Taipei, flying over Green Bay. Walk-in flights have been about NT$2,000, or about US$170 booked online with transfers and video. Winter winds cancel some days. The backup is the <b>Maokong Gondola</b> up to the tea houses.</p>
+          <p>Night: the biggest one. A crawl along Lane 160 of Dunhua South Road: <b>Bar Mood</b> (#82 in Asia, with cocktails built on Taiwanese landscapes), To Infinity &amp; Beyond on the same lane if you skipped it, then <b>The Public House</b> (#92) and a club to finish.</p>
+          <div class="todo"><span class="hot">Wanli paragliding</span><span>Maokong backup</span><span>Lane 160 bar crawl</span><span class="hot">Saturday club night</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:10deg" data-zh="萬里" data-en="WANLI" data-sub="PARAGLIDING" data-date="2026.12.26" data-shape="circle" data-color="purple"></span>
+      </article>
+
+      <article class="day">
+        <div class="d-date"><span class="wk">週日<small>SUN</small></span><span class="num">27</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>日月潭</b><span>Sun Moon Lake</span></div>
+          <h3>Lake Days</h3>
+          <p>Slow morning, then the high-speed train to Taichung (about 1 hour) and the bus to <b>Sun Moon Lake</b> (about 1.5 hours). Take the <b>ropeway</b> over the hills to the Formosan Aboriginal Culture Village. Your ticket covers the ropeway and the theme-park rides. Sunset on the water.</p>
+          <p>Your Christmas treat: a night at <b>The Lalu</b> with its famous lake-edge infinity pool. Or get a lake-view room in Shuishe for a fraction of the price. It's the last day of the long weekend, so expect crowds.</p>
+          <div class="photos"><figure class="snap"><span class="tape pink"></span><img src="assets/sunmoon.webp" alt="Sun Moon Lake surrounded by mountains" loading="lazy"><figcaption>Sun Moon Lake</figcaption></figure></div>
+          <div class="todo"><span>HSR → Taichung</span><span>Ropeway</span><span class="hot">Theme-park rides</span><span>Lake sunset</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:-7deg" data-zh="日月潭" data-en="SUN MOON LAKE" data-sub="ROPEWAY" data-date="2026.12.27" data-shape="oval" data-color="blue"></span>
+      </article>
+
+      <article class="day">
+        <div class="d-date"><span class="wk">週一<small>MON</small></span><span class="num">28</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>日月潭 → 台中</b><span>Sun Moon Lake → Taichung</span></div>
+          <h3>Cycle the Lake, Drink at Vender</h3>
+          <p>Morning: rent bikes for the lakeside cycle path, or take a boat across the lake. Afternoon: bus to <b>Taichung</b>. Night: <b>Fengjia Night Market</b>, then <b>Vender</b>, #14 on Asia's 50 Best Bars and the best bar in Taiwan. You open its vending-machine door with a coin. Open 6pm–2am. Book a table.</p>
+          <div class="todo"><span>Lake cycle</span><span>Bus → Taichung</span><span>Fengjia Night Market</span><span class="hot">Vender</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:9deg" data-zh="台中" data-en="TAICHUNG" data-sub="BEST BAR IN TW" data-date="2026.12.28" data-shape="octagon" data-color="seal"></span>
+      </article>
+
+      <article class="day">
+        <div class="d-date"><span class="wk">週二<small>TUE</small></span><span class="num">29</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>台中 → 桃園機場</b><span>Taichung → TPE</span></div>
+          <h3>Last Lap</h3>
+          <p>Slow morning, last shopping and a big lunch. The high-speed train goes straight from Taichung to Taoyuan station (under an hour), then the Airport MRT to Terminal 2. CI51 leaves at 23:50, so you have the whole day.</p>
+          <div class="sticky">Option B: go back to Taipei for one more night out instead, and fly out on the afternoon of the 30th.</div>
+          <div class="todo"><span>HSR → Taoyuan</span><span>Airport MRT</span><span>CI51 23:50</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:-11deg" data-zh="桃園" data-en="TAOYUAN" data-sub="LAST LAP" data-date="2026.12.29" data-shape="square" data-color="ink"></span>
+      </article>
+
+      <article class="day">
+        <div class="d-date"><span class="wk">週三<small>WED</small></span><span class="num">30</span><span class="mo"><i>十二月</i>Dec</span></div>
+        <div>
+          <div class="d-sign"><b>雪梨</b><span>Sydney</span></div>
+          <h3>Home for New Year's Eve</h3>
+          <p>Land in Sydney at 12:15. You've got one day to recover before New Year's Eve.</p>
+          <div class="todo"><span>Land SYD 12:15</span><span class="hot">NYE ready</span></div>
+        </div>
+        <span class="stamp wait d-stamp" style="--r:6deg" data-zh="雪梨" data-en="SYDNEY" data-sub="RALLY COMPLETE" data-date="2026.12.30" data-shape="circle" data-color="ink"></span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───────── STAYS ───────── -->
+<section id="stays" class="stays">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-seal">住宿</div>
+      <div>
+        <span class="sec-tag">where we sleep</span>
+        <h2 class="sec-title">Bag tags</h2>
+        <p>Ten nights, all twin-share. <b>Hostels where meeting people matters</b> (the opening Taipei weekend and the surf town), hotels everywhere else, and <b>one splurge for Christmas</b>. Nothing's booked yet. The Christmas weekend in Taipei and the 27th at Sun Moon Lake will go first.</p>
+      </div>
+    </div>
+    <div class="tags">
+      <div class="tag hostel reveal"><span class="band"></span>
+        <div class="kind"><b>青旅</b>Social hostel</div>
+        <div class="nights">2<span>nights</span></div>
+        <div class="place">Meander Taipei<small>Ximending · 19 – 21 Dec</small></div>
+        <div class="vibe">The top-rated social hostel in Taipei (9.7 on Hostelworld), with a big common room and regular events. <b>Private twin with its own bathroom from NT$1,800</b> a night. That room has no window, but for these two nights you won't care. Book from the 18th for the early arrival.
+          <br><a class="stay-link" href="https://www.staymeander.com/meandertaipei/en/private-room-2/" target="_blank" rel="noopener">Rooms →</a></div>
+      </div>
+      <div class="tag reveal"><span class="band"></span>
+        <div class="kind"><b>民宿</b>Guesthouse</div>
+        <div class="nights">1<span>night</span></div>
+        <div class="place">Xiaoliuqiu<small>Baishawei harbour · 21 – 22 Dec</small></div>
+        <div class="vibe">Stay in the main harbour town so you can walk to the ferry, food and scooter shops. Rooms are about <b>NT$2,000–6,000</b>, and many guesthouses can arrange scooters too.</div>
+      </div>
+      <div class="tag hostel reveal"><span class="band"></span>
+        <div class="kind"><b>衝浪</b>Surf hostel</div>
+        <div class="nights">1<span>night</span></div>
+        <div class="place">WaGaLiGong<small>Dulan · 22 – 23 Dec</small></div>
+        <div class="vibe">The east coast's social spot, rated 9.8 on Hostelworld, with a bar, pizzeria, surf lessons and board hire. <b>Rooms and bunks from NT$300.</b> It's basic, so get a private room.
+          <br><a class="stay-link" href="https://www.wagaligongtaiwan.com/hostel/" target="_blank" rel="noopener">Hostel →</a><a class="stay-link" href="https://www.wagaligongtaiwan.com/surf-lessons/" target="_blank" rel="noopener">Lessons →</a></div>
+      </div>
+      <div class="tag reveal"><span class="band"></span>
+        <div class="kind"><b>飯店</b>Hotel</div>
+        <div class="nights">1<span>night</span></div>
+        <div class="place">Hualien<small>Near the station · 23 – 24 Dec</small></div>
+        <div class="vibe">Any good mid-range hotel near Hualien Station. That makes the next day's car drop-off and train easy, and it's a short ride to Dongdamen Night Market.</div>
+      </div>
+      <div class="tag treat reveal"><span class="band"></span>
+        <div class="kind"><b>聖誕</b>Christmas base</div>
+        <div class="nights">3<span>nights</span></div>
+        <div class="place">Xinyi, Taipei<small>24 – 27 Dec</small></div>
+        <div class="vibe">Walking distance to Taipei 101, the clubs and CÉ LA VI. By budget: <b>W Taipei</b> (rooftop pool, lively lobby bar, from about NT$9,000), <b>Humble House</b> (art-filled boutique, from about NT$7,500) or <b>Hotel Cozzi Xinyi</b> (smart and compact, from about NT$3,200). Long-weekend prices will be higher than these.</div>
+      </div>
+      <div class="tag treat reveal"><span class="band"></span>
+        <div class="kind"><b>犒賞</b>The splurge</div>
+        <div class="nights">1<span>night</span></div>
+        <div class="place">Sun Moon Lake<small>27 – 28 Dec</small></div>
+        <div class="vibe"><b>The Lalu</b> is the bucket-list option at roughly US$500+ a night. <b>Apollo Resort</b> in Shuishe has lake-view balcony rooms in the front row, a 3-minute walk from the pier, for much less.</div>
+      </div>
+      <div class="tag reveal"><span class="band"></span>
+        <div class="kind"><b>飯店</b>Hotel</div>
+        <div class="nights">1<span>night</span></div>
+        <div class="place">Taichung<small>West District · 28 – 29 Dec</small></div>
+        <div class="vibe">Stay near Vender and the Calligraphy Greenway: <b>Tango Hotel Taichung</b> (from about US$63) or <b>The Splendor</b> (from about US$130). Taichung station has a direct high-speed train to the airport for the flight home.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── NIGHTS ───────── -->
+<section id="nights">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-seal">夜生活</div>
+      <div>
+        <span class="sec-tag">after dark</span>
+        <h2 class="sec-title">Bars &amp; clubs</h2>
+        <p>Five nights in Taipei, including <b>two Saturdays and Christmas night</b>. All of these were checked as open in October 2026. The cocktail bar rankings are from Asia's 50 Best Bars 2026.</p>
+      </div>
+    </div>
+
+    <div class="signs">
+      <div class="sign-card red reveal">
+        <div class="lightbox"><span class="v">夜店</span><h4>WAVE Club</h4></div>
+        <div class="where">ATT4Fun · Xinyi</div>
+        <p>Ranked Taipei's top club right now, with one of the biggest dance floors in the city. Mostly EDM, with some hip-hop nights. The all-you-can-drink party nights are the famous ones.</p>
+        <div class="cost">22:30 – 04:30 · open-bar nights ~NT$800</div>
+      </div>
+      <div class="sign-card red reveal">
+        <div class="lightbox"><span class="v">夜店</span><h4>AI Club</h4></div>
+        <div class="where">ATT4Fun · Xinyi</div>
+        <p>In the same building as WAVE, so it's easy to try both in one night. It leans towards bottle service, so book a table for Christmas or the Saturdays if you want somewhere to sit.</p>
+        <div class="cost">22:30 – 04:30 · tables for big nights</div>
+      </div>
+      <div class="sign-card white reveal">
+        <div class="lightbox"><span class="v">頂樓</span><h4>CÉ LA VI</h4></div>
+        <div class="where">48F, Breeze Nanshan · 17 Songzhi Rd, Xinyi</div>
+        <p>The highest rooftop in Taipei, looking straight at Taipei 101. It has a restaurant, sky bar and lounge, which makes it the Christmas dinner pick. Book ahead.</p>
+        <div class="cost">Cocktails ~NT$450–500 · smart casual · closed Mon</div>
+      </div>
+      <div class="sign-card reveal">
+        <div class="lightbox"><span class="v">調酒</span><h4>To Infinity &amp; Beyond</h4></div>
+        <div class="where">13, Lane 160, Sec 1 Dunhua S Rd · Da'an · #35 Asia</div>
+        <p>A cocktail bar fitted out like a spaceship, and the highest-ranked bar in Taipei. It's near Zhongxiao Dunhua MRT.</p>
+        <div class="cost">Christmas Eve pick · book</div>
+      </div>
+      <div class="sign-card reveal">
+        <div class="lightbox"><span class="v">調酒</span><h4>Bar Mood</h4></div>
+        <div class="where">53, Lane 160, Sec 1 Dunhua S Rd · Da'an · #82 Asia</div>
+        <p>Nick Wu's bar, with drinks built on Taiwan's landscapes and culture. It's on the same lane as To Infinity &amp; Beyond, so start the Saturday crawl here.</p>
+        <div class="cost">Saturday crawl start</div>
+      </div>
+      <div class="sign-card white reveal">
+        <div class="lightbox"><span class="v">酒館</span><h4>The Public House</h4></div>
+        <div class="where">Taipei · #92 Asia · check location before you go</div>
+        <p>Locals call it the city's late-night living room. It's a busy, relaxed tavern for the last drink before the club, or instead of it.</p>
+        <div class="cost">After midnight</div>
+      </div>
+      <div class="sign-card reveal">
+        <div class="lightbox"><span class="v">調酒</span><h4>Vender</h4></div>
+        <div class="where">118 Wuquan W 4th St · Taichung · #14 Asia</div>
+        <p>The best bar in Taiwan, behind a vending-machine door you open with a coin. It's worth the trip to Taichung on its own.</p>
+        <div class="cost">6pm – 2am · 28 Dec · book</div>
+      </div>
+      <div class="sign-card red reveal">
+        <div class="lightbox"><span class="v">青旅</span><h4>Hostel nights</h4></div>
+        <div class="where">Meander (Taipei) · WaGaLiGong (Dulan)</div>
+        <p>The quickest way to find people to go out with. Meander runs events and tours (Wednesdays and Sundays), and WaGaLiGong's bar is where Dulan meets in the evening.</p>
+        <div class="cost">19–20 &amp; 22 Dec</div>
+      </div>
+    </div>
+
+    <p class="night-note reveal"><b>Timing:</b> Taipei clubs open at 22:30 and get going after midnight. Eat late and pre-drink on Lane 160. <b>Dress:</b> smart casual for rooftops and bottle clubs, and bring your passport for ID. <b>Christmas weekend:</b> expect cover charges and table minimums to go up, and book tables early.</p>
+  </div>
+</section>
+
+<!-- ───────── BUDGET ───────── -->
+<section id="budget">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-seal">預算</div>
+      <div>
+        <span class="sec-tag">keep your receipts</span>
+        <h2 class="sec-title">Three budgets</h2>
+        <p>In Taiwan, every receipt doubles as a lottery ticket. Here's the rough cost per person for the whole trip, including flights, sharing rooms. Converted at <b>about NT$22 = A$1</b> (October 2026). Treat these as estimates, not quotes.</p>
+      </div>
+    </div>
+
+    <div class="receipts">
+      <div class="receipt reveal" data-seed="11">
+        <div class="r-head"><div class="zh">電子發票證明聯</div><div class="per">115年11-12月</div><div class="no">LN-19301226</div></div>
+        <div class="r-tier"><b>省錢</b><span>Lean</span></div>
+        <div class="r-meta"><span>2026-12-19</span><span>隨機碼 0312</span></div>
+        <div class="r-items">
+          <div><span>Scoot via Singapore</span><i></i><span>~A$700–1,200</span></div>
+          <div><span>Hostels + simple hotels</span><i></i><span>~A$45/nt</span></div>
+          <div><span>Food, drinks, transport</span><i></i><span>~A$80/day</span></div>
+          <div><span>Activities</span><i></i><span>~A$300</span></div>
+        </div>
+        <div class="r-total"><span>總計 Total pp</span><b>~A$2,300–2,800</b></div>
+        <div class="barcode"></div><div class="qrs"></div>
+      </div>
+      <div class="receipt pick reveal" data-seed="42">
+        <span class="stamp wait" style="--r:14deg" data-zh="推薦" data-en="OUR PICK" data-sub="★ ★ ★" data-date="SWEET SPOT" data-shape="circle" data-color="seal"></span>
+        <div class="r-head"><div class="zh">電子發票證明聯</div><div class="per">115年11-12月</div><div class="no">SS-19301226</div></div>
+        <div class="r-tier"><b>剛好</b><span>Sweet spot</span></div>
+        <div class="r-meta"><span>2026-12-19</span><span>隨機碼 4096</span></div>
+        <div class="r-items">
+          <div><span>China Airlines direct</span><i></i><span>~A$1,500–1,900</span></div>
+          <div><span>Hostels + 4★ hotels mix</span><i></i><span>~A$90/nt</span></div>
+          <div><span>Food, drinks, transport</span><i></i><span>~A$120/day</span></div>
+          <div><span>Activities + car</span><i></i><span>~A$550</span></div>
+        </div>
+        <div class="r-total"><span>總計 Total pp</span><b>~A$4,200–4,700</b></div>
+        <div class="barcode"></div><div class="qrs"></div>
+      </div>
+      <div class="receipt reveal" data-seed="77">
+        <div class="r-head"><div class="zh">電子發票證明聯</div><div class="per">115年11-12月</div><div class="no">TY-19301226</div></div>
+        <div class="r-tier"><b>犒賞</b><span>Treat yourselves</span></div>
+        <div class="r-meta"><span>2026-12-19</span><span>隨機碼 8888</span></div>
+        <div class="r-items">
+          <div><span>Direct flights</span><i></i><span>~A$1,600–1,900</span></div>
+          <div><span>W Taipei, The Lalu etc.</span><i></i><span>~A$200/nt</span></div>
+          <div><span>Big nights, tables</span><i></i><span>~A$180/day</span></div>
+          <div><span>Activities + car</span><i></i><span>~A$600</span></div>
+        </div>
+        <div class="r-total"><span>總計 Total pp</span><b>~A$6,200–6,500</b></div>
+        <div class="barcode"></div><div class="qrs"></div>
+      </div>
+    </div>
+
+    <div class="menu-board reveal">
+      <h4>價目表 <small>Price list · what things cost</small></h4>
+      <div class="menu">
+        <div><span class="it"><b>台北101 Skyline 460</b><span>Outdoor walk at 460 m</span></span><span class="pr">NT$3,000</span></div>
+        <div><span class="it"><b>鹿野 飛行傘</b><span>Luye tandem paraglide</span></span><span class="pr">NT$3,300</span></div>
+        <div><span class="it"><b>萬里 飛行傘</b><span>Wanli tandem paraglide</span></span><span class="pr">~NT$2,000</span></div>
+        <div><span class="it"><b>天燈</b><span>Sky lantern, Shifen</span></span><span class="pr">NT$200–350</span></div>
+        <div><span class="it"><b>北投 湯屋</b><span>Beitou private bath for two</span></span><span class="pr">NT$1,000–1,500</span></div>
+        <div><span class="it"><b>小琉球 船票</b><span>Xiaoliuqiu ferry, one way</span></span><span class="pr">~NT$200–230</span></div>
+        <div><span class="it"><b>租車</b><span>Rental car, per day</span></span><span class="pr">from NT$1,199</span></div>
+        <div><span class="it"><b>甲租乙還</b><span>One-way fee, Kaohsiung → Hualien</span></span><span class="pr">~NT$2,000</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── INTEL ───────── -->
+<section id="know" class="grid-paper">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-seal">須知</div>
+      <div>
+        <span class="sec-tag">read before you go</span>
+        <h2 class="sec-title">The intel</h2>
+      </div>
+    </div>
+    <div class="notes">
+      <div class="note wide reveal"><div class="h"><i>一</i><b>Should we drive?</b><small>開車</small></div><p><b>Yes, but only on the east coast</b> (21–24 Dec, Kaohsiung → Taitung → Hualien). The Southlink and Highway 11 are the best drives in Taiwan, buses there are infrequent, and Taroko still has no bus up the gorge. Everywhere else the trains are faster than a car, and nobody wants to drive in Taipei. Get an <b>International Driving Permit</b> (car class) before you leave and bring your Australian licence too. It's valid for 30 days after you land. <b>Scooters</b> need a motorcycle licence, so skip them unless you have one. Electric scooters on Xiaoliuqiu don't need a licence. No turning right on a red light.</p></div>
+      <div class="note reveal"><div class="h"><i>二</i><b>Entry</b><small>入境</small></div><p>Australians get <b>90 days visa-free</b>, and your passport must be valid for 6 months. Fill in the free <b>Taiwan Arrival Card (TWAC)</b> online at twac.immigration.gov.tw in the 3 days before you land. Ignore copycat sites that charge a fee.</p></div>
+      <div class="note reveal"><div class="h"><i>三</i><b>Weather</b><small>天氣</small></div><p><b>Taipei: 16–21°C</b>, often drizzly (around 13 wet days in December). <b>The south and east: 18–25°C</b> and mostly dry, with the sea at about 24–25°C. Pack layers and a light rain jacket. That's why the outdoor activities are in the south and east.</p></div>
+      <div class="note reveal"><div class="h"><i>四</i><b>Trains</b><small>火車</small></div><p>The high-speed rail runs down the west side, and Taiwan Railway covers the east. <b>Taiwan Railway tickets go on sale at midnight 28 days ahead</b>, and the Hualien → Taipei train on the 24th will sell out. Set a reminder for 26 Nov. You can't tap an EasyCard onto the reserved express trains.</p></div>
+      <div class="note reveal"><div class="h"><i>五</i><b>Christmas</b><small>聖誕</small></div><p><b>25 December is now a public holiday in Taiwan.</b> This year it's a Friday, so 25–27 is a long weekend. Hotels, trains and Sun Moon Lake get busier and dearer. Book those first.</p></div>
+      <div class="note reveal"><div class="h"><i>六</i><b>Taroko</b><small>太魯閣</small></div><p><b>Partly open.</b> Qingshui Cliffs, Taroko Terrace and Tianxiang (Highway 8, daytime only) are open. Swallow Grotto, Shakadang and the Tunnel of Nine Turns are closed. Check the national park site the week before.</p></div>
+      <div class="note reveal"><div class="h"><i>七</i><b>Money</b><small>錢</small></div><p>About <b>NT$22–23 to A$1</b>. Card works in hotels and bars, but <b>bring cash</b> for night markets, lanterns, paragliding (cash on the day) and ferries. Get an EasyCard for the MRT, buses and 7-Eleven.</p></div>
+      <div class="note reveal"><div class="h"><i>八</i><b>Backup plans</b><small>備案</small></div><p>Both paraglides, Skyline 460 and the surf lesson all depend on the weather. Book with free cancellation where you can, and keep the backups in the plan: Zhiben hot springs, Maokong and Beitou.</p></div>
+    </div>
+
+    <div class="doufang reveal">
+      <span class="sec-tag">the only rules</span>
+      <div class="diamonds">
+        <div class="dia"><div class="sq"><span>吃</span></div><p>If there's a queue at the night market, join it.</p></div>
+        <div class="dia"><div class="sq"><span>補</span></div><p>Every 7-Eleven is a pit stop.</p></div>
+        <div class="dia"><div class="sq"><span>願</span></div><p>Whatever you write on the lantern, write it big.</p></div>
+        <div class="dia"><div class="sq"><span>衝</span></div><p>Nobody skips the 460-metre walk.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <!-- seal reads right column first, top to bottom: 一路 / 順風 -->
+    <div class="seal-4" aria-label="一路順風 — bon voyage"><span>順</span><span>一</span><span>風</span><span>路</span></div>
+    <div class="big">Send it, <em>Taiwan</em></div>
+    <div class="hand">一路順風 · two mates · one island · zero sleep</div>
+    <div class="meta">19 – 30 Dec 2026 · Taipei → Xiaoliuqiu → Dulan → Hualien → Taipei → Sun Moon Lake → Taichung</div>
+    <p class="credits">Photos via Wikimedia Commons:
+      <a href="https://commons.wikimedia.org/wiki/File:Taipei_night_skyline_from_Elephant_Mountain_May_2025_2.jpg" target="_blank" rel="noopener">Taipei skyline</a> — 4300streetcar (CC BY 4.0) ·
+      <a href="https://commons.wikimedia.org/wiki/File:TRA_DRC1029_and_Pingxi_Sky_Lanterns_at_Shifen_Old_Street_20171028.jpg" target="_blank" rel="noopener">Shifen</a> — xiquinhosilva (CC BY 2.0) ·
+      <a href="https://commons.wikimedia.org/wiki/File:Jiufen_at_night_lantern_glow.jpg" target="_blank" rel="noopener">Jiufen</a> — Sunkenbean (CC BY-SA 4.0) ·
+      <a href="https://commons.wikimedia.org/wiki/File:Vase_Rock_on_Lambai_Island_(Xiaoliuqiu).jpg" target="_blank" rel="noopener">Vase Rock</a> — Jun Jie Yam (CC BY 4.0) ·
+      <a href="https://commons.wikimedia.org/wiki/File:Taroko_National_Park_Qingshui_Cliff_(Huaiwun).jpg" target="_blank" rel="noopener">Qingshui Cliff</a> — Huaiwun (CC BY-SA 4.0) ·
+      <a href="https://commons.wikimedia.org/wiki/File:Sun_Moon_Lake,_Taiwan_20230202.jpg" target="_blank" rel="noopener">Sun Moon Lake</a> — Ken Marshall (CC BY 2.0).
+      Map outline: Natural Earth (public domain).
+    </p>
+  </div>
+</footer>
+
+<script>
+  const INK={seal:'#c8302a',blue:'#2d4f9e',green:'#23805b',purple:'#6a3d9a',gold:'#e9b949',ink:'#2a241d'};
+  let uid=0;
+
+  // Build a rubber-stamp SVG. Shapes mimic Taiwan's station commemorative stamps.
+  function stampSVG({zh,en,sub,date,shape='circle',color='seal'}){
+    const c=INK[color]||color, id='sp'+(uid++);
+    const zs=zh.length<=2?52:zh.length===3?40:30;
+    const mono='font-family="DM Mono,monospace" font-weight="500"';
+    const serif='font-family="Noto Serif TC,serif" font-weight="900"';
+    const poly=(n,r,rot)=>Array.from({length:n},(_,i)=>{const a=rot+i*2*Math.PI/n;return(100+r*Math.cos(a)).toFixed(1)+','+(100+r*Math.sin(a)).toFixed(1)}).join(' ');
+    const enSize=en.length>12?11.5:13.5;
+    let vb='0 0 200 200', cx=100, frame='', top='', zy=118, sy=146, dy=166;
+    if(shape==='circle'||shape==='burst'){
+      frame = shape==='circle'
+        ? '<circle cx="100" cy="100" r="93" stroke-width="6"/><circle cx="100" cy="100" r="81" stroke-width="1.8"/>'
+        : `<polygon points="${Array.from({length:48},(_,i)=>{const a=i*Math.PI/24,r=i%2?88:97;return(100+r*Math.cos(a)).toFixed(1)+','+(100+r*Math.sin(a)).toFixed(1)}).join(' ')}" stroke-width="4"/><circle cx="100" cy="100" r="76" stroke-width="1.8"/>`;
+      const R=shape==='circle'?66:61;
+      top=`<path id="${id}" d="M ${100-R},100 A ${R},${R} 0 0 1 ${100+R},100" fill="none" stroke="none"/><text ${mono} font-size="${enSize}" letter-spacing="2.5" fill="${c}" stroke="none"><textPath href="#${id}" startOffset="50%" text-anchor="middle">${en}</textPath></text>`;
+    } else if(shape==='oval'){
+      vb='0 0 220 170'; cx=110; zy=100; sy=124; dy=142;
+      frame='<ellipse cx="110" cy="85" rx="104" ry="79" stroke-width="6"/><ellipse cx="110" cy="85" rx="92" ry="67" stroke-width="1.8"/>';
+      top=`<path id="${id}" d="M 32,88 A 78,58 0 0 1 188,88" fill="none" stroke="none"/><text ${mono} font-size="${enSize}" letter-spacing="2.5" fill="${c}" stroke="none"><textPath href="#${id}" startOffset="50%" text-anchor="middle">${en}</textPath></text>`;
+    } else {
+      const sq=shape==='square';
+      frame = sq
+        ? '<rect x="7" y="7" width="186" height="186" rx="12" stroke-width="6"/><rect x="19" y="19" width="162" height="162" rx="5" stroke-width="1.8"/>'
+        : `<polygon points="${poly(8,94,Math.PI/8)}" stroke-width="6"/><polygon points="${poly(8,81,Math.PI/8)}" stroke-width="1.8"/>`;
+      top=`<text x="100" y="${sq?48:52}" text-anchor="middle" ${mono} font-size="${enSize}" letter-spacing="2.5" fill="${c}" stroke="none">${en}</text><line x1="${sq?36:46}" x2="${sq?164:154}" y1="${sq?60:64}" y2="${sq?60:64}" stroke-width="1.6"/>`;
+      zy=122; sy=sq?150:146; dy=sq?170:162;
+    }
+    return `<svg viewBox="${vb}" aria-hidden="true"><g filter="url(#ink)" fill="none" stroke="${c}">${frame}${top}`+
+      `<text x="${cx}" y="${zy}" text-anchor="middle" ${serif} font-size="${zs}" fill="${c}" stroke="none">${zh}</text>`+
+      `<text x="${cx}" y="${sy}" text-anchor="middle" ${mono} font-size="10.5" letter-spacing="1.8" fill="${c}" stroke="none">${sub||''}</text>`+
+      `<text x="${cx}" y="${dy}" text-anchor="middle" ${mono} font-size="12" letter-spacing="1.5" fill="${c}" stroke="none">${date||''}</text></g></svg>`;
+  }
+  document.querySelectorAll('.stamp[data-zh]').forEach(el=>{el.innerHTML=stampSVG(el.dataset)});
+
+  // Stamps thunk down when they scroll into view; the day card jolts under them.
+  const so=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const s=e.target; s.classList.remove('wait'); s.classList.add('thunk');
+    const day=s.closest('.day'); if(day) setTimeout(()=>day.classList.add('hit'),260);
+    so.unobserve(s);
+  }),{threshold:.6});
+  document.querySelectorAll('.stamp.wait:not(.hero-stamp)').forEach(s=>so.observe(s));
+  document.querySelectorAll('.hero-stamp').forEach((s,i)=>setTimeout(()=>{s.classList.remove('wait');s.classList.add('thunk')},700+i*450));
+
+  // Tap-to-stamp on the hero.
+  const fun=[['讚','ZAN!','AWESOME'],['好吃','HAO CHI','DELICIOUS'],['乾杯','GAN BEI','CHEERS'],['衝','CHONG','SEND IT'],['好','HAO','GOOD'],['爽','SHUANG','SO GOOD']];
+  const shapes=['circle','square','octagon','oval','burst'], cols=['seal','blue','green','purple'];
+  const pick=a=>a[Math.floor(Math.random()*a.length)];
+  const hero=document.querySelector('header');
+  hero.addEventListener('click',e=>{
+    if(e.target.closest('a')) return;
+    const r=hero.getBoundingClientRect(), f=pick(fun);
+    const el=document.createElement('span');
+    el.className='stamp click-stamp thunk';
+    el.style.cssText=`left:${e.clientX-r.left-48}px;top:${e.clientY-r.top-48}px;--r:${Math.round(Math.random()*36-18)}deg`;
+    el.innerHTML=stampSVG({zh:f[0],en:f[1],sub:f[2],date:'2026',shape:pick(shapes),color:pick(cols)});
+    hero.appendChild(el);
+    const all=hero.querySelectorAll('.click-stamp'); if(all.length>14) all[0].remove();
+  });
+
+  // Central Mountain Range peaks along the island's spine.
+  (function(){
+    let d='';
+    for(let i=0;i<15;i++){const t=i/14, x=318-t*150+Math.sin(i*1.7)*6, y=150+t*470; d+=`M${(x-6).toFixed(1)},${(y+4).toFixed(1)} L${x.toFixed(1)},${(y-4).toFixed(1)} L${(x+6).toFixed(1)},${(y+4).toFixed(1)} `}
+    document.getElementById('peaks').innerHTML=`<path class="m-peak" d="${d}"/>`;
+  })();
+  const mo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('go');mo.unobserve(e.target)}}),{threshold:.35});
+  mo.observe(document.getElementById('map'));
+
+  // Receipt barcodes + QR codes (decorative, seeded so they render the same every time).
+  function rng(seed){return()=>{seed=(seed*16807)%2147483647;return seed/2147483647}}
+  document.querySelectorAll('.receipt').forEach(rc=>{
+    const rand=rng(+rc.dataset.seed||7);
+    let x=0; const stops=[];
+    while(x<100){const w=.4+rand()*1.6, on=rand()>.45; stops.push(`${on?'#111':'transparent'} ${x.toFixed(2)}% ${(x+w).toFixed(2)}%`); x+=w}
+    rc.querySelector('.barcode').style.background=`linear-gradient(90deg,${stops.join(',')})`;
+    const qr=()=>{
+      let s='';
+      const fin=(a,b)=>s+=`<rect x="${a}" y="${b}" width="7" height="7" fill="#111"/><rect x="${a+1}" y="${b+1}" width="5" height="5" fill="#fbfbf6"/><rect x="${a+2}" y="${b+2}" width="3" height="3" fill="#111"/>`;
+      for(let i=0;i<21;i++)for(let j=0;j<21;j++){const inF=(i<8&&j<8)||(i>12&&j<8)||(i<8&&j>12); if(!inF&&rand()>.52) s+=`<rect x="${i}" y="${j}" width="1" height="1" fill="#111"/>`}
+      fin(0,0);fin(14,0);fin(0,14);
+      return `<svg viewBox="0 0 21 21" shape-rendering="crispEdges">${s}</svg>`;
+    };
+    rc.querySelector('.qrs').innerHTML=qr()+qr();
+  });
+
+  // Nav + reveals.
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+</script>
+</body>
+</html>

@@ -4,22 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trips · limittox</title>
-<meta name="description" content="Pick a trip — Vietnam or Sri Lanka.">
+<meta name="description" content="Pick a trip — Vietnam, Sri Lanka or Taiwan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Hanken+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Hanken+Grotesk:wght@500;600;700&family=Dela+Gothic+One&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{
     --viet-paper:#f3e9d8; --viet-ink:#1c1612; --viet-lacquer:#b23a2e;
     --lk-abyss:#052229; --lk-surf:#1fd3c5; --lk-coral:#ff5b3c; --lk-sand:#f7ecd6;
+    --tw-ink:#1f1b16; --tw-seal:#c8302a; --tw-gold:#e9b949; --tw-paper:#f3ead8;
   }
   html,body{height:100%}
   body{font-family:'Hanken Grotesk',sans-serif;background:#0a0a0a;color:#fff;overflow:hidden}
   ::selection{background:var(--lk-coral);color:#fff}
 
   .split{display:flex;height:100vh;width:100%;flex-direction:row}
-  @media(max-width:780px){.split{flex-direction:column}}
+  @media(max-width:780px){
+    html,body{height:auto}body{overflow:auto}
+    .split{flex-direction:column;height:auto}
+    .panel{min-height:85vh}
+  }
 
   .panel{
     position:relative;flex:1 1 50%;overflow:hidden;text-decoration:none;color:inherit;
@@ -32,9 +37,11 @@
   .panel .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06);transition:transform 1.1s cubic-bezier(.2,.7,.2,1);z-index:0}
   .panel.viet .bg{background-image:url("vietnam/assets/halong.webp")}
   .panel.lk .bg{background-image:url("srilanka/assets/hero.webp")}
+  .panel.tw .bg{background-image:url("taiwan/assets/hero.webp");background-position:80% center}
   .panel .tint{position:absolute;inset:0;z-index:1;transition:opacity .5s}
   .panel.viet .tint{background:linear-gradient(180deg,rgba(28,22,18,.15) 0%,rgba(28,22,18,.45) 55%,rgba(28,22,18,.86) 100%),linear-gradient(90deg,rgba(178,58,46,.25),transparent 60%)}
   .panel.lk .tint{background:linear-gradient(180deg,rgba(5,34,41,.2) 0%,rgba(5,34,41,.5) 55%,rgba(5,34,41,.9) 100%),linear-gradient(90deg,rgba(31,211,197,.18),transparent 60%)}
+  .panel.tw .tint{background:linear-gradient(180deg,rgba(31,27,22,.2) 0%,rgba(31,27,22,.5) 55%,rgba(31,27,22,.9) 100%),linear-gradient(90deg,rgba(200,48,42,.28),transparent 60%)}
   .panel .grain{position:absolute;inset:0;z-index:2;opacity:.06;mix-blend-mode:overlay;pointer-events:none;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
@@ -50,15 +57,19 @@
   .eyebrow::before{content:"";width:34px;height:2px}
   .panel.viet .eyebrow{color:#f0c9a0}.panel.viet .eyebrow::before{background:var(--lacquer,#e08a5a)}
   .panel.lk .eyebrow{color:var(--lk-surf)}.panel.lk .eyebrow::before{background:var(--lk-surf)}
+  .panel.tw .eyebrow{color:var(--tw-gold)}.panel.tw .eyebrow::before{background:var(--tw-gold)}
 
   .title-viet{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(3rem,7vw,6.5rem);line-height:.9;letter-spacing:-.01em}
   .title-viet em{font-style:italic;color:#ff8f6b}
   .title-lk{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(3rem,7.5vw,7rem);line-height:.85;letter-spacing:.01em}
   .title-lk .o{-webkit-text-stroke:2px var(--lk-surf);color:transparent}
+  .title-tw{font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:clamp(2.8rem,5.6vw,5.8rem);line-height:.9;letter-spacing:-.02em;display:flex;align-items:flex-start;gap:14px}
+  .title-tw .seal{font-family:'Noto Serif TC',serif;font-weight:900;writing-mode:vertical-rl;font-size:.42em;line-height:1;background:var(--tw-seal);color:var(--tw-paper);padding:8px 6px;border-radius:4px;box-shadow:inset 0 0 0 3px var(--tw-seal),inset 0 0 0 4.5px var(--tw-paper);transform:rotate(3deg);margin-top:.15em}
 
   .sub{margin-top:16px;font-size:1.02rem;color:rgba(255,255,255,.82);max-width:420px}
   .scribble{font-family:'Caveat',cursive;font-size:1.5rem;margin-top:6px;display:inline-block}
   .panel.lk .scribble{color:var(--lk-coral);transform:rotate(-3deg)}
+  .panel.tw .scribble{color:var(--tw-gold);transform:rotate(-3deg)}
   .panel.viet .scribble{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:#f0c9a0;font-size:1.2rem}
 
   .meta-line{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
@@ -69,6 +80,8 @@
   .panel.lk .enter .arw{border:1.5px solid var(--lk-surf);color:var(--lk-surf)}
   .panel.viet:hover .enter .arw{background:#f0c9a0;color:var(--viet-ink);transform:translateX(4px)}
   .panel.lk:hover .enter .arw{background:var(--lk-surf);color:var(--lk-abyss);transform:translateX(4px)}
+  .panel.tw .enter .arw{border:1.5px solid var(--tw-seal);color:var(--tw-paper);background:rgba(200,48,42,.35)}
+  .panel.tw:hover .enter .arw{background:var(--tw-seal);color:var(--tw-paper);transform:translateX(4px)}
 
   /* center brand */
   .brand{
@@ -81,6 +94,7 @@
   /* intro fade */
   .panel{animation:rise .9s both}
   .panel.lk{animation-delay:.12s}
+  .panel.tw{animation-delay:.24s}
   @keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 </style>
 </head>
@@ -114,6 +128,18 @@
       <p class="sub">A bachelor send-off down the surf coast — a Colombo villa base, Weligama waves, the Ella hills and one last big night out.</p>
       <div class="meta-line"><span class="pill">7 Legends</span><span class="pill">Bachelor Trip</span><span class="pill">Surf · Hills</span></div>
       <div class="enter">Enter Sri Lanka <span class="arw">→</span></div>
+    </div>
+  </a>
+
+  <a class="panel tw" href="taiwan/index.html">
+    <div class="bg"></div><div class="tint"></div><div class="grain"></div>
+    <div class="panel-inner">
+      <div class="eyebrow">19 – 30 Dec 2026</div>
+      <h2 class="title-tw">Taiwan<span class="seal" aria-hidden="true">台灣</span></h2>
+      <div class="scribble">集章 stamp rally — Christmas at 460 m</div>
+      <p class="sub">An island loop: Taipei nights, turtles off Xiaoliuqiu, paragliding and surf on the east coast, Taroko, Christmas in Taipei and Taiwan's best bar.</p>
+      <div class="meta-line"><span class="pill">2 Travellers</span><span class="pill">Island Loop</span><span class="pill">Party · Adventure</span></div>
+      <div class="enter">Enter Taiwan <span class="arw">→</span></div>
     </div>
   </a>
 
