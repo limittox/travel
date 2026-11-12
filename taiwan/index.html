@@ -73,12 +73,12 @@
   nav.scrolled{padding:10px 28px;background:rgba(243,234,216,.94);backdrop-filter:blur(6px);box-shadow:0 1px 0 var(--rule)}
   .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
   .brand .seal-mini{width:30px;height:30px;background:var(--seal);color:var(--card);display:grid;place-items:center;font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.05rem;border-radius:4px;box-shadow:inset 0 0 0 2px var(--seal),inset 0 0 0 3.5px var(--card)}
-  .brand b{font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:.92rem;letter-spacing:.02em}
-  .nav-links{display:flex;gap:22px;font-family:'DM Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em}
+  .brand b{font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:.92rem;letter-spacing:.02em;white-space:nowrap}
+  .nav-links{display:flex;gap:22px;white-space:nowrap;font-family:'DM Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em}
   .nav-links a{color:var(--ink-2);text-decoration:none;display:flex;gap:6px;align-items:baseline}
   .nav-links a span{font-family:'Noto Serif TC',serif;font-weight:900;color:var(--seal);font-size:.82rem;letter-spacing:0}
   .nav-links a:hover{color:var(--seal)}
-  @media(max-width:900px){.nav-links{display:none}}
+  @media(max-width:1180px){.nav-links{display:none}}
 
   /* ───── HERO ───── */
   header{min-height:100vh;position:relative;padding:120px 0 80px;overflow:hidden;display:flex;align-items:center;cursor:crosshair}
@@ -141,14 +141,10 @@
     mask:var(--notch) top/100% 51% no-repeat,radial-gradient(circle 11px at calc(100% - 190px) 100%,#0000 10.5px,#000 11px) bottom/100% 51% no-repeat;
     background-image:repeating-linear-gradient(45deg,rgba(163,34,29,.05) 0 1.5px,transparent 1.5px 7px),repeating-linear-gradient(-45deg,rgba(45,79,158,.04) 0 1.5px,transparent 1.5px 7px);
     transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .7s}
-  .ticket:nth-child(2){background-color:#dfe6f3}
-  .ticket:nth-child(3){background-color:#f6ecc4}
   .ticket.in:hover{transform:translateY(-4px) rotate(-.4deg)}
   @media(max-width:760px){.ticket{grid-template-columns:1fr;-webkit-mask:none;mask:none}}
   .t-main{padding:0 0 22px}
   .t-band{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:var(--hsr);color:#fff;padding:10px 24px;border-radius:12px 0 0 0;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
-  .ticket:nth-child(2) .t-band{background:var(--blue)}
-  .ticket:nth-child(3) .t-band{background:var(--sign);color:var(--ink)}
   @media(max-width:760px){.t-band{border-radius:12px 12px 0 0}}
   .t-band b{font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.05rem;letter-spacing:.06em;text-transform:none;margin-right:8px}
   .t-legs{padding:18px 24px 0;display:flex;flex-direction:column;gap:16px}
@@ -215,7 +211,7 @@
   .day{display:grid;grid-template-columns:118px minmax(0,1fr) 180px;gap:26px;align-items:start;background:var(--card);border:1.5px solid var(--rule);border-radius:10px;padding:30px 28px 28px;position:relative;box-shadow:0 16px 34px -26px rgba(31,27,22,.45)}
   .day.hit{animation:jolt .28s ease-out}
   @media(max-width:860px){.day{grid-template-columns:92px minmax(0,1fr);padding:24px 20px}.day .d-stamp{position:absolute;right:-6px;top:-34px;width:112px}}
-  @media(max-width:560px){.day{grid-template-columns:1fr;gap:12px}}
+  @media(max-width:560px){.day{grid-template-columns:minmax(0,1fr);gap:12px}}
   .d-date{display:flex;flex-direction:column;line-height:1}
   .d-date .wk{font-family:'Noto Serif TC',serif;font-weight:900;font-size:1rem;color:var(--seal)}
   .d-date .wk small{font-family:'DM Mono',monospace;font-weight:500;font-size:.66rem;letter-spacing:.14em;color:var(--ink-dim);margin-left:6px}
@@ -230,7 +226,7 @@
   .day p+p{margin-top:10px}
   .day p b{color:var(--ink)}
   .sticky{display:inline-block;margin-top:14px;background:#fff1a8;padding:10px 14px;font-size:.95rem;transform:rotate(-1deg);box-shadow:0 6px 12px -8px rgba(31,27,22,.45);max-width:520px;font-family:'LXGW WenKai TC',cursive;color:var(--ink)}
-  .photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:22px 0 6px;max-width:660px}
+  .photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:18px;margin:22px 0 6px;max-width:660px}
   .snap{position:relative;background:#fff;padding:8px 8px 30px;box-shadow:0 10px 20px -14px rgba(31,27,22,.55);transform:rotate(-1.2deg);transition:transform .4s}
   .snap:nth-child(2){transform:rotate(1.6deg)}
   .snap:hover{transform:rotate(0) scale(1.02)}
@@ -449,7 +445,7 @@
         <h1 class="hero-title">Taiwan<span class="sub-line">Stamp Rally</span></h1>
         <div class="seal-big" aria-hidden="true">台灣</div>
       </div>
-      <p class="hero-sub">Every station in Taiwan has a rubber stamp for travellers. Here's twelve days, all the way round the island, one stamp a day: <b>Taipei nights → turtles → paragliding → surf → Taroko → Christmas at 460 metres → Sun Moon Lake → Taiwan's best bar</b>. Then a night flight home in time for New Year's Eve.</p>
+      <p class="hero-sub">Every station in Taiwan has a rubber stamp for travellers. Here's twelve days, all the way round the island, one stamp a day: <b>Taipei nights → turtles → paragliding → surf → Taroko → Christmas at 460 metres → Sun Moon Lake → Taiwan's best bar</b>. Then one last Taipei night, and home via Hong Kong in time for New Year's Eve.</p>
       <div class="punch" aria-label="Trip at a glance">
         <div><div class="n">2</div><div class="t">Travellers</div></div>
         <div><div class="n red">12</div><div class="t">Days</div></div>
@@ -484,90 +480,48 @@
       <div class="sec-seal">航班</div>
       <div>
         <span class="sec-tag">getting there</span>
-        <h2 class="sec-title">Pick your tickets</h2>
-        <p>Fly into <b>Taipei (Taoyuan, TPE)</b>. It's the only airport with direct flights from Sydney, and the loop starts and ends there. One catch: China Airlines' direct flight doesn't fly on Saturdays from Sydney or on Wednesdays from Taipei. So you can go direct a day either side, or keep the exact dates with a stop.</p>
+        <h2 class="sec-title">Tickets booked</h2>
+        <p>Booked on 23 October 2026, both of you on one Qantas booking. Direct into <b>Taipei (Taoyuan, TPE)</b> overnight on the way out. Home through <b>Hong Kong</b> on the afternoon of the 30th, landing in Sydney on the morning of New Year's Eve.</p>
       </div>
     </div>
 
     <div class="tickets">
       <article class="ticket reveal">
         <div class="t-main">
-          <div class="t-band"><span><b>中華航空</b>China Airlines</span><span>直飛 Direct · CI52 / CI51</span></div>
+          <div class="t-band"><span><b>澳洲航空</b>Qantas · China Airlines</span><span>已訂 Booked · 23 Oct 2026</span></div>
           <div class="t-legs">
             <div class="t-leg">
-              <div class="t-date">Fri 18 Dec → Sat 19 Dec</div>
+              <div class="t-date">Fri 18 Dec → Sat 19 Dec · flown by China Airlines · A350-900</div>
               <div class="t-pt"><div class="city">雪梨</div><div class="code">SYD <b>22:10</b> · T1</div></div>
-              <div class="t-mid">CI52 · 9h 10m<div class="line"></div>direct</div>
+              <div class="t-mid">QF8729 · 9h 10m<div class="line"></div>direct</div>
               <div class="t-pt r"><div class="city">桃園</div><div class="code">TPE <b>04:20⁺¹</b> · T2</div></div>
             </div>
             <div class="t-leg">
-              <div class="t-date">Tue 29 Dec → Wed 30 Dec</div>
-              <div class="t-pt"><div class="city">桃園</div><div class="code">TPE <b>23:50</b> · T2</div></div>
-              <div class="t-mid">CI51 · 9h 25m<div class="line"></div>direct</div>
-              <div class="t-pt r"><div class="city">雪梨</div><div class="code">SYD <b>12:15⁺¹</b> · T1</div></div>
-            </div>
-          </div>
-          <p class="t-note">Gives you the <b>most time on the ground</b>, with no connections. You wake up in Taiwan on the 19th and land home at lunchtime on the 30th. The trade-off is two night flights.</p>
-        </div>
-        <div class="t-stub">
-          <span class="stamp wait" style="--r:12deg" data-zh="推薦" data-en="OUR PICK" data-sub="★ ★ ★" data-date="OPTION A" data-shape="circle" data-color="seal"></span>
-          <div class="lbl">Option</div>
-          <div class="opt">A</div>
-          <div class="price">A$1,516+</div>
-          <div class="lbl">return · Dec fares</div>
-        </div>
-      </article>
-
-      <article class="ticket reveal">
-        <div class="t-main">
-          <div class="t-band"><span><b>國泰航空</b>Cathay Pacific</span><span>轉機 Via Hong Kong · exact dates</span></div>
-          <div class="t-legs">
-            <div class="t-leg">
-              <div class="t-date">Sat 19 Dec</div>
-              <div class="t-pt"><div class="city">雪梨</div><div class="code">SYD <b>08:40</b> · CX110</div></div>
-              <div class="t-mid">HKG 15:10<div class="line"></div>1 stop</div>
-              <div class="t-pt r"><div class="city">桃園</div><div class="code">TPE <b>~evening</b></div></div>
+              <div class="t-date">Wed 30 Dec · China Airlines · A321neo</div>
+              <div class="t-pt"><div class="city">桃園</div><div class="code">TPE <b>14:30</b> · T2</div></div>
+              <div class="t-mid">CI915 · 2h 05m<div class="line"></div>direct</div>
+              <div class="t-pt r"><div class="city">香港</div><div class="code">HKG <b>16:35</b> · T1</div></div>
             </div>
             <div class="t-leg">
-              <div class="t-date">Wed 30 Dec → Thu 31 Dec</div>
-              <div class="t-pt"><div class="city">桃園</div><div class="code">TPE <b>~pm</b> → HKG</div></div>
-              <div class="t-mid">CX111 · HKG 19:05<div class="line"></div>1 stop</div>
-              <div class="t-pt r"><div class="city">雪梨</div><div class="code">SYD <b>07:10⁺¹</b></div></div>
+              <div class="t-date">Wed 30 Dec → Thu 31 Dec · 2h 50m in Hong Kong · Qantas · A330</div>
+              <div class="t-pt"><div class="city">香港</div><div class="code">HKG <b>19:25</b> · T1</div></div>
+              <div class="t-mid">QF128 · 9h 30m<div class="line"></div>direct</div>
+              <div class="t-pt r"><div class="city">雪梨</div><div class="code">SYD <b>07:55⁺¹</b> · T1</div></div>
             </div>
           </div>
-          <p class="t-note">Keeps your <b>exact 19th–30th dates</b> and has no red-eye on the way out. You land in Taipei on the evening of the 19th and get an extra Taipei night on the 29th. The Taipei–Hong Kong connections aren't confirmed yet, so check them when you book.</p>
+          <p class="t-note">The flight out is <b>Economy Flex</b>. The flights home are <b>Economy Saver</b>, which is stricter about changes and refunds. Both legs home are on the same booking, so your bags should go straight through to Sydney. Ask at check-in to be sure.</p>
         </div>
         <div class="t-stub">
-          <div class="lbl">Option</div>
-          <div class="opt">B</div>
-          <div class="price">A$1,560+</div>
-          <div class="lbl">return · Dec fares</div>
-        </div>
-      </article>
-
-      <article class="ticket reveal">
-        <div class="t-main">
-          <div class="t-band"><span><b>酷航</b>Scoot</span><span>廉航 Budget · via Singapore</span></div>
-          <div class="t-legs">
-            <div class="t-leg">
-              <div class="t-date">Daily · Sydney ⇄ Taipei</div>
-              <div class="t-pt"><div class="city">雪梨</div><div class="code">SYD</div></div>
-              <div class="t-mid">18–21 hrs<div class="line"></div>via SIN</div>
-              <div class="t-pt r"><div class="city">桃園</div><div class="code">TPE</div></div>
-            </div>
-          </div>
-          <p class="t-note">The cheapest option, but you pay for it in time. It's <b>18–21 hours with a Singapore change</b>, and bags and meals cost extra. The typical range is for the whole year, and Christmas week will sit at the top of it or above. Only worth it if saving about A$700 each matters more than a whole travel day.</p>
-        </div>
-        <div class="t-stub">
-          <div class="lbl">Option</div>
-          <div class="opt">C</div>
-          <div class="price">~A$500–1,050</div>
-          <div class="lbl">typical return</div>
+          <span class="stamp wait" style="--r:12deg" data-zh="已訂" data-en="BOOKED" data-sub="★ ★ ★" data-date="2026.10.23" data-shape="circle" data-color="seal"></span>
+          <div class="lbl">Status</div>
+          <div class="opt">OK</div>
+          <div class="price">A$2,555.50</div>
+          <div class="lbl">each · A$5,111 for two</div>
         </div>
       </article>
     </div>
 
-    <p class="flt-foot reveal"><b>Prices</b> are the "from" fares each airline lists on its own site for December (October 2026). Over Christmas they move fast, so book soon. <b>Times</b> come from the current timetables. Re-check them when you book, especially that CI52 doesn't fly Saturdays and CI51 doesn't fly Wednesdays. The day-by-day plan below assumes <b>Option A</b>, with notes where Option B changes things.</p>
+    <p class="flt-foot reveal"><b>Check-in:</b> the flight out is a Qantas codeshare flown by China Airlines, so use the China Airlines counters at Sydney T1. Coming home, check in with China Airlines at Taoyuan Terminal 2. <b>Bags:</b> Flex and Saver fares can come with different allowances, so check both directions under Manage Booking before you pack.</p>
   </div>
 </section>
 
@@ -607,7 +561,7 @@
 
           <g class="m-fade" style="transition-delay:.2s">
             <circle class="m-dot" cx="243.6" cy="74" r="4.5"/><text class="m-label" x="236" y="62" text-anchor="end">桃園機場</text><text class="m-en" x="236" y="74" text-anchor="end">TPE · IN &amp; OUT</text>
-            <circle class="m-dot" cx="304" cy="82" r="6.5"/><text class="m-label" x="296" y="106" text-anchor="end">台北</text><text class="m-en" x="296" y="118" text-anchor="end">TAIPEI · 19–21, 24–27</text>
+            <circle class="m-dot" cx="304" cy="82" r="6.5"/><text class="m-label" x="296" y="106" text-anchor="end">台北</text><text class="m-en" x="296" y="118" text-anchor="end">TAIPEI · 19–21, 24–27, 29</text>
             <circle class="m-dot" cx="355" cy="68" r="4.5"/><text class="m-label" x="380" y="44" text-anchor="middle">九份</text><text class="m-en" x="380" y="55" text-anchor="middle">JIUFEN · 20</text>
             <circle class="m-dot" cx="324" cy="54" r="4.5"/><text class="m-label" x="330" y="26" text-anchor="middle">萬里</text><text class="m-en" x="330" y="37" text-anchor="middle">WANLI · 26</text>
             <circle class="m-dot" cx="75" cy="552" r="4.5"/><text class="m-label" x="64" y="540" text-anchor="end">左營</text><text class="m-en" x="64" y="552" text-anchor="end">ZUOYING</text>
@@ -639,7 +593,8 @@
         <div class="station reveal"><div class="st-top"><div><div class="zh">花蓮</div><div class="en">Hualien</div><div class="what">Surf lesson · Highway 11 · night market · Taroko</div></div><div class="st-n"><b>1</b><span>night</span></div></div><div class="st-bar"><span>← 都蘭</span><span>23 – 24 Dec</span><span>台北 →</span></div></div>
         <div class="station hot reveal"><div class="st-top"><div><div class="zh">台北</div><div class="en">Taipei · Christmas</div><div class="what">Christmas Eve · Skyline 460 · Wanli · two big nights</div></div><div class="st-n"><b>3</b><span>nights</span></div></div><div class="st-bar"><span>← 花蓮</span><span>24 – 27 Dec</span><span>日月潭 →</span></div></div>
         <div class="station reveal"><div class="st-top"><div><div class="zh">日月潭</div><div class="en">Sun Moon Lake</div><div class="what">Ropeway · theme-park rides · the splurge night</div></div><div class="st-n"><b>1</b><span>night</span></div></div><div class="st-bar"><span>← 台北</span><span>27 – 28 Dec</span><span>台中 →</span></div></div>
-        <div class="station reveal"><div class="st-top"><div><div class="zh">台中</div><div class="en">Taichung</div><div class="what">Fengjia Night Market · Vender, Taiwan's best bar</div></div><div class="st-n"><b>1</b><span>night</span></div></div><div class="st-bar"><span>← 日月潭</span><span>28 – 29 Dec</span><span>桃園機場 →</span></div></div>
+        <div class="station reveal"><div class="st-top"><div><div class="zh">台中</div><div class="en">Taichung</div><div class="what">Fengjia Night Market · Vender, Taiwan's best bar</div></div><div class="st-n"><b>1</b><span>night</span></div></div><div class="st-bar"><span>← 日月潭</span><span>28 – 29 Dec</span><span>台北 →</span></div></div>
+        <div class="station reveal"><div class="st-top"><div><div class="zh">台北</div><div class="en">Taipei · last night</div><div class="what">Back to the hostel · one more round · Airport MRT</div></div><div class="st-n"><b>1</b><span>night</span></div></div><div class="st-bar"><span>← 台中</span><span>29 – 30 Dec</span><span>桃園機場 →</span></div></div>
       </div>
     </div>
   </div>
@@ -653,7 +608,7 @@
       <div>
         <span class="sec-tag">one stamp a day</span>
         <h2 class="sec-title">Twelve days, day by day</h2>
-        <p>Each day gets stamped as you scroll to it. The plan assumes the <b>direct China Airlines flights (Option A)</b>. The yellow notes show where Option B changes things.</p>
+        <p>Each day gets stamped as you scroll to it. It's built around the booked flights: <b>land at 04:20 on the 19th, take off at 14:30 on the 30th</b>.</p>
       </div>
     </div>
 
@@ -666,7 +621,6 @@
           <h3>Land, Soak, Go Out</h3>
           <p>Land at 04:20 and take the Airport MRT into Taipei Main (about 40 minutes), then go to Meander in Ximending. <b>Book the room from the night of the 18th</b> so you can sleep from 6am instead of waiting for a 3pm check-in. Sleep until lunch.</p>
           <p>Afternoon: a <b>private hot-spring room in Beitou</b> (about NT$1,000–1,500 for two, 60–120 min) to recover from the overnight flight. Evening: Ximending street food, meet people in the hostel common room, then <b>Saturday night in Xinyi at WAVE or AI Club</b>.</p>
-          <div class="sticky">Option B: you land in the evening, so skip Beitou and go straight out.</div>
           <div class="todo"><span>Land 04:20</span><span>Airport MRT</span><span>Beitou hot spring</span><span>Ximending</span><span class="hot">WAVE / AI Club</span></div>
         </div>
         <span class="stamp wait d-stamp" style="--r:-10deg" data-zh="台北" data-en="TAIPEI" data-sub="HOT SPRINGS" data-date="2026.12.19" data-shape="circle" data-color="seal"></span>
@@ -791,22 +745,23 @@
       <article class="day">
         <div class="d-date"><span class="wk">週二<small>TUE</small></span><span class="num">29</span><span class="mo"><i>十二月</i>Dec</span></div>
         <div>
-          <div class="d-sign"><b>台中 → 桃園機場</b><span>Taichung → TPE</span></div>
-          <h3>Last Lap</h3>
-          <p>Slow morning, last shopping and a big lunch. The high-speed train goes straight from Taichung to Taoyuan station (under an hour), then the Airport MRT to Terminal 2. CI51 leaves at 23:50, so you have the whole day.</p>
-          <div class="sticky">Option B: go back to Taipei for one more night out instead, and fly out on the afternoon of the 30th.</div>
-          <div class="todo"><span>HSR → Taoyuan</span><span>Airport MRT</span><span>CI51 23:50</span></div>
+          <div class="d-sign"><b>台中 → 台北</b><span>Taichung → Taipei</span></div>
+          <h3>Last Night in Taipei</h3>
+          <p>Slow morning, a walk along the Calligraphy Greenway and a big lunch. Then the high-speed train back to Taipei (under an hour) and check back in at <b>Meander</b> in Ximending. It's one MRT stop from Taipei Main, where the Airport MRT starts.</p>
+          <p>Night: it's a Tuesday, so cocktails rather than clubs. Hit the Lane 160 bars you missed on the 26th, or have a farewell round with the hostel crowd. Don't go too late, because tomorrow's flight is at 14:30.</p>
+          <div class="todo"><span>HSR → Taipei</span><span>Meander check-in</span><span class="hot">Last night out</span></div>
         </div>
-        <span class="stamp wait d-stamp" style="--r:-11deg" data-zh="桃園" data-en="TAOYUAN" data-sub="LAST LAP" data-date="2026.12.29" data-shape="square" data-color="ink"></span>
+        <span class="stamp wait d-stamp" style="--r:-11deg" data-zh="台北" data-en="TAIPEI" data-sub="LAST NIGHT" data-date="2026.12.29" data-shape="square" data-color="ink"></span>
       </article>
 
       <article class="day">
         <div class="d-date"><span class="wk">週三<small>WED</small></span><span class="num">30</span><span class="mo"><i>十二月</i>Dec</span></div>
         <div>
-          <div class="d-sign"><b>雪梨</b><span>Sydney</span></div>
-          <h3>Home for New Year's Eve</h3>
-          <p>Land in Sydney at 12:15. You've got one day to recover before New Year's Eve.</p>
-          <div class="todo"><span>Land SYD 12:15</span><span class="hot">NYE ready</span></div>
+          <div class="d-sign"><b>桃園 → 香港 → 雪梨</b><span>TPE → HKG → SYD</span></div>
+          <h3>Home via Hong Kong</h3>
+          <p>Have one last Taiwanese breakfast, then take the express Airport MRT from Taipei Main by about 11:00 (about 40 minutes to Terminal 2). Check in with China Airlines by 12:00 for <b>CI915 at 14:30</b>.</p>
+          <p>You land in Hong Kong at 16:35 with 2h 50m before <b>QF128 at 19:25</b>, and both use Terminal 1. Land in Sydney at <b>07:55 on the 31st</b>. Have a nap, then it's New Year's Eve.</p>
+          <div class="todo"><span>Airport MRT by 11:00</span><span>CI915 14:30</span><span>HKG 2h 50m</span><span class="hot">Land SYD 07:55 · NYE</span></div>
         </div>
         <span class="stamp wait d-stamp" style="--r:6deg" data-zh="雪梨" data-en="SYDNEY" data-sub="RALLY COMPLETE" data-date="2026.12.30" data-shape="circle" data-color="ink"></span>
       </article>
@@ -823,15 +778,15 @@
       <div>
         <span class="sec-tag">where we sleep</span>
         <h2 class="sec-title">Bag tags</h2>
-        <p>Ten nights, all twin-share. <b>Hostels where meeting people matters</b> (the opening Taipei weekend and the surf town), hotels everywhere else, and <b>one splurge for Christmas</b>. Nothing's booked yet. The Christmas weekend in Taipei and the 27th at Sun Moon Lake will go first.</p>
+        <p>Eleven nights, all twin-share. <b>Hostels where meeting people matters</b> (the opening Taipei weekend, the surf town and the last night), hotels everywhere else, and <b>one splurge for Christmas</b>. Nothing's booked yet. The Christmas weekend in Taipei and the 27th at Sun Moon Lake will go first.</p>
       </div>
     </div>
     <div class="tags">
       <div class="tag hostel reveal"><span class="band"></span>
         <div class="kind"><b>青旅</b>Social hostel</div>
-        <div class="nights">2<span>nights</span></div>
-        <div class="place">Meander Taipei<small>Ximending · 19 – 21 Dec</small></div>
-        <div class="vibe">The top-rated social hostel in Taipei (9.7 on Hostelworld), with a big common room and regular events. <b>Private twin with its own bathroom from NT$1,800</b> a night. That room has no window, but for these two nights you won't care. Book from the 18th for the early arrival.
+        <div class="nights">3<span>nights</span></div>
+        <div class="place">Meander Taipei<small>Ximending · 19 – 21 &amp; 29 – 30 Dec</small></div>
+        <div class="vibe">The top-rated social hostel in Taipei (9.7 on Hostelworld), with a big common room and regular events. <b>Private twin with its own bathroom from NT$1,800</b> a night. That room has no window, but for these nights you won't care. Book from the 18th for the early arrival. Come back on the 29th for the last night: it's one MRT stop from the Airport MRT at Taipei Main.
           <br><a class="stay-link" href="https://www.staymeander.com/meandertaipei/en/private-room-2/" target="_blank" rel="noopener">Rooms →</a></div>
       </div>
       <div class="tag reveal"><span class="band"></span>
@@ -869,7 +824,7 @@
         <div class="kind"><b>飯店</b>Hotel</div>
         <div class="nights">1<span>night</span></div>
         <div class="place">Taichung<small>West District · 28 – 29 Dec</small></div>
-        <div class="vibe">Stay near Vender and the Calligraphy Greenway: <b>Tango Hotel Taichung</b> (from about US$63) or <b>The Splendor</b> (from about US$130). Taichung station has a direct high-speed train to the airport for the flight home.</div>
+        <div class="vibe">Stay near Vender and the Calligraphy Greenway: <b>Tango Hotel Taichung</b> (from about US$63) or <b>The Splendor</b> (from about US$130). From Taichung station, the high-speed train back to Taipei takes under an hour.</div>
       </div>
     </div>
   </div>
@@ -883,7 +838,7 @@
       <div>
         <span class="sec-tag">after dark</span>
         <h2 class="sec-title">Bars &amp; clubs</h2>
-        <p>Five nights in Taipei, including <b>two Saturdays and Christmas night</b>. All of these were checked as open in October 2026. The cocktail bar rankings are from Asia's 50 Best Bars 2026.</p>
+        <p>Six nights in Taipei, including <b>two Saturdays and Christmas night</b>. All of these were checked as open in October 2026. The cocktail bar rankings are from Asia's 50 Best Bars 2026.</p>
       </div>
     </div>
 
@@ -950,7 +905,7 @@
       <div>
         <span class="sec-tag">keep your receipts</span>
         <h2 class="sec-title">Three budgets</h2>
-        <p>In Taiwan, every receipt doubles as a lottery ticket. Here's the rough cost per person for the whole trip, including flights, sharing rooms. Converted at <b>about NT$22 = A$1</b> (October 2026). Treat these as estimates, not quotes.</p>
+        <p>In Taiwan, every receipt doubles as a lottery ticket. Here's the rough cost per person for the whole trip, including the booked flights (A$2,555.50 each) and sharing rooms. Converted at <b>about NT$22 = A$1</b> (October 2026). Treat these as estimates, not quotes.</p>
       </div>
     </div>
 
@@ -960,12 +915,12 @@
         <div class="r-tier"><b>省錢</b><span>Lean</span></div>
         <div class="r-meta"><span>2026-12-19</span><span>隨機碼 0312</span></div>
         <div class="r-items">
-          <div><span>Scoot via Singapore</span><i></i><span>~A$700–1,200</span></div>
+          <div><span>Flights (booked)</span><i></i><span>A$2,556</span></div>
           <div><span>Hostels + simple hotels</span><i></i><span>~A$45/nt</span></div>
           <div><span>Food, drinks, transport</span><i></i><span>~A$80/day</span></div>
           <div><span>Activities</span><i></i><span>~A$300</span></div>
         </div>
-        <div class="r-total"><span>總計 Total pp</span><b>~A$2,300–2,800</b></div>
+        <div class="r-total"><span>總計 Total pp</span><b>~A$4,200</b></div>
         <div class="barcode"></div><div class="qrs"></div>
       </div>
       <div class="receipt pick reveal" data-seed="42">
@@ -974,12 +929,12 @@
         <div class="r-tier"><b>剛好</b><span>Sweet spot</span></div>
         <div class="r-meta"><span>2026-12-19</span><span>隨機碼 4096</span></div>
         <div class="r-items">
-          <div><span>China Airlines direct</span><i></i><span>~A$1,500–1,900</span></div>
+          <div><span>Flights (booked)</span><i></i><span>A$2,556</span></div>
           <div><span>Hostels + 4★ hotels mix</span><i></i><span>~A$90/nt</span></div>
           <div><span>Food, drinks, transport</span><i></i><span>~A$120/day</span></div>
           <div><span>Activities + car</span><i></i><span>~A$550</span></div>
         </div>
-        <div class="r-total"><span>總計 Total pp</span><b>~A$4,200–4,700</b></div>
+        <div class="r-total"><span>總計 Total pp</span><b>~A$5,350–5,450</b></div>
         <div class="barcode"></div><div class="qrs"></div>
       </div>
       <div class="receipt reveal" data-seed="77">
@@ -987,12 +942,12 @@
         <div class="r-tier"><b>犒賞</b><span>Treat yourselves</span></div>
         <div class="r-meta"><span>2026-12-19</span><span>隨機碼 8888</span></div>
         <div class="r-items">
-          <div><span>Direct flights</span><i></i><span>~A$1,600–1,900</span></div>
+          <div><span>Flights (booked)</span><i></i><span>A$2,556</span></div>
           <div><span>W Taipei, The Lalu etc.</span><i></i><span>~A$200/nt</span></div>
           <div><span>Big nights, tables</span><i></i><span>~A$180/day</span></div>
           <div><span>Activities + car</span><i></i><span>~A$600</span></div>
         </div>
-        <div class="r-total"><span>總計 Total pp</span><b>~A$6,200–6,500</b></div>
+        <div class="r-total"><span>總計 Total pp</span><b>~A$7,350</b></div>
         <div class="barcode"></div><div class="qrs"></div>
       </div>
     </div>
